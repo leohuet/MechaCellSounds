@@ -61,7 +61,7 @@ for(var index=0; index < rows.length; index++){
 function readTextFile(path){
 	var file = new File(path, 'read', 'TEXT');
   	if (!file.isopen) {
-    	error('Could not open file: ' + filepath + '\n');
+    	error('Could not open file: ' + path + '\n');
     	return;
   	}
   	var text = '';
