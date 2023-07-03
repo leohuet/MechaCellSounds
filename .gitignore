@@ -3,6 +3,7 @@
 
 ### Audio ###
 sounds/
+*.asd
 
 
 ### Images ###

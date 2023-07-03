@@ -2,7 +2,7 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3769409993,
+	"modificationdate" : 3771237612,
 	"viewrect" : [ 25.0, 108.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -10,43 +10,23 @@
 	"autolocalize" : 0,
 	"contents" : 	{
 		"patchers" : 		{
-			"granular_test.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"input.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"map_poly.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"mapping.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"mappingV1.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"mubu_son.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"230608 DEMO.maxpat" : 			{
+			"230703 DEMO viscoelastic.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
 			}
 ,
-			"zlstream.maxpat" : 			{
+			"230703 viscoussounds.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"fft_interpolation.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -210,5 +190,6 @@
 	"devpathtype" : 0,
 	"devpath" : ".",
 	"sortmode" : 0,
-	"viewmode" : 0
+	"viewmode" : 0,
+	"includepackages" : 0
 }
