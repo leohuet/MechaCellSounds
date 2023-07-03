@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1526.0, 1031.0 ],
+		"rect" : [ 34.0, 100.0, 1044.0, 777.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,34 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 0,
+					"id" : "obj-9",
+					"linecount" : 5,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 609.622219005652823, 263.398533284664154, 174.0, 93.0 ],
+					"presentation_linecount" : 3,
+					"text" : "Conseil optimisation --> enlever tout affichage superflu qui sollicite le scheduler de max (baisse de précision du timing)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"id" : "obj-8",
+					"linecount" : 8,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 709.579361862795622, 426.0, 253.0, 118.0 ],
+					"text" : "Je pense que tu peux faire ce patch directement grâce au bufGranul si tu veux pousser plus loin le vice du patching ;)\nindice --> utiliser un bufGranul~ 4ch et un message de trigg de grains unique\nSi tu y arrives, doit même y avoir moyen de remplacer elastic_comp aussi mais un peu plus galère!"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "newobj",
@@ -95,7 +123,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 718.191690549964051, 549.0, 30.0, 30.0 ]
+					"patching_rect" : [ 718.191690549964051, 594.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -111,13 +139,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 864.0, 1390.0, 640.0, 480.0 ],
+						"rect" : [ 780.0, 226.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -351,13 +379,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 618.0, 1252.0, 934.0, 848.0 ],
+						"rect" : [ 155.0, 113.0, 934.0, 848.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1251,7 +1279,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 718.191690549964051, 599.058450135276871, 50.0, 22.0 ]
+					"patching_rect" : [ 718.191690549964051, 644.058450135276871, 50.0, 22.0 ]
 				}
 
 			}
@@ -1686,7 +1714,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 701.350790434224336, 254.35124077590558, 50.0, 22.0 ],
+					"patching_rect" : [ 701.350790434224336, 232.191221378169985, 50.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 885.807933291367135, 313.190241515636444, 50.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
@@ -1745,7 +1773,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}

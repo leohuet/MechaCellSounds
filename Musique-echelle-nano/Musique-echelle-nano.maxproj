@@ -2,7 +2,7 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3771237612,
+	"modificationdate" : 3771260003,
 	"viewrect" : [ 25.0, 108.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -21,12 +21,12 @@
 				"toplevel" : 1
 			}
 ,
-			"230703 viscoussounds.maxpat" : 			{
+			"fft_interpolation.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"fft_interpolation.maxpat" : 			{
+			"230703 viscoussounds.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
