@@ -2,7 +2,7 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3771260003,
+	"modificationdate" : 3771320094,
 	"viewrect" : [ 25.0, 108.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -19,6 +19,11 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"vocoder.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 ,
 			"fft_interpolation.maxpat" : 			{
@@ -190,6 +195,5 @@
 	"devpathtype" : 0,
 	"devpath" : ".",
 	"sortmode" : 0,
-	"viewmode" : 0,
-	"includepackages" : 0
+	"viewmode" : 0
 }
