@@ -2,7 +2,7 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3771320094,
+	"modificationdate" : 3771416562,
 	"viewrect" : [ 25.0, 108.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -21,12 +21,22 @@
 				"toplevel" : 1
 			}
 ,
-			"vocoder.maxpat" : 			{
+			"fft_interpolation.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"fft_interpolation.maxpat" : 			{
+			"pfft2.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
+			}
+,
+			"vocoder.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
