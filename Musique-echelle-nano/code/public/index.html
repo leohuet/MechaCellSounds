@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>XYPad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"
+    integrity="sha512-rCZdHNB0AePry6kAnKAVFMRfWPmUXSo+/vlGtrOUvhsxD0Punm/xWbEh+8vppPIOzKB9xnk42yCRZ5MD/jvvjQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+    ></script>
+    <script src="js/socket.io.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <script src="js/sketch.js"></script>
+
+    <script>
+
+    var socket = io();
+    socket.connect('http://127.0.0.1:8000');
+
+    function send_xy(x, y){
+      message = str(x) + ' ' + str(y);
+      socket.send(message);
+    }
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    socket.on("accessToken", async function(accessToken){
+      console.log('access')
+      await sleep(1000);
+    });
+
+    </script>
+
+  </body>
+
+
+
+</html>
