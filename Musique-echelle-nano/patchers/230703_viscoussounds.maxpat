@@ -40,6 +40,30 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-83",
+					"maxclass" : "newobj",
+					"numinlets" : 6,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1311.0, 236.128442437728836, 110.0, 22.0 ],
+					"text" : "scale 0. 1. 10. 100."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-80",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1311.0, 201.0, 42.0, 22.0 ],
+					"text" : "r betaj"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-78",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -69,7 +93,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1232.0, 207.0, 67.0, 22.0 ],
+					"patching_rect" : [ 1232.0, 201.0, 67.0, 22.0 ],
 					"text" : "r elastictrig"
 				}
 
@@ -186,7 +210,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 1232.0, 249.5, 73.0, 22.0 ],
+					"patching_rect" : [ 1232.0, 236.5, 73.0, 22.0 ],
 					"text" : "random 100"
 				}
 
@@ -302,7 +326,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.603921568627451, 0.145098039215686, 0.796078431372549, 1.0 ],
 					"id" : "obj-26",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -315,7 +339,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.603921568627451, 0.145098039215686, 0.796078431372549, 1.0 ],
 					"id" : "obj-62",
 					"linecount" : 7,
 					"maxclass" : "comment",
@@ -329,21 +353,21 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.603921568627451, 0.145098039215686, 0.796078431372549, 1.0 ],
 					"id" : "obj-59",
-					"linecount" : 8,
+					"linecount" : 10,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 901.707933291367681, 30.248149445136733, 208.0, 114.0 ],
-					"text" : "STIFFNESS (MODULE DE YOUNG) MAPPING :\n- Lowpass filter cutof frequency\n- No drunk pitch for soft parts\n- Grain frequency higher for stiffer parts\n- levels of elements inside the viscous_comp",
+					"patching_rect" : [ 901.707933291367681, 30.248149445136733, 208.0, 141.0 ],
+					"text" : "STIFFNESS (MODULE DE YOUNG) MAPPING :\n- Lowpass filter cutof frequency\n- No drunk pitch for soft parts\n- Grain frequency higher for stiffer parts\n- levels of elements inside the viscous_comp\n- lower or higher frequencies when damping",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.603921568627451, 0.145098039215686, 0.796078431372549, 1.0 ],
 					"id" : "obj-124",
 					"linecount" : 3,
 					"maxclass" : "comment",
@@ -373,7 +397,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 422.307933291366908, 142.0, 44.0, 22.0 ],
+					"patching_rect" : [ 409.499623841330731, 139.0, 44.0, 22.0 ],
 					"text" : "s betaj"
 				}
 
@@ -534,7 +558,7 @@
 					"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 580.30793329136668, 625.0, 360.0, 155.0 ],
-					"setfilter" : [ 0, 1, 1, 0, 0, 19930.76171875, 0.859650075435638, 0.899999976158142, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+					"setfilter" : [ 0, 1, 1, 0, 0, 19672.67578125, 0.859650075435638, 0.899999976158142, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 				}
 
 			}
@@ -1977,6 +2001,20 @@
 				"patchline" : 				{
 					"destination" : [ "obj-29", 1 ],
 					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-83", 0 ],
+					"source" : [ "obj-80", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-229", 1 ],
+					"source" : [ "obj-83", 0 ]
 				}
 
 			}

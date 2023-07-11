@@ -24,6 +24,17 @@
     var socket = io();
     socket.connect('http://127.0.0.1:8000');
 
+    document.body.addEventListener("touchstart", startTouch);
+    document.body.addEventListener("touchend", endTouch);
+
+    function startTouch(){
+      socket.send('touch 1');
+    }
+
+    function endTouch(){
+      socket.send('touch 0');
+    }
+
     function send_xy(x, y){
       message = str(x) + ' ' + str(y);
       socket.send(message);
