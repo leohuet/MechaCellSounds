@@ -2,8 +2,8 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3771842346,
-	"viewrect" : [ 25.0, 108.0, 516.0, 797.0 ],
+	"modificationdate" : 3771922831,
+	"viewrect" : [ 568.0, 186.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -17,6 +17,16 @@
 			}
 ,
 			"230703_viscoussounds.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"damping.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"damping_fft.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -40,7 +50,27 @@
 				"local" : 1
 			}
 ,
+			"pluggo.dryWet2~.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"pluggo.dryWet3~.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"socketreceive.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"spaceecho.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"swirl.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -65,21 +95,6 @@
 				"local" : 1
 			}
 ,
-			"pluggo.dryWet3~.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"swirl.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
-			}
-,
 			"raindrops.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1,
@@ -88,11 +103,6 @@
 					"projectrelativepath" : "./patchers"
 				}
 
-			}
-,
-			"pluggo.dryWet2~.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
 			}
 
 		}
@@ -407,6 +417,45 @@
 		}
 ,
 		"externals" : 		{
+			"bufGranul~.mxo" : 			{
+				"kind" : "object",
+				"local" : 1
+			}
+,
+			"spat5.reverb~.mxo" : 			{
+				"kind" : "object",
+				"local" : 1
+			}
+,
+			"liveGranul~.mxo" : 			{
+				"kind" : "object",
+				"local" : 1
+			}
+,
+			"mubu.mxo" : 			{
+				"kind" : "object",
+				"local" : 1
+			}
+,
+			"pipo~.mxo" : 			{
+				"kind" : "object",
+				"local" : 1
+			}
+,
+			"spat5.hoa.binaural~.mxo" : 			{
+				"kind" : "object",
+				"local" : 1
+			}
+,
+			"spat5.hoa.encoder~.mxo" : 			{
+				"kind" : "object",
+				"local" : 1
+			}
+,
+			"spat5.viewer.mxo" : 			{
+				"kind" : "object",
+				"local" : 1
+			}
 
 		}
 ,
