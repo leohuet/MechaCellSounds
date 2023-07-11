@@ -73,7 +73,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1975.042418241500854, 736.298206789493634, 124.0, 33.0 ],
-					"presentation_linecount" : 2,
 					"text" : "Samples of spring hit random",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -88,8 +87,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1260.28317712068565, 795.709207518100811, 121.993270788192604, 47.0 ],
-					"presentation_linecount" : 3,
+					"patching_rect" : [ 1260.28317712068565, 795.709207518100811, 124.0, 47.0 ],
 					"text" : "Samples of colander, metal tin and violins mixed together",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -119,7 +117,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 691.207606795061565, 203.605454385280609, 121.993270788192604, 33.0 ],
-					"presentation_linecount" : 2,
 					"text" : "Random more stuff on elastic trig",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -1108,13 +1105,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-42",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 148.307933291367135, 991.0, 249.884355545043945, 35.0 ],
-					"text" : "0 0 1 1 1 1 2 0 1 2 1 1 3 0 1 3 1 1 4 0 1 5 1 1 6 0 1 7 1 1 8 0 1 9 1 1 10 0 1 10 1 1"
+					"patching_rect" : [ 148.307933291367135, 997.0, 319.0, 22.0 ],
+					"text" : "0 0 1 1 1 1 2 0 1 2 1 1 3 0 1 3 1 1 4 0 1 5 1 1 10 0 1 10 1 1"
 				}
 
 			}
