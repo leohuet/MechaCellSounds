@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1526.0, 1031.0 ],
+		"rect" : [ 34.0, 87.0, 1529.0, 1031.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,41 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "int", "int" ],
+					"patching_rect" : [ 899.952886402606964, 658.0, 61.0, 22.0 ],
+					"text" : "change 0."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "int", "int" ],
+					"patching_rect" : [ 961.917775243520737, 658.0, 61.0, 22.0 ],
+					"text" : "change 0."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-127",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 807.659999999999854, 697.263603627681732, 61.0, 22.0 ],
+					"text" : "print betaj"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgcolor" : [ 0.603921568627451, 0.145098039215686, 0.796078431372549, 1.0 ],
 					"id" : "obj-58",
 					"linecount" : 2,
@@ -47,7 +82,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 672.003756945332043, 22.0, 128.0, 33.0 ],
-					"presentation_linecount" : 2,
 					"text" : "B patcher with script for web interface",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -62,7 +96,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1715.5, 1320.709721148014069, 128.0, 47.0 ],
-					"presentation_linecount" : 3,
 					"text" : "Coll with levels during time for 20 frequency bands",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -127,7 +160,19 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 448.167775243520737, 233.0, 86.0, 22.0 ],
+									"text" : "s launchsound"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"bgcolor" : [ 0.603921568627451, 0.145098039215686, 0.796078431372549, 1.0 ],
 									"id" : "obj-68",
@@ -149,7 +194,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 622.917775243520737, 529.962416557153347, 128.0, 60.0 ],
-									"presentation_linecount" : 4,
 									"text" : "Stiff/viscous levels up when mouse down, then trigger damping on mouse up",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -164,7 +208,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 169.91666666666697, 265.035332943361027, 128.0, 47.0 ],
-									"presentation_linecount" : 3,
 									"text" : "Elastic components level up when mouse up",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -179,7 +222,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 601.0, 8.293513417243958, 128.0, 74.0 ],
-									"presentation_linecount" : 5,
 									"text" : "Mouse or touch down launch stiff/viscous comp and mouse or touch up launch elastic components",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -262,7 +304,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 448.167775243520737, 195.0, 69.0, 22.0 ],
+									"patching_rect" : [ 448.167775243520737, 204.0, 69.0, 22.0 ],
 									"text" : "s elastictrig"
 								}
 
@@ -982,6 +1024,15 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-181", 0 ],
+									"order" : 0,
+									"source" : [ "obj-141", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"order" : 1,
 									"source" : [ "obj-141", 0 ]
 								}
 
@@ -1867,7 +1918,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1783.0, 1058.655613929033279, 50.0, 22.0 ],
-					"text" : "71"
+					"text" : "106"
 				}
 
 			}
@@ -1879,7 +1930,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1715.5, 1052.655613929033279, 50.0, 22.0 ],
-					"text" : "1000"
+					"text" : "979"
 				}
 
 			}
@@ -1915,17 +1966,6 @@
 					"patching_rect" : [ 1909.473686933517456, 60.150866091251373, 128.0, 60.0 ],
 					"text" : "POLYBUFFERS WITH ENVELOPPES AND SOUND FILES FOR BUFGRANUL",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-23",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 961.917775243520737, 657.61656591296196, 70.0, 22.0 ],
-					"text" : "s emodulus"
 				}
 
 			}
@@ -2956,7 +2996,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-100",
-					"items" : [ "Audio", "source", ",", "amb.wav", ",", "AMB_MER_AGITEE_TOULON.WAV", ",", "AMB_MER_TOULON.WAV", ",", "AmbienceHunter.wav", ",", "BakedBeans4.wav", ",", "bells.wav", ",", "Bubbles5.wav", ",", "ColanderRubberMallet13.wav", ",", "ColanderRubberMallet21.wav", ",", "ColanderRubberMallet3.wav", ",", "ColanderRubberMallet7.wav", ",", "ColanderRubberMalletREC.wav", ",", "crépitement.02.WAV", ",", "DeepNoisySlime.wav", ",", "fer_gravier01.WAV", ",", "foret_percs.wav", ",", "granulator1_visceux.wav", ",", "granulator2.wav", ",", "granulatormix_visqueux.wav", ",", "granulatormix_visqueux2.wav", ",", "granulatormix_visqueux3.wav", ",", "hihat.wav", ",", "MetalLunchboxVibrationSmall11.wav", ",", "MetalTin104.wav", ",", "MetalTin105.wav", ",", "MetalTin110-2.wav", ",", "MetalTin110.wav", ",", "MetalTin57.wav", ",", "percloop.wav", ",", "piano.wav", ",", "saw.aiff", ",", "snd.aiff", ",", "spring.wav", ",", "SpringMic1.wav", ",", "SpringMic2.wav", ",", "SpringMic3.wav", ",", "SpringMic4.wav", ",", "strings.wav", ",", "tree_rim.wav", ",", "visqueuxGMU.aiff" ],
+					"items" : [ "Audio", "source", ",", "amb.wav", ",", "AMB_MER_AGITEE_TOULON.WAV", ",", "AMB_MER_TOULON.WAV", ",", "AmbienceHunter.wav", ",", "BakedBeans4.wav", ",", "bells.wav", ",", "Bubbles5.wav", ",", "ColanderRubberMallet13.wav", ",", "ColanderRubberMallet21.wav", ",", "ColanderRubberMallet3.wav", ",", "ColanderRubberMallet7.wav", ",", "ColanderRubberMalletREC.wav", ",", "crépitement.02.WAV", ",", "DeepNoisySlime.wav", ",", "fer_gravier01.WAV", ",", "foret_percs.wav", ",", "granulator1_visceux.wav", ",", "granulator2.wav", ",", "granulatormix_visqueux.wav", ",", "granulatormix_visqueux2.wav", ",", "granulatormix_visqueux3.wav", ",", "hihat.wav", ",", "MetalLunchboxVibrationSmall11.wav", ",", "MetalTin104.wav", ",", "MetalTin105.wav", ",", "MetalTin110-2.wav", ",", "MetalTin110.wav", ",", "MetalTin57.wav", ",", "percloop.wav", ",", "piano.wav", ",", "saw.aiff", ",", "snd.aiff", ",", "spring.wav", ",", "SpringMic1.wav", ",", "SpringMic2.wav", ",", "SpringMic3.wav", ",", "SpringMic4.wav", ",", "strings.wav", ",", "tree_rim.wav", ",", "violons1.wav", ",", "violons2.wav", ",", "violons3.wav", ",", "visqueuxGMU.aiff" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -4076,7 +4116,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
+					"destination" : [ "obj-29", 0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -4570,6 +4610,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-4", 1 ],
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-13", 1 ],
 					"source" : [ "obj-24", 0 ]
 				}
@@ -4580,6 +4627,22 @@
 					"destination" : [ "obj-18", 0 ],
 					"midpoints" : [ 406.544869323571675, 328.0, 818.0, 328.0, 818.0, 14.0, 836.25, 14.0 ],
 					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-127", 0 ],
+					"order" : 1,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"order" : 0,
+					"source" : [ "obj-29", 0 ]
 				}
 
 			}
@@ -4694,15 +4757,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
-					"order" : 1,
-					"source" : [ "obj-41", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 1 ],
-					"order" : 0,
 					"source" : [ "obj-41", 0 ]
 				}
 
@@ -5248,10 +5302,10 @@
 			"obj-4::obj-69" : [ "number[16]", "number[16]", 0 ],
 			"obj-4::obj-77::obj-146" : [ "live.gain~[30]", "live.gain~[30]", 0 ],
 			"obj-4::obj-77::obj-147" : [ "live.gain~[31]", "live.gain~[30]", 0 ],
-			"obj-4::obj-77::obj-156::obj-1::obj-11" : [ "live.text[7]", "live.text", 0 ],
-			"obj-4::obj-77::obj-156::obj-1::obj-110" : [ "live.text[6]", "live.text", 0 ],
+			"obj-4::obj-77::obj-156::obj-1::obj-11" : [ "live.text[8]", "live.text", 0 ],
+			"obj-4::obj-77::obj-156::obj-1::obj-110" : [ "live.text[7]", "live.text", 0 ],
 			"obj-4::obj-77::obj-156::obj-1::obj-16" : [ "live.text[9]", "live.text", 0 ],
-			"obj-4::obj-77::obj-156::obj-1::obj-55" : [ "live.text[8]", "live.text", 0 ],
+			"obj-4::obj-77::obj-156::obj-1::obj-55" : [ "live.text[6]", "live.text", 0 ],
 			"obj-4::obj-77::obj-156::obj-1::obj-606" : [ "live.text[10]", "live.text", 0 ],
 			"obj-4::obj-77::obj-156::obj-1::obj-607" : [ "live.button[2]", "live.button", 0 ],
 			"obj-4::obj-77::obj-156::obj-2::obj-1" : [ "live.menu", "live.menu", 0 ],
@@ -5274,8 +5328,6 @@
 			"obj-4::obj-84::obj-39" : [ "live.gain~[20]", "live.gain~", 0 ],
 			"obj-4::obj-84::obj-58" : [ "live.gain~[21]", "live.gain~", 0 ],
 			"obj-4::obj-84::obj-60" : [ "live.gain~[22]", "live.gain~[22]", 0 ],
-			"obj-4::obj-84::obj-64" : [ "live.gain~[23]", "live.gain~[23]", 0 ],
-			"obj-4::obj-84::obj-83" : [ "live.gain~[24]", "live.gain~[23]", 0 ],
 			"obj-66" : [ "Master Gain", "Master Gain", 0 ],
 			"obj-71::obj-11" : [ "live.text[4]", "live.text", 0 ],
 			"obj-71::obj-110" : [ "live.text[5]", "live.text", 0 ],
@@ -5313,11 +5365,11 @@
 				}
 ,
 				"obj-4::obj-77::obj-156::obj-1::obj-11" : 				{
-					"parameter_longname" : "live.text[7]"
+					"parameter_longname" : "live.text[8]"
 				}
 ,
 				"obj-4::obj-77::obj-156::obj-1::obj-110" : 				{
-					"parameter_longname" : "live.text[6]"
+					"parameter_longname" : "live.text[7]"
 				}
 ,
 				"obj-4::obj-77::obj-156::obj-1::obj-16" : 				{
@@ -5325,7 +5377,7 @@
 				}
 ,
 				"obj-4::obj-77::obj-156::obj-1::obj-55" : 				{
-					"parameter_longname" : "live.text[8]"
+					"parameter_longname" : "live.text[6]"
 				}
 ,
 				"obj-4::obj-77::obj-156::obj-1::obj-606" : 				{
@@ -5350,15 +5402,6 @@
 ,
 				"obj-4::obj-84::obj-39" : 				{
 					"parameter_longname" : "live.gain~[20]"
-				}
-,
-				"obj-4::obj-84::obj-64" : 				{
-					"parameter_longname" : "live.gain~[23]",
-					"parameter_shortname" : "live.gain~[23]"
-				}
-,
-				"obj-4::obj-84::obj-83" : 				{
-					"parameter_longname" : "live.gain~[24]"
 				}
 
 			}
