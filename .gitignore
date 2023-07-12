@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,audio,images
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,audio,images
 
+### npm stuff ###
+code/node_modules/
+
 ### Audio ###
 sounds/
 *.asd
