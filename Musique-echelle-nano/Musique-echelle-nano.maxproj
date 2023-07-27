@@ -2,8 +2,8 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3771922831,
-	"viewrect" : [ 568.0, 186.0, 516.0, 797.0 ],
+	"modificationdate" : 3773045304,
+	"viewrect" : [ 952.0, 100.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -466,6 +466,11 @@
 			}
 ,
 			"filtered_exported.csv" : 			{
+				"kind" : "file",
+				"local" : 1
+			}
+,
+			"cell12_filtered_exported.csv" : 			{
 				"kind" : "file",
 				"local" : 1
 			}
