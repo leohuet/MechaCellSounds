@@ -2,7 +2,7 @@
 2, MetalTin104.wav;
 3, MetalTin105.wav;
 4, MetalTin110-2.wav;
-5, fer_gravier01.WAV;
+5, MetalTin105.wav;
 6, SpringMic3.wav;
 7, SpringMic4.wav;
 8, SpringMic1.wav;
