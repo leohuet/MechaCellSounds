@@ -664,7 +664,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 345.789923429489136, 455.935254116058331, 25.0, 22.0 ],
+					"patching_rect" : [ 358.789923429489136, 451.484704692363721, 25.0, 22.0 ],
 					"text" : "t 0."
 				}
 
@@ -676,8 +676,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "float" ],
-					"patching_rect" : [ 307.789923429489136, 333.050338821411117, 63.0, 22.0 ],
-					"text" : "split 0. 10."
+					"patching_rect" : [ 307.789923429489136, 333.050338821411117, 70.0, 22.0 ],
+					"text" : "split 0. 9.99"
 				}
 
 			}
