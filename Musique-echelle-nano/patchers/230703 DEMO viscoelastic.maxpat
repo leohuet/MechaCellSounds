@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1532.0, 1031.0 ],
+		"rect" : [ 34.0, 87.0, 1980.0, 1031.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -221,8 +221,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 986.0, 1290.0, 29.5, 22.0 ],
-					"text" : "*~"
+					"patching_rect" : [ 986.0, 1290.0, 34.0, 22.0 ],
+					"text" : "*~ 1."
 				}
 
 			}
@@ -233,8 +233,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 868.0, 1290.0, 29.5, 22.0 ],
-					"text" : "*~"
+					"patching_rect" : [ 868.0, 1290.0, 34.0, 22.0 ],
+					"text" : "*~ 1."
 				}
 
 			}
@@ -274,7 +274,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 349.5, 1007.267742899736277, 63.0, 75.0 ],
-					"presentation_linecount" : 4,
 					"text" : "load built-in IRC_1040 data",
 					"textjustification" : 1
 				}
@@ -304,7 +303,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 266.5, 1007.267742899736277, 80.0, 75.0 ],
-					"presentation_linecount" : 4,
 					"text" : "load HRTF from default built-in kemar filters",
 					"textjustification" : 1
 				}
@@ -319,7 +317,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 277.5, 1128.267742899736277, 153.0, 37.0 ],
-					"presentation_linecount" : 2,
 					"text" : "open dialog for choosing a SOFA file",
 					"textjustification" : 1
 				}
@@ -375,7 +372,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 561.75, 1007.267742899736277, 94.5, 87.0 ],
-					"presentation_linecount" : 5,
 					"text" : "apply a scaling factor to the ITD (when it is processed independently)",
 					"textjustification" : 1
 				}
@@ -393,7 +389,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 666.0, 1031.267742899736277, 151.0, 75.0 ],
-					"presentation_linecount" : 4,
 					"text" : "use either the ITD provided in the HRTF file ('measurement') or use a geometrical model",
 					"textjustification" : 1
 				}
@@ -548,7 +543,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 162.5, 1035.267742899736277, 100.0, 50.0 ],
-					"presentation_linecount" : 2,
 					"text" : "double-click to open the window",
 					"textjustification" : 1
 				}
@@ -1950,7 +1944,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1158.917775243520737, 501.739045002540024, 128.0, 60.0 ],
-									"presentation_linecount" : 4,
 									"text" : "Stiff levels up when mouse down, then trigger damping on mouse up",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
@@ -7379,11 +7372,11 @@
 			"obj-4::obj-69" : [ "number[16]", "number[16]", 0 ],
 			"obj-4::obj-77::obj-146" : [ "live.gain~[30]", "live.gain~[30]", 0 ],
 			"obj-4::obj-77::obj-147" : [ "live.gain~[31]", "live.gain~[30]", 0 ],
-			"obj-4::obj-77::obj-156::obj-1::obj-11" : [ "live.text[6]", "live.text", 0 ],
-			"obj-4::obj-77::obj-156::obj-1::obj-110" : [ "live.text[8]", "live.text", 0 ],
-			"obj-4::obj-77::obj-156::obj-1::obj-16" : [ "live.text[7]", "live.text", 0 ],
-			"obj-4::obj-77::obj-156::obj-1::obj-55" : [ "live.text[10]", "live.text", 0 ],
-			"obj-4::obj-77::obj-156::obj-1::obj-606" : [ "live.text[9]", "live.text", 0 ],
+			"obj-4::obj-77::obj-156::obj-1::obj-11" : [ "live.text[8]", "live.text", 0 ],
+			"obj-4::obj-77::obj-156::obj-1::obj-110" : [ "live.text[7]", "live.text", 0 ],
+			"obj-4::obj-77::obj-156::obj-1::obj-16" : [ "live.text[9]", "live.text", 0 ],
+			"obj-4::obj-77::obj-156::obj-1::obj-55" : [ "live.text[6]", "live.text", 0 ],
+			"obj-4::obj-77::obj-156::obj-1::obj-606" : [ "live.text[10]", "live.text", 0 ],
 			"obj-4::obj-77::obj-156::obj-1::obj-607" : [ "live.button[2]", "live.button", 0 ],
 			"obj-4::obj-77::obj-156::obj-2::obj-1" : [ "live.menu", "live.menu", 0 ],
 			"obj-4::obj-77::obj-156::obj-2::obj-12::obj-4" : [ "live.numbox", "live.numbox", 0 ],
@@ -7441,23 +7434,23 @@
 				}
 ,
 				"obj-4::obj-77::obj-156::obj-1::obj-11" : 				{
-					"parameter_longname" : "live.text[6]"
-				}
-,
-				"obj-4::obj-77::obj-156::obj-1::obj-110" : 				{
 					"parameter_longname" : "live.text[8]"
 				}
 ,
-				"obj-4::obj-77::obj-156::obj-1::obj-16" : 				{
+				"obj-4::obj-77::obj-156::obj-1::obj-110" : 				{
 					"parameter_longname" : "live.text[7]"
 				}
 ,
+				"obj-4::obj-77::obj-156::obj-1::obj-16" : 				{
+					"parameter_longname" : "live.text[9]"
+				}
+,
 				"obj-4::obj-77::obj-156::obj-1::obj-55" : 				{
-					"parameter_longname" : "live.text[10]"
+					"parameter_longname" : "live.text[6]"
 				}
 ,
 				"obj-4::obj-77::obj-156::obj-1::obj-606" : 				{
-					"parameter_longname" : "live.text[9]"
+					"parameter_longname" : "live.text[10]"
 				}
 ,
 				"obj-4::obj-77::obj-156::obj-1::obj-607" : 				{
