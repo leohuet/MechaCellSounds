@@ -919,7 +919,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 148.307933291367135, 997.0, 365.0, 22.0 ],
 					"text" : "0 0 1 1 1 1 2 0 1 2 1 1 3 0 1 3 1 1 4 0 1 5 1 1 6 0 1 6 1 1 7 0 1 8 1 1"
-<<<<<<< HEAD
 				}
 
 			}
@@ -932,8 +931,6 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 148.307933291367135, 963.0, 58.0, 22.0 ],
 					"text" : "loadbang"
-=======
->>>>>>> a8844d8 (Avancées clean patch)
 				}
 
 			}
@@ -2203,7 +2200,6 @@
 			}
 , 			{
 				"patchline" : 				{
-<<<<<<< HEAD
 					"destination" : [ "obj-42", 0 ],
 					"source" : [ "obj-37", 0 ]
 				}
@@ -2211,8 +2207,6 @@
 			}
 , 			{
 				"patchline" : 				{
-=======
->>>>>>> a8844d8 (Avancées clean patch)
 					"destination" : [ "obj-36", 0 ],
 					"source" : [ "obj-39", 1 ]
 				}
