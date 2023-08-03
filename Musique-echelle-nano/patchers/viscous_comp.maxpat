@@ -434,6 +434,7 @@
 			}
 , 			{
 				"box" : 				{
+<<<<<<< HEAD
 					"id" : "obj-30",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -446,6 +447,8 @@
 			}
 , 			{
 				"box" : 				{
+=======
+>>>>>>> a8844d8 (Avancées clean patch)
 					"id" : "obj-29",
 					"maxclass" : "newobj",
 					"numinlets" : 6,
@@ -757,13 +760,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-32", 0 ],
-					"source" : [ "obj-30", 0 ]
 				}
 
 			}
