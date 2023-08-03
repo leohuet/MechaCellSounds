@@ -42,6 +42,7 @@ var DD_dict = {
 
 temp_array = new Array(13);
 temp_arrayf = new Array(13);
+moyenne_array = new Array(13);
 
 for(var index=0; index < rows.length; index++){
 	var selected_row = rows[index];
@@ -111,11 +112,39 @@ function readTextFile(path){
 }
 
 
-function sort_values(x, y){
-	for(var index=0; index < rows.length; index++){
-		selected_row = rows[index];
-		temp_array[index] = DD_dict[selected_row + '_2D_array'][x+32][y+32];
-		temp_arrayf[index] = parseFloat(DD_dict[selected_row + '_2D_array'][x+32][y+32]);
+function sort_values(x, y, s){
+	var addition = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	var xys = points_distance(x+32, y+32, s);
+	for(var j=0; j<xys.length/2; j++){
+		for(var index=0; index < rows.length; index++){
+			selected_row = rows[index];
+			temp_arrayf[index] = parseFloat(DD_dict[selected_row + '_2D_array'][xys[j*2]][xys[j*2+1]]);
+			addition[index] = addition[index] + temp_arrayf[index];
+		}
 	}
-	outlet(0, temp_arrayf);
+	for(var e=0; e<addition.length; e++){
+		moyenne = addition[e]/(xys.length/2);
+		moyenne_array[e] = moyenne;
+	}
+	outlet(0, moyenne_array);
 }
+
+function points_distance(x, y, s){
+	var distances = [0, Math.sqrt(2), Math.sqrt(2), Math.sqrt(8), Math.sqrt(8)];
+	var center = 0;
+	var points = [];
+	if(s == 1 || s == 3){
+		center = 0.5;
+	}
+	for(var x1=0; x1<64; x1++){
+		for(var y1=0; y1<64; y1++){
+			var distance = Math.sqrt(Math.pow(x+center-x1, 2)+ Math.pow(y+center-y1, 2));
+			if(distance <= distances[s]){
+				points.push(x1);
+				points.push(y1);
+			}
+		}
+	}
+	return points;
+}
+			
