@@ -66,7 +66,7 @@ function readTextFile(path){
   	}
   	var text = '';
   	var eof = file.eof;
-	outlet(2, eof);
+	post(eof);
 	for(var i=0; i < eof; i +=1024){
 		text += file.readchars(1024).join('');
 	}
@@ -117,6 +117,5 @@ function sort_values(x, y){
 		temp_array[index] = DD_dict[selected_row + '_2D_array'][x+32][y+32];
 		temp_arrayf[index] = parseFloat(DD_dict[selected_row + '_2D_array'][x+32][y+32]);
 	}
-	// outlet(0, temp_array);
 	outlet(0, temp_arrayf);
 }

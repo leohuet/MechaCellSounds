@@ -2,7 +2,7 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3773045304,
+	"modificationdate" : 3773902647,
 	"viewrect" : [ 952.0, 100.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -21,11 +21,6 @@
 				"local" : 1
 			}
 ,
-			"damping.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"damping_fft.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -36,28 +31,33 @@
 				"local" : 1
 			}
 ,
-			"pathfinder.maxpat" : 			{
+			"n4m.monitor.maxpat" : 			{
 				"kind" : "patcher"
 			}
 ,
-			"pfft2.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"thru.maxpat" : 			{
+			"pathfinder.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
 			"pluggo.dryWet2~.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
+				"kind" : "patcher"
 			}
 ,
 			"pluggo.dryWet3~.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
+				"kind" : "patcher"
+			}
+,
+			"pluggo.dryWet~.maxpat" : 			{
+				"kind" : "patcher"
+			}
+,
+			"pluggo.hip1~.maxpat" : 			{
+				"kind" : "patcher"
+			}
+,
+			"pluggo.lop1~.maxpat" : 			{
+				"kind" : "patcher"
 			}
 ,
 			"socketreceive.maxpat" : 			{
@@ -66,6 +66,20 @@
 			}
 ,
 			"spaceecho.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"spat5.monitor.maxpat" : 			{
+				"kind" : "patcher"
+			}
+,
+			"thru.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"stiff_comp.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -85,12 +99,12 @@
 				"local" : 1
 			}
 ,
-			"fft_interpolation.maxpat" : 			{
+			"damping.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"input.maxpat" : 			{
+			"fft_interpolation.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -386,6 +400,24 @@
 		}
 ,
 		"code" : 		{
+			"attenuation_coef.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"fit_jweb_to_bounds.js" : 			{
+				"kind" : "javascript"
+			}
+,
+			"moyenne.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"resize_n4m_monitor_patcher.js" : 			{
+				"kind" : "javascript"
+			}
+,
 			"server.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
@@ -395,11 +427,26 @@
 				"kind" : "javascript",
 				"local" : 1
 			}
+,
+			"arrayoui.js" : 			{
+				"kind" : "javascript",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/code",
+					"projectrelativepath" : "./code"
+				}
+
+			}
 
 		}
 ,
 		"data" : 		{
 			"coolelasticsf.txt" : 			{
+				"kind" : "textfile",
+				"local" : 1
+			}
+,
+			"positions.txt" : 			{
 				"kind" : "textfile",
 				"local" : 1
 			}
@@ -413,11 +460,42 @@
 				"kind" : "textfile",
 				"local" : 1
 			}
+,
+			"package-lock.json" : 			{
+				"kind" : "json",
+				"local" : 1
+			}
+,
+			"package.json" : 			{
+				"kind" : "json",
+				"local" : 1
+			}
 
 		}
 ,
 		"externals" : 		{
 			"bufGranul~.mxo" : 			{
+				"kind" : "object",
+				"local" : 1
+			}
+,
+			"spat5.binaural~.mxo" : 			{
+				"kind" : "object"
+			}
+,
+			"spat5.cpu.mxo" : 			{
+				"kind" : "object"
+			}
+,
+			"spat5.hostinfos.mxo" : 			{
+				"kind" : "object"
+			}
+,
+			"spat5.sofa.loader.mxo" : 			{
+				"kind" : "object"
+			}
+,
+			"spat5.viewer.mxo" : 			{
 				"kind" : "object",
 				"local" : 1
 			}
@@ -451,11 +529,6 @@
 				"kind" : "object",
 				"local" : 1
 			}
-,
-			"spat5.viewer.mxo" : 			{
-				"kind" : "object",
-				"local" : 1
-			}
 
 		}
 ,
@@ -471,6 +544,11 @@
 			}
 ,
 			"cell12_filtered_exported.csv" : 			{
+				"kind" : "file",
+				"local" : 1
+			}
+,
+			"0727filtered_exported.csv" : 			{
 				"kind" : "file",
 				"local" : 1
 			}
