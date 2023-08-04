@@ -2,7 +2,7 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3773989013,
+	"modificationdate" : 3774002396,
 	"viewrect" : [ 952.0, 100.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -99,11 +99,6 @@
 				"local" : 1
 			}
 ,
-			"damping.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"fft_interpolation.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -122,19 +117,19 @@
 		}
 ,
 		"media" : 		{
-			"amb.wav" : 			{
-				"kind" : "audiofile",
+			"macrophage.png" : 			{
+				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"macrophage.png" : 			{
+			"scale.png" : 			{
 				"kind" : "imagefile",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/pics",
-					"projectrelativepath" : "./pics"
-				}
-
+				"local" : 1
+			}
+,
+			"amb.wav" : 			{
+				"kind" : "audiofile",
+				"local" : 1
 			}
 ,
 			"AmbienceHunter.wav" : 			{
@@ -447,6 +442,16 @@
 				}
 
 			}
+,
+			"damping.gendsp" : 			{
+				"kind" : "gendsp",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
+			}
 
 		}
 ,
@@ -468,7 +473,12 @@
 ,
 			"exported.txt" : 			{
 				"kind" : "textfile",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/code",
+					"projectrelativepath" : "./code"
+				}
+
 			}
 ,
 			"package-lock.json" : 			{
