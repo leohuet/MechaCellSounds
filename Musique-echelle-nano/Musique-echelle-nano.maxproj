@@ -2,7 +2,7 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3773902647,
+	"modificationdate" : 3773989013,
 	"viewrect" : [ 952.0, 100.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -125,6 +125,16 @@
 			"amb.wav" : 			{
 				"kind" : "audiofile",
 				"local" : 1
+			}
+,
+			"macrophage.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/pics",
+					"projectrelativepath" : "./pics"
+				}
+
 			}
 ,
 			"AmbienceHunter.wav" : 			{
@@ -463,12 +473,22 @@
 ,
 			"package-lock.json" : 			{
 				"kind" : "json",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/code",
+					"projectrelativepath" : "./code"
+				}
+
 			}
 ,
 			"package.json" : 			{
 				"kind" : "json",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/code",
+					"projectrelativepath" : "./code"
+				}
+
 			}
 
 		}
@@ -533,24 +553,54 @@
 		}
 ,
 		"other" : 		{
-			"exported.csv" : 			{
+			"230630_exported.csv" : 			{
 				"kind" : "file",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
+					"projectrelativepath" : "./data"
+				}
+
 			}
 ,
-			"filtered_exported.csv" : 			{
+			"230630_filtered_exported.csv" : 			{
 				"kind" : "file",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
+					"projectrelativepath" : "./data"
+				}
+
 			}
 ,
-			"cell12_filtered_exported.csv" : 			{
+			"230724_cell12_filtered_exported.csv" : 			{
 				"kind" : "file",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
+					"projectrelativepath" : "./data"
+				}
+
 			}
 ,
-			"0727filtered_exported.csv" : 			{
+			"230727_filtered_exported.csv" : 			{
 				"kind" : "file",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
+					"projectrelativepath" : "./data"
+				}
+
+			}
+,
+			"230804_macrophage1.csv" : 			{
+				"kind" : "file",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
+					"projectrelativepath" : "./data"
+				}
+
 			}
 
 		}

@@ -40,7 +40,6 @@ var DD_dict = {
 'F0Tn_2D_array': [],
 }
 
-temp_array = new Array(13);
 temp_arrayf = new Array(13);
 moyenne_array = new Array(13);
 
@@ -60,6 +59,7 @@ for(var index=0; index < rows.length; index++){
 //============================================================================//
 
 function readTextFile(path){
+	// Read the csv file from the path in argument
 	var file = new File(path, 'read', 'TEXT');
   	if (!file.isopen) {
     	error('Could not open file: ' + path + '\n');
@@ -68,13 +68,17 @@ function readTextFile(path){
   	var text = '';
   	var eof = file.eof;
 	post(eof);
+	
+	// Get all the content of the file and split it into each line
 	for(var i=0; i < eof; i +=1024){
 		text += file.readchars(1024).join('');
 	}
 	var lines = text.split('\n');
-	outlet(1, 'rows', lines.length);
-	var cols = rows.length;
-	outlet(1, 'cols', cols);
+	// outlet(1, 'rows', lines.length);
+	// var cols = rows.length;
+	// outlet(1, 'cols', cols);
+	
+	// Split each line into 13 cells and assign them to the array
 	for(var j=1; j < lines.length; j++){
 		var cells = lines[j].split(',');
 		D_dict['E_array'][j-1] = cells[0];
@@ -90,10 +94,12 @@ function readTextFile(path){
 		D_dict['betaTn_array'][j-1] = cells[10];
 		D_dict['tcTn_array'][j-1] = cells[11];
 		D_dict['F0Tn_array'][j-1] = cells[12];
-		for(var k=0; k < cells.length; k++){
-			outlet(1, 'set', k, j, cells[k]);
-		}
+		// for(var k=0; k < cells.length; k++){
+			// outlet(1, 'set', k, j, cells[k]);
+		// }
 	}
+	
+	// Rebuild the array to re order the data into a 2D array
 	var i = 0;
 	for(var index=0; index < rows.length; index++){
 		var selected_row = rows[index];
@@ -115,6 +121,8 @@ function readTextFile(path){
 function sort_values(x, y, s){
 	var addition = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 	var xys = points_distance(x+32, y+32, s);
+	
+	// Retrieve the data at each point from xys array and add them in the addition array
 	for(var j=0; j<xys.length/2; j++){
 		for(var index=0; index < rows.length; index++){
 			selected_row = rows[index];
@@ -122,14 +130,18 @@ function sort_values(x, y, s){
 			addition[index] = addition[index] + temp_arrayf[index];
 		}
 	}
+	
+	// Measure each mean value for the 13 rows
 	for(var e=0; e<addition.length; e++){
 		moyenne = addition[e]/(xys.length/2);
 		moyenne_array[e] = moyenne;
 	}
+	
 	outlet(0, moyenne_array);
 }
 
 function points_distance(x, y, s){
+	// Get all the points around the xy input within a chosen distance
 	var distances = [0, Math.sqrt(2), Math.sqrt(2), Math.sqrt(8), Math.sqrt(8)];
 	var center = 0;
 	var points = [];

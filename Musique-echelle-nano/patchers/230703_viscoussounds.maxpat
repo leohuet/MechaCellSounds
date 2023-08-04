@@ -211,12 +211,12 @@
 				"box" : 				{
 					"bgcolor" : [ 0.603921568627451, 0.145098039215686, 0.796078431372549, 1.0 ],
 					"id" : "obj-62",
-					"linecount" : 9,
+					"linecount" : 11,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 856.0, 189.264393401546386, 202.314285714285688, 127.0 ],
-					"text" : "VISCO-ELASTICITY (BETA) MAPPING :\n- Envelop changes\n- BufGranul Soundfile changes\n- Grains length changes\n- Viscous com levels\n- Viscous effects dry/wet\n- Chances de l'impact bufgranul elastic",
+					"patching_rect" : [ 856.0, 189.264393401546386, 202.314285714285688, 154.0 ],
+					"text" : "VISCO-ELASTICITY (BETA) MAPPING :\n- Envelop changes\n- BufGranul Soundfile changes\n- Grains length changes\n- Viscous com levels\n- Viscous effects dry/wet\n- Chances de l'impact bufgranul elastic\n- Attenuation du son au cours du temps",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
