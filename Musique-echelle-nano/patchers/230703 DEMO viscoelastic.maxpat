@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1566.0, 1031.0 ],
+		"rect" : [ 34.0, 87.0, 1980.0, 1031.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -225,7 +225,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 132.0, 667.0, 58.0, 22.0 ],
+					"patching_rect" : [ 33.63042676448822, 440.063036441802979, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -4478,7 +4478,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 333.0, 1608.0, 289.0, 297.0 ],
+						"rect" : [ 882.0, 1565.0, 289.0, 297.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4506,6 +4506,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"comment" : "",
@@ -8442,7 +8443,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.486274509803922, 0.603921568627451, 0.776470588235294, 1.0 ],
 					"htricolor" : [ 1.0, 0.686274509803922, 0.486274509803922, 1.0 ],
 					"id" : "obj-57",
 					"maxclass" : "number",
@@ -8703,7 +8703,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.486274509803922, 0.603921568627451, 0.776470588235294, 1.0 ],
 					"id" : "obj-48",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -8781,7 +8780,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.486274509803922, 0.603921568627451, 0.776470588235294, 1.0 ],
 					"id" : "obj-106",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -8811,7 +8809,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.486274509803922, 0.603921568627451, 0.776470588235294, 1.0 ],
 					"id" : "obj-102",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -8841,7 +8838,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.486274509803922, 0.603921568627451, 0.776470588235294, 1.0 ],
 					"id" : "obj-74",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -10065,7 +10061,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 132.0, 698.010926246643066, 376.0, 132.0 ],
+					"patching_rect" : [ 33.63042676448822, 471.073962688446045, 376.0, 132.0 ],
 					"viewvisibility" : 1
 				}
 
