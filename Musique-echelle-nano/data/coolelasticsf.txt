@@ -10,6 +10,7 @@
 10, crépitements.02.WAV;
 11, Bubbles5.wav;
 12, strings.wav;
+13, bells.wav;
 14, AMB_MER_TOULON.WAV;
 15, BakedBeans4.wav;
 16, DeepNoisySlime.wav;

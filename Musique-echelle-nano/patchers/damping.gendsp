@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "dsp.gen",
-		"rect" : [ 34.0, 87.0, 1404.0, 959.0 ],
+		"rect" : [ 141.0, 1180.0, 1444.0, 848.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -52,7 +52,7 @@
 			}
 , 			{
 				"box" : 				{
-					"code" : "attenuation = 0;\r\namplitude = 1;\r\naf = 2*PI*in2;\r\nif(in3==1){\r\n\tattenuation = in1*(pow(af, 2)/(3*pow(1500, 3)));\r\n}\r\nelse{\r\n\tattenuation = 0;\r\n}\r\n\r\namplitude = exp(-attenuation);\r\nout1 = amplitude;",
+					"code" : "attenuation = 0;\r\namplitude = 1;\r\naf = 2*PI*in2;\r\nif(in3==1){\r\n\tattenuation = 10*in1*(pow(af, 2)/(3*pow(1500, 3)));\r\n}\r\nelse{\r\n\tattenuation = 0;\r\n}\r\n\r\namplitude = exp(-attenuation);\r\nout1 = amplitude;",
 					"fontface" : 0,
 					"fontname" : "<Monospaced>",
 					"fontsize" : 12.0,
@@ -208,8 +208,7 @@
 				}
 
 			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

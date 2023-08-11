@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1980.0, 1031.0 ],
+		"rect" : [ 141.0, 1180.0, 1444.0, 848.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "audio_template",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 975.0, 235.0, 50.0, 22.0 ],
+					"text" : "0"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-81",
 					"maxclass" : "newobj",
@@ -95,7 +107,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 941.0, 116.0, 105.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "elastic_zones.js",
+						"filename" : "/Users/poire/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/code/elastic_zones.js",
 						"parameter_enable" : 0
 					}
 ,
@@ -331,7 +343,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 1523.680000000000291, 318.985710442066193, 39.0, 22.0 ],
-					"text" : ">= 50"
+					"text" : ">= 90"
 				}
 
 			}
@@ -2891,7 +2903,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 1 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-72", 1 ]
 				}
 
@@ -2906,7 +2918,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 1 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-72", 1 ]
 				}
 
@@ -2924,6 +2936,14 @@
 					"destination" : [ "obj-157", 1 ],
 					"order" : 0,
 					"source" : [ "obj-72", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-25", 1 ],
+					"order" : 0,
+					"source" : [ "obj-72", 1 ]
 				}
 
 			}
