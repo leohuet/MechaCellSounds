@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 1180.0, 1444.0, 848.0 ],
+		"rect" : [ 34.0, 100.0, 1444.0, 848.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -106,8 +106,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 600.958310008049011, 136.229167878627777, 75.0, 22.0 ],
-					"text" : "r #0_betaj"
+					"patching_rect" : [ 600.958310008049011, 136.229167878627777, 79.0, 22.0 ],
+					"text" : "r #1_betaj"
 				}
 
 			}
@@ -337,8 +337,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 340.0, 26.880367615302703, 117.0, 22.0 ],
-					"text" : "r #0_launchsound"
+					"patching_rect" : [ 340.0, 26.880367615302703, 121.0, 22.0 ],
+					"text" : "r #1_launchsound"
 				}
 
 			}
@@ -350,8 +350,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 267.0, 50.880367615302703, 100.0, 22.0 ],
-					"text" : "r #0_elastictrig"
+					"patching_rect" : [ 267.0, 50.880367615302703, 103.0, 22.0 ],
+					"text" : "r #1_elastictrig"
 				}
 
 			}
@@ -373,7 +373,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 768.0, 1238.0, 640.0, 703.0 ],
+						"rect" : [ 527.0, 369.0, 640.0, 703.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -421,8 +421,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 179.595640659332275, 283.735043168067932, 75.0, 22.0 ],
-									"text" : "r #0_betaj"
+									"patching_rect" : [ 179.595640659332275, 283.735043168067932, 79.0, 22.0 ],
+									"text" : "r #1_betaj"
 								}
 
 							}
@@ -977,8 +977,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 239.599383506774984, 131.503869533538818, 75.0, 22.0 ],
-									"text" : "r #0_betaj"
+									"patching_rect" : [ 239.599383506774984, 131.503869533538818, 79.0, 22.0 ],
+									"text" : "r #1_betaj"
 								}
 
 							}
