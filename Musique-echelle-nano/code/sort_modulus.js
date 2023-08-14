@@ -7,6 +7,7 @@ outlets = 5
 
 rows = ['Zc', 'E0Tn', 'betaTn'];
 
+var D_dict;
 var DD_dict = {
 'Zc_2D_array': [],
 'E0Tn_2D_array': [],
@@ -25,22 +26,23 @@ for(var index=0; index < rows.length; index++){
 		}
 	}
 }
-
-var all_data = [];
 var selection = 0;
-
+var all_data = [];
 
 //============================================================================//
 //                                 FUNCTIONS                                  //
 //============================================================================//
 
 function init(){
+	
+	all_data = [];
+	D_dict = {
+		'Zc_array': [],
+		'E0Tn_array': [],
+		'betaTn_array': [],
+	}
+	
 	for(var cell=0; cell<arguments.length; cell++){
-		var D_dict = {
-			'Zc_array': [],
-			'E0Tn_array': [],
-			'betaTn_array': [],
-		}
 		
 		// Read the csv file from the path in argument
 		var file = new File(arguments[cell], 'read', 'TEXT');
