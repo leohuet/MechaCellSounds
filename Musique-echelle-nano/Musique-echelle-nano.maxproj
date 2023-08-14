@@ -2,7 +2,7 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3774002396,
+	"modificationdate" : 3774864593,
 	"viewrect" : [ 952.0, 100.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -16,7 +16,7 @@
 				"toplevel" : 1
 			}
 ,
-			"230703_viscoussounds.maxpat" : 			{
+			"USER.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -94,7 +94,17 @@
 				"local" : 1
 			}
 ,
+			"viscous_stiff_levels.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"vocoder.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"230703_viscoussounds.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -117,7 +127,7 @@
 		}
 ,
 		"media" : 		{
-			"macrophage.png" : 			{
+			"macrophage1.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
@@ -125,6 +135,16 @@
 			"scale.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
+			}
+,
+			"macrophage.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 ,
 			"amb.wav" : 			{
@@ -405,7 +425,12 @@
 		}
 ,
 		"code" : 		{
-			"attenuation_coef.js" : 			{
+			"damping.gendsp" : 			{
+				"kind" : "gendsp",
+				"local" : 1
+			}
+,
+			"elastic_zones.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
@@ -433,22 +458,17 @@
 				"local" : 1
 			}
 ,
+			"attenuation_coef.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"arrayoui.js" : 			{
 				"kind" : "javascript",
 				"local" : 1,
 				"singleton" : 				{
 					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/code",
 					"projectrelativepath" : "./code"
-				}
-
-			}
-,
-			"damping.gendsp" : 			{
-				"kind" : "gendsp",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
-					"projectrelativepath" : "./patchers"
 				}
 
 			}

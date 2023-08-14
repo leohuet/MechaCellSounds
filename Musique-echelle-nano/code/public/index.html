@@ -13,6 +13,8 @@
     ></script>
     <script src="js/socket.io.js"></script>
     <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/pressure.js"></script>
+    <script type="text/javascript" src="js/jquery.pressure.js"></script>
   </head>
 
   <body>
@@ -23,25 +25,63 @@
 
     var socket = io();
     socket.connect('http://127.0.0.1:8000');
+    var pressure = false;
+    var users = [];
+    var user = 0;
 
-    document.body.addEventListener("touchstart", startTouch);
-    document.body.addEventListener("touchend", endTouch);
-
-    function startTouch(){
-      socket.send('touch 1');
-    }
-
-    function endTouch(){
-      socket.send('touch 0');
-    }
-
-    function send_xy(x, y){
-      message = str(x) + ' ' + str(y);
-      socket.send(message);
-    }
+    socket.on("connection", function(id){
+      // if(!users.includes(id)){
+      //   users.push(id);
+      // }
+      if(user == 0){
+        user = id;
+      }
+      console.log(user);
+    });
 
     function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    document.body.addEventListener("touchstart", function(){
+      socket.send(`${user} touch 1`);
+    });
+    document.body.addEventListener("touchend", function(){
+      socket.send(`${user} touch 0`);
+    });
+
+    Pressure.set('body', {
+      start: function(){
+        pressure = true;
+      },
+      end: function(){
+
+      },
+      change: function(force, event){
+        sizeCercle(force, true);
+      },
+      unsupported: function(){
+        pressure = false;
+      }
+    });
+
+    console.log(pressure)
+
+    var old_x = 0;
+    var old_y = 0;
+
+    function send_xy(x, y, size){
+      message = `${user} ${x} ${y} ${size}`;
+      socket.send(message);
+      if(Math.abs(x-old_x)*100<1 && Math.abs(y-old_y)*100<1 && !pressure){
+        sizeCercle(0, false);
+      }
+      else if(!pressure){
+        resetForce();
+      }
+      sleep(200);
+      old_x = x;
+      old_y = y;
     }
 
     socket.on("accessToken", async function(accessToken){

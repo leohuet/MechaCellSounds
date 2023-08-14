@@ -5,6 +5,7 @@ var io        =     require("socket.io")(http);
 const path = require('path');
 const Max = require('max-api');
 
+num_users = 0;
 
 // ========== Pages ========== //
 // Allows acess to all files inside 'public' folder.
@@ -22,9 +23,17 @@ function sleep(ms) {
 // ========== SOCKET.IO ========== //
 /*  This is auto initiated event when Client connects to the server  */
 io.on('connection',function(socket){
-    console.log("A user is connected");
+    console.log(socket.id + ' connected');
+    users = socket.client.conn.server.clientsCount;
+    console.log(users + " users connected" );
+    io.emit('connection', socket.id);
+    Max.outlet(users, socket.id);
     socket.on('message',function(event){
-        Max.outlet(event);
+        Max.outlet(0, event);
+    });
+    socket.on('disconnect', function(data){
+        users -= 1;
+        console.log(users + " users connected" );
     });
 });
 
