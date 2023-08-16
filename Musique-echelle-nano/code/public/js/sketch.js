@@ -4,10 +4,6 @@ var windowHeight = window.innerHeight;
 var size = 30;
 var nopressuresize = 30;
 
-function preload(){
-  // theShader = loadShader('texture.vert','texture.frag');
-}
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   console.log(windowWidth);
@@ -36,11 +32,10 @@ function resetForce(){
 
 function draw() {
   background(0);
-  send_xy(mouseX/windowWidth, mouseY/windowHeight, size);
-  translate(mouseX, mouseY);
-  push();
-  fill(200);
-  circle(0, 0, size);
-  pop();
-
+  if(user_launched){
+    send_xy(mouseX/windowWidth, mouseY/windowHeight, size);
+    translate(mouseX, mouseY);
+    fill(200);
+    circle(0, 0, size);
+  }
 }
