@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1566.0, 1031.0 ],
+		"rect" : [ 34.0, 87.0, 1980.0, 1031.0 ],
 		"bglocked" : 1,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -3232,7 +3232,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "monocyte1.png",
+				"name" : "macrophage2.png",
 				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics",
 				"patcherrelativepath" : "../media/pics",
 				"type" : "PNG",

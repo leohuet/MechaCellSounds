@@ -8,8 +8,316 @@ basic
 
 body {
      position: absolute;
+     margin: 0;
      padding: 0;
      width: 100vw;
      height: 100vh;
      overflow: hidden;
+     font-family: 'Futura', sans-serif;
+     background-color: white;
+     color: black;
+}
+
+@media screen and (orientation: portrait) {
+     #choix_user {
+          position: absolute;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: 0 200;
+          border: 1px solid white;
+     }
+     
+     #choix_user button {
+          display: block;
+          position: static;
+          flex-shrink: 1;
+          height: 50px;
+          width: 100px;
+          margin: 10px;
+          padding: 10px;
+          border: 2px solid black;
+          border-radius: 5px;
+          background-color: #666;
+          color: azure;
+          font-size: 20px;
+     }
+}
+
+@media screen and (orientation: landscape) {
+     #choix_user {
+          position: absolute;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-around;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: 0 200;
+          border: 1px solid white;
+     }
+     
+     #choix_user button {
+          display: block;
+          position: static;
+          flex-shrink: 1;
+          height: 70px;
+          width: 100px;
+          margin: 10px;
+          padding: 10px;
+          border: 2px solid black;
+          border-radius: 5px;
+          background-color: #666;
+          color: azure;
+          font-size: 20px;
+     }
+}
+
+
+/*---------------------------------------------------------------------
+Settings
+---------------------------------------------------------------------*/
+
+@media screen and (orientation: portrait) {
+     #settings {
+          position: absolute;
+          height: auto;
+          width: auto;
+          top: 0;
+          right: 0;
+          left: auto;
+          display: none;
+          flex-direction: column;
+          justify-content: start;
+          background-color: transparent;
+     }
+     
+     #settings_content {
+          display: block;
+          position: static;
+          padding: 10px 20px;
+          font-size: 16px;
+          opacity: 0;
+          transform: translateX(100%);
+     }
+     
+     #settings_button {
+          display: block;
+          position: static;
+          align-self: flex-end;
+          width: 50px;
+          height: 50px;
+          padding: 20px 20px;
+     }
+     
+     #settings_button img {
+          width: 100%;
+          height: 100%;
+     }
+     
+     #settings_title {
+          font-size: 20px;
+          text-decoration: underline;
+          margin-bottom: 20px;
+          text-align: center;
+     }
+     
+     #settings_content_slider {
+          margin-bottom: 20px;
+          color: orange;
+     }
+}
+
+@media screen  and (orientation: landscape) {
+     #settings {
+          position: absolute;
+          height: auto;
+          width: auto;
+          top: 0;
+          right: 0;
+          left: auto;
+          display: none;
+          flex-direction: column;
+          justify-content: start;
+          background-color: transparent;
+     }
+     
+     #settings_content {
+          display: block;
+          position: static;
+          margin-top: -100px;
+          padding: 10px 20px;
+          font-size: 16px;
+          opacity: 0;
+          transform: translateX(100%);
+     }
+     
+     #settings_button {
+          display: block;
+          position: static;
+          align-self: flex-end;
+          width: 50px;
+          height: 50px;
+          padding: 20px 20px;
+     }
+     
+     #settings_button img {
+          width: 100%;
+          height: 100%;
+     }
+     
+     #settings_title {
+          font-size: 20px;
+          text-decoration: underline;
+          margin-bottom: 20px;
+          text-align: center;
+     }
+     
+     #settings_content_slider {
+          margin-bottom: 20px;
+          color: orange;
+     }
+}
+
+
+
+/*---------------------------------------------------------------------
+Menu déroulant 
+---------------------------------------------------------------------*/
+
+#settings_content ul{
+     list-style-type: none;
+     padding-inline-start: 0px;
+}
+
+#settings_content ul li {
+     position: relative;
+     float: left;
+     text-align: left;
+     min-width: 150px;
+     max-width: 220px;
+}
+
+#settings_content ul::after {
+     content: "";
+     clear: both;
+     display: table;
+}
+
+#settings_content ul li a {
+     display: block;
+     padding: 8px 16px;
+     text-decoration: none;
+     border-bottom: 2px solid transparent;
+}
+
+#settings_content ul li a:hover {
+     color: orange;
+     border-bottom: 2px solid gold;
+}
+
+.deroulant > a::after{
+     content: "\25BC";
+     font-size: 10px;
+     margin-left: 5px;
+}
+
+#sous{
+     position: absolute;
+     display: none;
+     flex-direction: column;
+     align-items: left;
+     justify-content: start;
+     margin-bottom: 20px;
+     margin-left: 0;
+     box-shadow: 0px 1px 2px #CCC;
+     background-color: #111;
+     z-index: 10;
+     width: 100%;
+}
+
+#sous li{
+     float: none;
+     text-align: center;
+}
+
+#sous li a{
+     background-color: aliceblue;
+}
+
+
+/*---------------------------------------------------------------------
+Sound Toggles
+---------------------------------------------------------------------*/
+
+.sound_toggles {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     margin-bottom: 20px;
+}
+
+.sound_toggles h6 {
+     margin: 0 10px;
+     font-family: "Futura", sans-serif;
+     font-size: 16px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+     position: relative;
+     display: inline-block;
+     width: 60px;
+     height: 34px;
+}
+
+
+   
+/* Hide default HTML checkbox */
+.switch input {
+     opacity: 0;
+     width: 0;
+     height: 0;
+}
+   
+/* The toggle */
+.toggle {
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     border-radius: 34px;
+     background-color: #ccc;
+     -webkit-transition: .4s;
+     transition: .4s;
+}
+   
+.toggle:before {
+     position: absolute;
+     content: "";
+     height: 26px;
+     width: 26px;
+     left: 4px;
+     bottom: 4px;
+     border-radius: 50%;
+     background-color: white;
+     -webkit-transition: .4s;
+     transition: .4s;
+}
+
+input:checked + .toggle {
+     background-color: orange;
+}
+
+input:checked + .toggle:before {
+     -webkit-transform: translateX(26px);
+     -ms-transform: translateX(26px);
+     transform: translateX(26px);
 }

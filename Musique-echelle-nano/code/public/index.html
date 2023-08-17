@@ -17,42 +17,6 @@
     <script type="text/javascript" src="js/jquery.pressure.js"></script>
   </head>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-
-    #choix_user {
-      position: absolute;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin: 0 200;
-      border: 1px solid black;
-    }
-
-    #choix_user button {
-      display: block;
-      position: static;
-      flex-shrink: 1;
-      height: 50px;
-      width: 100px;
-      margin: 10px;
-      padding: 10px;
-      border: 1px solid black;
-      border-radius: 5px;
-      background-color: white;
-      font-size: 20px;
-      font-family: 'Courier New', Courier, monospace;
-    }
-  </style>
-
   <body>
 
     <div id="choix_user">
@@ -66,95 +30,57 @@
       <button id="user8" onclick="choixUser(8)">User 8</button>
     </div>
 
-    <div id="script"><script src="js/sketch.js"></script></div>
+    <div id="settings">
+      <div id="settings_button">
+        <img src="./imgs/settings.png" onclick="showHideSettings()"></img>
+      </div>
+      <div id="settings_content">
+        <div id="settings_title">Settings</div>
+        <ul>
+          <li class="deroulant">
+            <a id="titre_menu" href="#" onclick="displayMenu(0)">Sélection de la cellule</a>
+            <ul id="sous">
+              <li><a href="#" onclick="displayMenu(1)">Macrophage 1</a></li>
+              <li><a href="#" onclick="displayMenu(2)">Macrophage 2</a></li>
+              <li><a href="#" onclick="displayMenu(3)">Monocyte 1</a></li>
+              <li><a href="#" onclick="displayMenu(4)">Monocyte 2</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="sound_toggles">
+          <label class="switch">
+            <input type="checkbox" onclick="activeSounds(0)">
+            <span class="toggle"></span>
+          </label>
+          <h6>Composition visqueuse</h6>
+        </div>
+        <div class="sound_toggles">
+          <label class="switch">
+            <input type="checkbox" onclick="activeSounds(1)">
+            <span class="toggle"></span>
+          </label>
+          <h6>Composition rigide</h6>
+        </div>
+        <div class="sound_toggles">
+          <label class="switch">
+            <input type="checkbox" onclick="activeSounds(2)">
+            <span class="toggle"></span>
+          </label>
+          <h6>Composition élastique</h6>
+        </div>
+        <div id="settings_content_title">Force</div>
+        <div id="settings_content_slider">
+          <input type="range" min="0" max="100" value="0" class="slider">
+        </div>
+        <div id="settings_content_title">Size</div>
+        <div id="settings_content_slider">
+          <input type="range" min="0" max="100" value="0" class="slider"  onchange="sliderSize(value)">
+        </div>
+      </div>
+    </div>
 
-    <script>
-
-    var socket = io();
-    socket.connect('http://127.0.0.1:8000');
-    var pressure = false;
-    var user = 0;
-    const script = document.getElementById('script');
-    const choix_user = document.getElementById('choix_user');
-    const users_buttons = choix_user.children;
-    var user_launched = false;
-    let socketid;
-
-    // Socket message sent from server when a client connects
-    // It shows the buttons for the users that are not currently used
-    socket.on("users", function(users_list, id){
-        console.log('init');
-        socketid = id;
-        choix_user.style.display = 'flex';
-        for(let i=0; i<users_list.length; i++){
-          if(users_list[i] == 0){
-          users_buttons[i].style.display = 'none';
-          }
-          else{
-            users_buttons[i].style.display = 'block';
-          }
-        }
-    });
-
-    // Function triggered when client clicks to chose a user
-    // It sends a message to the server to tell which user is chosen
-    // It hides the buttons and shows the canvas
-    function choixUser(user_sel){
-      user = user_sel;
-      console.log('user' + user + ' choisi');
-      user_launched = true;
-      choix_user.style.display = 'none';
-      socket.send(`${user} link ${socketid}`);
-    }
-
-    function sleep(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
-
-    // Functions triggered when client touches the screen
-    document.body.addEventListener("touchstart", function(){
-      socket.send(`${user} touch 1`);
-    });
-    document.body.addEventListener("touchend", function(){
-      socket.send(`${user} touch 0`);
-    });
-
-    // Functions handling the pressure (when available on your device)
-    Pressure.set('body', {
-      start: function(){
-        pressure = true;
-      },
-      end: function(){
-
-      },
-      change: function(force, event){
-        sizeCercle(force, true);
-      },
-      unsupported: function(){
-        pressure = false;
-      }
-    });
-
-    var old_x = 0;
-    var old_y = 0;
-
-    // Function to send the coordinates of the touch to the server
-    function send_xy(x, y, size){
-      message = `${user} ${x} ${y} ${size}`;
-      socket.send(message);
-      if(Math.abs(x-old_x)*100<1 && Math.abs(y-old_y)*100<1 && !pressure){
-        sizeCercle(0, false);
-      }
-      else if(!pressure){
-        resetForce();
-      }
-      sleep(200);
-      old_x = x;
-      old_y = y;
-    }
-
-    </script>
+    <script src="js/sketch.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 
   </body>
 
