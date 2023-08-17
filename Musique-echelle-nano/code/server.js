@@ -19,6 +19,8 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
+var rootFolder = path.join(__dirname, '..', '..');
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -32,7 +34,7 @@ io.on('connection',function(socket){
     console.log(users + " users connected" );
 
     // Send the users available to the client
-    io.to(socket.id).emit('users', users_dict['user_active'], socket.id);
+    io.to(socket.id).emit('users', users_dict['user_active'], socket.id, rootFolder);
 
     socket.on('message',function(event){
         if(event.includes('link')){
