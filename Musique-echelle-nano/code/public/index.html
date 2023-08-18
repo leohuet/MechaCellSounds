@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>XYPad</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"
     integrity="sha512-rCZdHNB0AePry6kAnKAVFMRfWPmUXSo+/vlGtrOUvhsxD0Punm/xWbEh+8vppPIOzKB9xnk42yCRZ5MD/jvvjQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -31,55 +31,61 @@
     </div>
 
     <div id="settings">
-      <div id="settings_button">
-        <img src="./imgs/settings.png" onclick="showHideSettings()"></img>
+      <div id="settings_button" onclick="showHideSettings()">
+        <img src="./imgs/settings.png"></img>
       </div>
       <div id="settings_content">
         <div id="settings_title">Settings</div>
-        <ul>
-          <li class="deroulant">
-            <a id="titre_menu" href="#" onclick="displayMenu(0)">Sélection de la cellule</a>
-            <ul id="sous">
-              <li><a href="#" onclick="displayMenu(1)">Macrophage 1</a></li>
-              <li><a href="#" onclick="displayMenu(2)">Macrophage 2</a></li>
-              <li><a href="#" onclick="displayMenu(3)">Monocyte 1</a></li>
-              <li><a href="#" onclick="displayMenu(4)">Monocyte 2</a></li>
+        <div id="settings_grid">
+          <div id="settings_col_1">
+            <ul>
+              <li class="deroulant">
+                <a id="titre_menu" href="#" onclick="displayMenu(0)">Sélection de la cellule</a>
+                <ul id="sous">
+                  <li><a href="#" onclick="displayMenu(1)">Macrophage 1</a></li>
+                  <li><a href="#" onclick="displayMenu(2)">Macrophage 2</a></li>
+                  <li><a href="#" onclick="displayMenu(3)">Monocyte 1</a></li>
+                  <li><a href="#" onclick="displayMenu(4)">Monocyte 2</a></li>
+                </ul>
+              </li>
             </ul>
-          </li>
-        </ul>
-        <div class="sound_toggles">
-          <label class="switch">
-            <input type="checkbox" onclick="activeSounds(0)">
-            <span class="toggle"></span>
-          </label>
-          <h6>Composition visqueuse</h6>
-        </div>
-        <div class="sound_toggles">
-          <label class="switch">
-            <input type="checkbox" onclick="activeSounds(1)">
-            <span class="toggle"></span>
-          </label>
-          <h6>Composition rigide</h6>
-        </div>
-        <div class="sound_toggles">
-          <label class="switch">
-            <input type="checkbox" onclick="activeSounds(2)">
-            <span class="toggle"></span>
-          </label>
-          <h6>Composition élastique</h6>
-        </div>
-        <div id="settings_content_title">Force</div>
-        <div id="settings_content_slider">
-          <input type="range" min="0" max="100" value="0" class="slider">
-        </div>
-        <div id="settings_content_title">Size</div>
-        <div id="settings_content_slider">
-          <input type="range" min="0" max="100" value="0" class="slider"  onchange="sliderSize(value)">
+            <div class="sound_toggles">
+              <label class="switch">
+                <input type="checkbox" onclick="activeSounds(0)">
+                <span class="toggle"></span>
+              </label>
+              <h6>Composition visqueuse</h6>
+            </div>
+            <div class="sound_toggles">
+              <label class="switch">
+                <input type="checkbox" onclick="activeSounds(1)">
+                <span class="toggle"></span>
+              </label>
+              <h6>Composition rigide</h6>
+            </div>
+            <div class="sound_toggles">
+              <label class="switch">
+                <input type="checkbox" onclick="activeSounds(2)">
+                <span class="toggle"></span>
+              </label>
+              <h6>Composition élastique</h6>
+            </div>
+          </div>
+          <div id="settings_col_2">
+            <div id="settings_content_title">Force</div>
+            <div id="settings_content_slider">
+              <input type="range" min="0" max="100" value="0" class="slider">
+            </div>
+            <div id="settings_content_title">Size</div>
+            <div id="settings_content_slider">
+              <input type="range" min="0" max="100" value="0" class="slider"  onchange="sliderSize(value)">
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <script src="js/sketch.js"></script>
+    <div id="sketch"><script src="js/sketch.js"></script></div>
     <script type="text/javascript" src="js/script.js"></script>
 
   </body>

@@ -1,9 +1,19 @@
-var windowWidth = window.innerWidth;
+const windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
-var picwidth = window.innerWidth;
-var picheight = window.innerWidth;
+var socket = io();
+socket.connect('http://127.0.0.1:8000');
+socket.send(`${windowWidth} windowwidth`);
 
-var size = 30;
+if(windowWidth > windowHeight){
+  var picwidth = windowHeight;
+  var picheight = windowHeight;
+}
+else{
+  var picwidth = windowWidth;
+  var picheight = windowWidth;
+}
+
+var size = 15;
 var nopressuresize = 30;
 let img1, img2, img3, img4;
 let picture = 0;
@@ -29,19 +39,16 @@ var drawPicture = function drawPicture(pic){
 }
 
 var changePicture = function changePicture(orientation){
-  if(orientation == 'portrait'){
-    picwidth = window.innerWidth;
-    picheight = window.innerWidth;
+  if(orientation == 'portrait' && user_launched){
+    picwidth = windowWidth;
+    socket.send(`${picwidth} picwidth`);
+    picheight = windowWidth;
+    img1.resize(picwidth, picheight);
+    img2.resize(picwidth, picheight);
+    img3.resize(picwidth, picheight);
+    img4.resize(picwidth, picheight);
+    resizeCanvas(picwidth, picheight);
   }
-  else{
-    picwidth = window.innerHeight;
-    picheight = window.innerHeight;
-  }
-  img1.resize(picwidth, picheight);
-  img2.resize(picwidth, picheight);
-  img3.resize(picwidth, picheight);
-  img4.resize(picwidth, picheight);
-  resizeCanvas(picwidth, picheight);
 }
 
 function sizeCercle(force, pressure){
@@ -55,7 +62,7 @@ function sizeCercle(force, pressure){
 }
 
 function sliderSize(value){
-  size = value/2+10;
+  size = value/3;
   socket.send(`${user} size ${value}`);
 }
 
@@ -79,9 +86,17 @@ function draw() {
     image(img4, 0, 0, picwidth, picheight);
   }
   if(user_launched){
-    send_xy(mouseX/windowWidth, mouseY/windowHeight, size);
-    translate(mouseX, mouseY);
-    fill(200);
-    circle(0, 0, size);
+    if(mouseX<picwidth && mouseY<picheight){
+      on_cell(true);
+      send_xy(mouseX/picwidth, mouseY/picheight, size);
+      translate(mouseX, mouseY);
+      fill(200, 200, 200, 100);
+      stroke(0);
+      strokeWeight(1);
+      circle(0, 0, size);
+    }
+    else{
+      on_cell(false);
+    }
   }
 }
