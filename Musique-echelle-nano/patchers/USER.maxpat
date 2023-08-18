@@ -43,10 +43,10 @@
 					"id" : "obj-43",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "int", "int", "int", "int" ],
-					"patching_rect" : [ 469.75, 213.020611382722791, 52.0, 22.0 ],
-					"text" : "t 0 0 0 0"
+					"numoutlets" : 5,
+					"outlettype" : [ "int", "int", "int", "int", "int" ],
+					"patching_rect" : [ 469.75, 213.020611382722791, 62.0, 22.0 ],
+					"text" : "t 0 0 0 0 0"
 				}
 
 			}
@@ -3231,7 +3231,7 @@
 													"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 396.204275643995516, 1328.0, 199.0, 105.657794296741486 ],
-													"setfilter" : [ 0, 1, 1, 0, 0, 20000.0, 1.149980545043945, 1.378124952316284, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+													"setfilter" : [ 0, 1, 1, 0, 0, 12926.3662109375, 1.149980545043945, 1.378124952316284, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 												}
 
 											}
@@ -11574,7 +11574,7 @@
 									"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 331.0, 162.0, 256.0, 128.0 ],
-									"setfilter" : [ 0, 1, 1, 0, 0, 20000.0, 0.961105227470398, 0.876276314258575, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+									"setfilter" : [ 0, 1, 1, 0, 0, 9945.3349609375, 0.961105227470398, 0.876276314258575, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 								}
 
 							}
@@ -14730,7 +14730,7 @@
 					"displayknob" : 1,
 					"id" : "obj-18",
 					"knobcolor" : [ 0.164705882352941, 0.164705882352941, 0.156862745098039, 1.0 ],
-					"knobsize" : 5.0,
+					"knobsize" : 29.0,
 					"maxclass" : "nodes",
 					"nodecolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
 					"nodesnames" : [ "1" ],
@@ -14752,7 +14752,7 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
-					"bkgndpict" : "/Users/poire/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics/monocyte2.png",
+					"bkgndpict" : "/Users/poire/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics/macrophage1.png",
 					"color" : [ 0.807843137254902, 0.898039215686275, 0.909803921568627, 0.0 ],
 					"elementcolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
 					"id" : "obj-62",
@@ -15283,6 +15283,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-53", 0 ],
 					"source" : [ "obj-43", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-57", 0 ],
+					"source" : [ "obj-43", 4 ]
 				}
 
 			}

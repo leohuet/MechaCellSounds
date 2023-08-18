@@ -9,11 +9,10 @@ const users_buttons = choix_user.children;
 const menu_titre = document.getElementById('titre_menu');
 const menu = document.getElementById('sous');
 const menu_choices = menu.children;
-var folder;
 var user_launched = false;
 let socketid;
 const cells = ['macrophage1', 'macrophage2', 'monocyte1', 'monocyte2'];
-
+var touch_cell = false;
 let portrait = window.matchMedia("(orientation: portrait)");
 let orientationTel = 'portrait';
 
@@ -31,8 +30,6 @@ portrait.addEventListener("change", function(e){
 // It shows the buttons for the users that are not currently used
 socket.on("users", function(users_list, id, dirname){
     console.log('init');
-    folder = dirname;
-    console.log(folder);
     socketid = id;
     choix_user.style.display = 'flex';
     for(let i=0; i<users_list.length; i++){
@@ -66,10 +63,14 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+var on_cell = function on_cell(cellornot){
+    touch_cell = cellornot;
+};
+
 
 // Functions triggered when client touches the screen
 document.body.addEventListener("touchstart", function(){
-    if(user_launched && !settings_on){
+    if(user_launched && !settings_on && touch_cell){
         socket.send(`${user} touch 1`);
     }
 });
@@ -113,6 +114,7 @@ function send_xy(x, y, size){
     old_y = y;
 }
 
+// Function to display the settings
 function showHideSettings(){
     const settings_content = document.getElementById('settings_content');
     const settings = document.getElementById('settings');
@@ -147,8 +149,9 @@ function showHideSettings(){
     }
 }
 
+// Function triggered when you select a cell
+// It changes the picture displayed on the canvas
 function displayMenu(selection){
-    console.log(menu_choices);
     if(menu.style.display == 'flex'){
         menu.style.display = 'none';
     if(selection != 0){
@@ -165,6 +168,7 @@ function displayMenu(selection){
     }
 }
 
+// Function to active or disactive cell sounds (viscosity, etc.)
 function activeSounds(sound){
     var sound_toggle = document.getElementsByClassName('switch')[sound];
     if(sound_toggle.children[0].checked){
