@@ -21,7 +21,7 @@ var cpu_dict = {
 
 // ========== Pages ========== //
 // Allows acess to all files inside 'public' folder.
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/code/public"));
 
 // Configures each link to a different page.
 app.get('/', function(req, res) {
