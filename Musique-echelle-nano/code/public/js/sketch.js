@@ -28,10 +28,10 @@ function sleep(ms) {
 }
 
 var readPictures = function readPictures(){
-  img1 = loadImage(`imgs/${cells[0]}.png`);
-  img2 = loadImage(`imgs/${cells[1]}.png`);
-  img3 = loadImage(`imgs/${cells[2]}.png`);
-  img4 = loadImage(`imgs/${cells[3]}.png`);
+  img1 = loadImage(`media/pics/${cells[0]}.png`);
+  img2 = loadImage(`media/pics/${cells[1]}.png`);
+  img3 = loadImage(`media/pics/${cells[2]}.png`);
+  img4 = loadImage(`media/pics/${cells[3]}.png`);
 }
 
 var drawPicture = function drawPicture(pic){

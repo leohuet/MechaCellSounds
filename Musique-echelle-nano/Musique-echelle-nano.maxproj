@@ -2,8 +2,8 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3774864593,
-	"viewrect" : [ 952.0, 100.0, 516.0, 797.0 ],
+	"modificationdate" : 3775535676,
+	"viewrect" : [ 829.0, 155.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -21,12 +21,7 @@
 				"local" : 1
 			}
 ,
-			"damping_fft.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"elastic_comp.maxpat" : 			{
+			"grain_message.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -42,6 +37,40 @@
 ,
 			"pluggo.dryWet2~.maxpat" : 			{
 				"kind" : "patcher"
+			}
+,
+			"socketreceive.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"spat5.monitor.maxpat" : 			{
+				"kind" : "patcher"
+			}
+,
+			"thru.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"stiffSpat.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"viscous_stiff_levels.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"vocoder.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"damping_fft.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 ,
 			"pluggo.dryWet3~.maxpat" : 			{
@@ -60,26 +89,7 @@
 				"kind" : "patcher"
 			}
 ,
-			"socketreceive.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"spaceecho.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"spat5.monitor.maxpat" : 			{
-				"kind" : "patcher"
-			}
-,
-			"thru.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"stiff_comp.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -89,17 +99,17 @@
 				"local" : 1
 			}
 ,
+			"elastic_comp.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"stiff_comp.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"viscous_comp.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"viscous_stiff_levels.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"vocoder.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -379,7 +389,12 @@
 ,
 			"visqueuxGMU.aiff" : 			{
 				"kind" : "audiofile",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 ,
 			"gmu.env.trapez10.aif" : 			{
@@ -425,11 +440,6 @@
 		}
 ,
 		"code" : 		{
-			"damping.gendsp" : 			{
-				"kind" : "gendsp",
-				"local" : 1
-			}
-,
 			"elastic_zones.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
@@ -437,6 +447,11 @@
 ,
 			"fit_jweb_to_bounds.js" : 			{
 				"kind" : "javascript"
+			}
+,
+			"polyBufferHandle.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
 			}
 ,
 			"moyenne.js" : 			{
@@ -448,6 +463,11 @@
 				"kind" : "javascript"
 			}
 ,
+			"pan_calcul.gendsp" : 			{
+				"kind" : "gendsp",
+				"local" : 1
+			}
+,
 			"server.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
@@ -456,6 +476,16 @@
 			"sort_modulus.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
+			}
+,
+			"damping.gendsp" : 			{
+				"kind" : "gendsp",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+					"projectrelativepath" : "./patchers"
+				}
+
 			}
 ,
 			"attenuation_coef.js" : 			{
@@ -486,6 +516,11 @@
 				"local" : 1
 			}
 ,
+			"stiffspats.txt" : 			{
+				"kind" : "textfile",
+				"local" : 1
+			}
+,
 			"preloadn.txt" : 			{
 				"kind" : "textfile",
 				"local" : 1
@@ -503,22 +538,12 @@
 ,
 			"package-lock.json" : 			{
 				"kind" : "json",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/code",
-					"projectrelativepath" : "./code"
-				}
-
+				"local" : 1
 			}
 ,
 			"package.json" : 			{
 				"kind" : "json",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/code",
-					"projectrelativepath" : "./code"
-				}
-
+				"local" : 1
 			}
 
 		}
@@ -527,6 +552,10 @@
 			"bufGranul~.mxo" : 			{
 				"kind" : "object",
 				"local" : 1
+			}
+,
+			"mc.bufGranul~.mxo" : 			{
+				"kind" : "object"
 			}
 ,
 			"spat5.binaural~.mxo" : 			{
@@ -538,6 +567,10 @@
 			}
 ,
 			"spat5.hostinfos.mxo" : 			{
+				"kind" : "object"
+			}
+,
+			"spat5.pan~.mxo" : 			{
 				"kind" : "object"
 			}
 ,
@@ -578,6 +611,10 @@
 			"spat5.hoa.encoder~.mxo" : 			{
 				"kind" : "object",
 				"local" : 1
+			}
+,
+			"spat5.spat~.mxo" : 			{
+				"kind" : "object"
 			}
 
 		}
