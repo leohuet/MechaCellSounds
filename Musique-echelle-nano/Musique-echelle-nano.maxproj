@@ -2,8 +2,8 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3775535676,
-	"viewrect" : [ 829.0, 155.0, 516.0, 797.0 ],
+	"modificationdate" : 3775638322,
+	"viewrect" : [ 1089.0, 153.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -21,7 +21,7 @@
 				"local" : 1
 			}
 ,
-			"grain_message.maxpat" : 			{
+			"mc.pluggo.dryWet2~.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -37,40 +37,6 @@
 ,
 			"pluggo.dryWet2~.maxpat" : 			{
 				"kind" : "patcher"
-			}
-,
-			"socketreceive.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"spat5.monitor.maxpat" : 			{
-				"kind" : "patcher"
-			}
-,
-			"thru.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"stiffSpat.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"viscous_stiff_levels.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"vocoder.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"damping_fft.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
 			}
 ,
 			"pluggo.dryWet3~.maxpat" : 			{
@@ -89,12 +55,61 @@
 				"kind" : "patcher"
 			}
 ,
+			"socketreceive.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"spaceecho.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
+			"spat5.monitor.maxpat" : 			{
+				"kind" : "patcher"
+			}
+,
+			"thru.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"stiffFX.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"stiffSpat.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"swirl.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"viscousSpats.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"viscous_stiff_levels.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"vocoder.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"grain_message.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"damping_fft.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -137,7 +152,7 @@
 		}
 ,
 		"media" : 		{
-			"macrophage1.png" : 			{
+			"monocyte1.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
@@ -147,14 +162,9 @@
 				"local" : 1
 			}
 ,
-			"macrophage.png" : 			{
+			"macrophage1.png" : 			{
 				"kind" : "imagefile",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
+				"local" : 1
 			}
 ,
 			"amb.wav" : 			{
@@ -436,6 +446,21 @@
 				"kind" : "audiofile",
 				"local" : 1
 			}
+,
+			"macrophage2.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"monocyte2.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"settings.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
 
 		}
 ,
@@ -447,11 +472,6 @@
 ,
 			"fit_jweb_to_bounds.js" : 			{
 				"kind" : "javascript"
-			}
-,
-			"polyBufferHandle.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
 			}
 ,
 			"moyenne.js" : 			{
@@ -474,6 +494,11 @@
 			}
 ,
 			"sort_modulus.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"polyBufferHandle.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
@@ -521,6 +546,11 @@
 				"local" : 1
 			}
 ,
+			"viscousspats.txt" : 			{
+				"kind" : "textfile",
+				"local" : 1
+			}
+,
 			"preloadn.txt" : 			{
 				"kind" : "textfile",
 				"local" : 1
@@ -554,10 +584,6 @@
 				"local" : 1
 			}
 ,
-			"mc.bufGranul~.mxo" : 			{
-				"kind" : "object"
-			}
-,
 			"spat5.binaural~.mxo" : 			{
 				"kind" : "object"
 			}
@@ -581,6 +607,10 @@
 			"spat5.viewer.mxo" : 			{
 				"kind" : "object",
 				"local" : 1
+			}
+,
+			"mc.bufGranul~.mxo" : 			{
+				"kind" : "object"
 			}
 ,
 			"spat5.reverb~.mxo" : 			{

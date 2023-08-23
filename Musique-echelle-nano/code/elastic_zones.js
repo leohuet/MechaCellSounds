@@ -1,5 +1,5 @@
 inlets = 1;
-outlets = 4;
+outlets = 5;
 
 function list(e, b){
 	if(e>0.8 && b<0.1){
