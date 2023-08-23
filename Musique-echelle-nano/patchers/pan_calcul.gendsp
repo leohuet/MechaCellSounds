@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "dsp.gen",
-		"rect" : [ 34.0, 87.0, 1520.0, 1031.0 ],
+		"rect" : [ 747.0, 389.0, 916.0, 576.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,7 +40,7 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"code" : "modulus = in1;\r\ncircle_pos = scale(in2, 0, 1, pi/2, (-3*pi/2));\r\nnew_circle_pos = 0;\r\n\r\nsin_recul = scale(modulus, 0, 1, -sin(circle_pos), sin(circle_pos));\r\n\r\nif(cos(circle_pos) > 0) {\r\n\tnew_circle_pos = asin(sin_recul);\r\n}\r\nelse{\r\n\tif(sin_recul > 0) {\r\n\t\tnew_circle_pos = pi-asin(sin_recul);\r\n\t}\r\n\telse{\r\n\t\tnew_circle_pos = pi+asin(sin_recul);\r\n\t}\r\n}\r\n\r\nout1 = scale(new_circle_pos, (-3*pi/2), pi/2, 1, 0);",
+					"code" : "modulus = in1;\r\npan = in2;\r\nnew_pan = 0;\r\n\r\n\r\nif(pan < 0.5) {\r\n\tnew_pan = pan + (0.25*(1-modulus));\r\n}\r\nelse{\r\n\tnew_pan = pan - (0.25*(1-modulus));\r\n}\r\n\r\nout1 = new_pan;",
 					"fontface" : 0,
 					"fontname" : "<Monospaced>",
 					"fontsize" : 12.0,
@@ -110,7 +110,8 @@
 				}
 
 			}
- ]
+ ],
+		"autosave" : 0
 	}
 
 }

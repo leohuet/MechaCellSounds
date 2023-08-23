@@ -21,11 +21,11 @@ var cpu_dict = {
 
 // ========== Pages ========== //
 // Allows acess to all files inside 'public' folder.
-app.use(express.static(__dirname + "/code/public"));
+app.use(express.static(__dirname));
 
 // Configures each link to a different page.
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/code/public/index.html');
 });
 
 var cpu_dict_old = [];
