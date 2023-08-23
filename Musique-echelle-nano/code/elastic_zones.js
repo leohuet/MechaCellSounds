@@ -26,4 +26,10 @@ function list(e, b){
 		outlet(2, 0);
 		outlet(3, 1);
 	}
+	else{
+		outlet(0, 0);
+		outlet(1, 0);
+		outlet(2, 0);
+		outlet(3, 0);
+	}
 }
