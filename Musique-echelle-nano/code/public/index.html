@@ -19,63 +19,77 @@
 
   <body>
 
-    <div id="choix_user">
-      <button id="user1" onclick="choixUser(1)">User 1</button>
-      <button id="user2" onclick="choixUser(2)">User 2</button>
-      <button id="user3" onclick="choixUser(3)">User 3</button>
-      <button id="user4" onclick="choixUser(4)">User 4</button>
-      <button id="user5" onclick="choixUser(5)">User 5</button>
-      <button id="user6" onclick="choixUser(6)">User 6</button>
-      <button id="user7" onclick="choixUser(7)">User 7</button>
-      <button id="user8" onclick="choixUser(8)">User 8</button>
+    <div id="menu_debut">
+      <h2 style="text-align: center;">Musique à l'échelle nanométrique</h2>
+      <p style="text-align: justify;">Cette interface vous permet d'intéragir avec les cellules et de les écouter !
+        Pour cela, sélectionnez le poste utilisateur sur lequel vous êtes et choisissez une cellule à écouter.
+        Vous pourrez ensuite parcourir l'organisme tactilement, explorant ainsi sa surface.
+      </p>
+      <div id="menucell_div">
+        <div id="menu_cell">
+          <ul>
+            <li class="deroulant">
+              <a id="titre_menu" href="#" onclick="displayMenu(0)">Sélection</a>
+              <ul id="sous">
+                <li><a href="#" onclick="displayMenu(1)">Macrophage 1</a></li>
+                <li><a href="#" onclick="displayMenu(2)">Macrophage 2</a></li>
+                <li><a href="#" onclick="displayMenu(3)">Monocyte 1</a></li>
+                <li><a href="#" onclick="displayMenu(4)">Monocyte 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="choix_user">
+        <button id="user1" onclick="choixUser(1)">1</button>
+        <button id="user2" onclick="choixUser(2)">2</button>
+        <button id="user3" onclick="choixUser(3)">3</button>
+        <button id="user4" onclick="choixUser(4)">4</button>
+      </div>
+      <div id="pictureShowHide" class="sound_toggles">
+        <label id="imageswitch" class="switch">
+          <input type="checkbox" oninput="showHidePicture(this.checked)">
+          <span class="toggle"></span>
+        </label>
+      </div>
+      <div id="logos">
+        <img class="logoimg" src="media/pics/gmem.jpeg"></img>
+        <img class="logoimg" src="media/pics/lai.png"></img>
+      </div>
+      
     </div>
 
     <div id="settings">
-      <div id="settings_button" onclick="showHideSettings()">
-        <img src="media/pics/settings.png"></img>
+      <div id="settings_button">
+        
       </div>
       <div id="settings_content">
         <div id="settings_title">Settings</div>
         <div id="settings_grid">
           <div id="settings_col_1">
-            <ul>
-              <li class="deroulant">
-                <a id="titre_menu" href="#" onclick="displayMenu(0)">Sélection de la cellule</a>
-                <ul id="sous">
-                  <li><a href="#" onclick="displayMenu(1)">Macrophage 1</a></li>
-                  <li><a href="#" onclick="displayMenu(2)">Macrophage 2</a></li>
-                  <li><a href="#" onclick="displayMenu(3)">Monocyte 1</a></li>
-                  <li><a href="#" onclick="displayMenu(4)">Monocyte 2</a></li>
-                </ul>
-              </li>
-            </ul>
             <div class="sound_toggles">
               <label class="switch">
-                <input type="checkbox" onclick="activeSounds(0)" checked>
+                <input type="checkbox" oninput="activeSounds(this.checked, this.value)" value="0" checked>
                 <span class="toggle"></span>
               </label>
               <h6>Composition visqueuse</h6>
             </div>
             <div class="sound_toggles">
               <label class="switch">
-                <input type="checkbox" onclick="activeSounds(1)" checked>
+                <input type="checkbox" oninput="activeSounds(this.checked, this.value)" value="1" checked>
                 <span class="toggle"></span>
               </label>
               <h6>Composition rigide</h6>
             </div>
             <div class="sound_toggles">
               <label class="switch">
-                <input type="checkbox" onclick="activeSounds(2)" checked>
+                <input type="checkbox" oninput="activeSounds(this.checked, this.value)" value="2" checked>
                 <span class="toggle"></span>
               </label>
               <h6>Composition élastique</h6>
             </div>
           </div>
           <div id="settings_col_2">
-            <div id="settings_content_title">Force</div>
-            <div id="settings_content_slider">
-              <input type="range" min="0" max="100" value="0" class="slider">
-            </div>
             <div id="settings_content_title">Size</div>
             <div id="settings_content_slider">
               <input type="range" min="0" max="100" value="0" class="slider"  onchange="sliderSize(value)">
@@ -85,7 +99,35 @@
       </div>
     </div>
 
-    <div id="sketch"><script src="code/public/js/sketch.js"></script></div>
+    <div id="section_bottom">
+      <div class="sound_toggles2">
+        <label class="switch">
+          <input id="viscousToggle" type="checkbox" oninput="activeSounds(this.checked, this.value)" value="0" checked>
+          <span class="toggle"></span>
+        </label>
+        <h6 style="margin-block-start: 0; margin-block-end: 0;">viscosité</h6>
+      </div>
+      <div class="sound_toggles2">
+        <label class="switch">
+          <input id="stiffToggle" type="checkbox" oninput="activeSounds(this.checked, this.value)" value="1" checked>
+          <span class="toggle"></span>
+        </label>
+        <h6 style="margin-block-start: 0; margin-block-end: 0;">rigidité</h6>
+      </div>
+      <div class="sound_toggles2">
+        <label class="switch">
+          <input id="elasticToggle" type="checkbox" oninput="activeSounds(this.checked, this.value)" value="2" checked>
+          <span class="toggle"></span>
+        </label>
+        <h6 style="margin-block-start: 0; margin-block-end: 0;">elasticité</h6>
+      </div>
+    </div>
+
+    <div id="sketch">
+      <script src="code/public/js/sketch.js"></script>
+      <a id="legende" onclick="showLegende(1)">Légende</a>
+      <img id="legendeimg" src="media/pics/viscous_scale.png"></img>
+    </div>
     <script type="text/javascript" src="code/public/js/script.js"></script>
 
   </body>
