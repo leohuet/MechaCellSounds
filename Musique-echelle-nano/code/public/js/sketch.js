@@ -3,6 +3,7 @@ var windowHeight = window.innerHeight;
 var socket = io();
 socket.connect('http://127.0.0.1:8000');
 socket.send(`${windowWidth} windowwidth`);
+var old_picture = 1;
 
 if(windowWidth > windowHeight){
   var picwidth = windowHeight;
@@ -19,7 +20,8 @@ let img1, img2, img3, img4;
 let picture = 0;
 
 function setup() {
-  createCanvas(picwidth, picheight);
+  const myCanvas = createCanvas(picwidth, picheight);
+  myCanvas.parent("sketch");
   noStroke();
 }
 
@@ -27,15 +29,32 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-var readPictures = function readPictures(){
-  img1 = loadImage(`media/pics/${cells[0]}.png`);
-  img2 = loadImage(`media/pics/${cells[1]}.png`);
-  img3 = loadImage(`media/pics/${cells[2]}.png`);
-  img4 = loadImage(`media/pics/${cells[3]}.png`);
+function showHidePicture(checkBox){
+  if(!checkBox){
+    picture = 0;
+  }
+  else{
+    picture = 1;
+    drawPicture(cells[cell-1], type);
+  }
 }
 
-var drawPicture = function drawPicture(pic){
-  picture = pic;
+var drawPicture = function drawPicture(pic, type, onoff){
+  if(onoff){
+    picture = 1;
+    if(type == 'all'){
+      img = loadImage(`media/pics/all.png`);
+    }
+    else if(type == 'none'){
+      picture = 0;
+    }
+    else{
+      img = loadImage(`media/pics/${pic}_${type}.png`);
+    }
+  }
+  else{
+    picture = 0;
+  }
 }
 
 var changePicture = function changePicture(orientation){
@@ -73,17 +92,10 @@ function resetForce(){
 
 function draw() {
   background(255);
-  if(picture == 1){
-    image(img1, 0, 0, picwidth, picheight);
-  }
-  else if(picture == 2){
-    image(img2, 0, 0, picwidth, picheight);
-  }
-  else if(picture == 3){
-    image(img3, 0, 0, picwidth, picheight);
-  }
-  else if(picture == 4){
-    image(img4, 0, 0, picwidth, picheight);
+  stroke(0)
+  square(0, 0, picwidth);
+  if(picture != 0){
+    image(img, 0, 0, picwidth, picheight);
   }
   if(user_launched){
     if(mouseX<picwidth && mouseY<picheight){

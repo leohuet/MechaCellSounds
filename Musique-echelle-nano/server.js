@@ -8,7 +8,7 @@ const os      =     require('os');
 
 var users_dict = {
     'ids': [],
-    'user_active': [1, 1, 1, 1, 1, 1, 1, 1],
+    'user_active': [1, 1, 1, 1],
 };
 
 var cpu_dict = {

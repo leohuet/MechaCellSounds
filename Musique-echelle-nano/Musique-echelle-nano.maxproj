@@ -2,7 +2,7 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3775638322,
+	"modificationdate" : 3776077858,
 	"viewrect" : [ 1089.0, 153.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -21,7 +21,37 @@
 				"local" : 1
 			}
 ,
+			"viscous_stiff_levels.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"mc.pluggo.dryWet2~.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"mc.spaceecho.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"mc.swirl.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"stiffSpat.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"viscousSpats.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"vocoder.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -31,6 +61,20 @@
 			}
 ,
 			"pathfinder.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"socketreceive.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"spat5.monitor.maxpat" : 			{
+				"kind" : "patcher"
+			}
+,
+			"thru.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -55,21 +99,7 @@
 				"kind" : "patcher"
 			}
 ,
-			"socketreceive.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"spaceecho.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"spat5.monitor.maxpat" : 			{
-				"kind" : "patcher"
-			}
-,
-			"thru.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -79,27 +109,7 @@
 				"local" : 1
 			}
 ,
-			"stiffSpat.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"swirl.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"viscousSpats.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"viscous_stiff_levels.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"vocoder.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -152,7 +162,7 @@
 		}
 ,
 		"media" : 		{
-			"monocyte1.png" : 			{
+			"macrophage1.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
@@ -162,7 +172,7 @@
 				"local" : 1
 			}
 ,
-			"macrophage1.png" : 			{
+			"monocyte1.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
@@ -470,6 +480,16 @@
 				"local" : 1
 			}
 ,
+			"pan_calcul.gendsp" : 			{
+				"kind" : "gendsp",
+				"local" : 1
+			}
+,
+			"sort_modulus.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"fit_jweb_to_bounds.js" : 			{
 				"kind" : "javascript"
 			}
@@ -483,17 +503,7 @@
 				"kind" : "javascript"
 			}
 ,
-			"pan_calcul.gendsp" : 			{
-				"kind" : "gendsp",
-				"local" : 1
-			}
-,
 			"server.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"sort_modulus.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
@@ -584,6 +594,10 @@
 				"local" : 1
 			}
 ,
+			"spat5.pan~.mxo" : 			{
+				"kind" : "object"
+			}
+,
 			"spat5.binaural~.mxo" : 			{
 				"kind" : "object"
 			}
@@ -593,10 +607,6 @@
 			}
 ,
 			"spat5.hostinfos.mxo" : 			{
-				"kind" : "object"
-			}
-,
-			"spat5.pan~.mxo" : 			{
 				"kind" : "object"
 			}
 ,

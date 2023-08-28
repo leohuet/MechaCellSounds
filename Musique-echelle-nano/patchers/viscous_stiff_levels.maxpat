@@ -212,8 +212,8 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 69.428572058677673, 705.0, 128.0, 22.0 ],
-					"text" : "mc.biquad~ @chans 8"
+					"patching_rect" : [ 69.428572058677673, 705.0, 71.5, 22.0 ],
+					"text" : "mc.biquad~"
 				}
 
 			}
@@ -1175,7 +1175,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "multichannelsignal" ],
 					"patching_rect" : [ 69.428572058677673, 110.880367615302703, 30.0, 30.0 ]
 				}
 

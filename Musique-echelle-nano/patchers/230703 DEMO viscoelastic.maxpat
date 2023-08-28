@@ -11,7 +11,7 @@
 ,
 		"classnamespace" : "box",
 		"rect" : [ 34.0, 87.0, 1980.0, 1031.0 ],
-		"bglocked" : 1,
+		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
@@ -40,11 +40,176 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"channels" : 2,
+					"id" : "obj-16",
+					"lastchannelcount" : 2,
+					"maxclass" : "mc.live.gain~",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "multichannelsignal", "", "float", "list" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 665.63042676448822, 769.0, 48.0, 136.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "mc.live.gain~[4]",
+							"parameter_mmax" : 6.0,
+							"parameter_mmin" : -70.0,
+							"parameter_shortname" : "mc.live.gain~[1]",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 4
+						}
+
+					}
+,
+					"varname" : "mc.live.gain~[3]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "multichannelsignal", "" ],
+					"patching_rect" : [ 665.63042676448822, 712.36758832812302, 200.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0
+					}
+,
+					"text" : "spat5.binaural~ @sources 8 @mc 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"channels" : 2,
+					"id" : "obj-13",
+					"lastchannelcount" : 2,
+					"maxclass" : "mc.live.gain~",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "multichannelsignal", "", "float", "list" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 442.63042676448822, 769.0, 48.0, 136.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "mc.live.gain~[3]",
+							"parameter_mmax" : 6.0,
+							"parameter_mmin" : -70.0,
+							"parameter_shortname" : "mc.live.gain~[1]",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 4
+						}
+
+					}
+,
+					"varname" : "mc.live.gain~[2]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "multichannelsignal", "" ],
+					"patching_rect" : [ 442.63042676448822, 712.36758832812302, 200.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0
+					}
+,
+					"text" : "spat5.binaural~ @sources 8 @mc 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"channels" : 2,
+					"id" : "obj-12",
+					"lastchannelcount" : 2,
+					"maxclass" : "mc.live.gain~",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "multichannelsignal", "", "float", "list" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 219.63042676448822, 769.0, 48.0, 136.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "mc.live.gain~[2]",
+							"parameter_mmax" : 6.0,
+							"parameter_mmin" : -70.0,
+							"parameter_shortname" : "mc.live.gain~[1]",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 4
+						}
+
+					}
+,
+					"varname" : "mc.live.gain~[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "multichannelsignal", "" ],
+					"patching_rect" : [ 219.63042676448822, 712.36758832812302, 200.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0
+					}
+,
+					"text" : "spat5.binaural~ @sources 8 @mc 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "multichannelsignal" ],
+					"patching_rect" : [ 665.63042676448822, 506.0, 149.0, 22.0 ],
+					"text" : "user user4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "multichannelsignal" ],
+					"patching_rect" : [ 442.63042676448822, 506.0, 149.0, 22.0 ],
+					"text" : "user user3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "multichannelsignal" ],
+					"patching_rect" : [ 219.63042676448822, 499.0, 149.0, 22.0 ],
+					"text" : "user user2"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-22",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 6.63042676448822, 1064.0, 54.0, 22.0 ],
+					"patching_rect" : [ 251.63042676448822, 1034.0, 54.0, 22.0 ],
 					"text" : "mc.dac~"
 				}
 
@@ -107,19 +272,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 335.63042676448822, 646.0, 50.5, 22.0 ],
+					"patching_rect" : [ 309.63042676448822, 641.0, 50.5, 22.0 ],
 					"text" : "t s s s s"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 8,
-					"numoutlets" : 0,
-					"patching_rect" : [ 6.63042676448822, 992.0, 692.0, 22.0 ],
-					"text" : "dac~ 1 2 1 2 1 2 1 2"
 				}
 
 			}
@@ -734,7 +888,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 335.63042676448822, 614.635331328123129, 81.0, 22.0 ],
+					"patching_rect" : [ 309.63042676448822, 609.635331328123129, 81.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -820,7 +974,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-12",
@@ -2893,146 +3046,6 @@
 					"activebgcolor" : [ 0.486274509803922, 0.603921568627451, 0.776470588235294, 1.0 ],
 					"fontname" : "Futura Bk",
 					"fontsize" : 14.0,
-					"id" : "obj-14",
-					"maxclass" : "live.text",
-					"mode" : 0,
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 1275.63042676448822, 372.0, 149.0, 58.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 1198.63042676448822, 182.0, 149.0, 58.0 ],
-					"saved_attribute_attributes" : 					{
-						"activebgcolor" : 						{
-							"expression" : ""
-						}
-,
-						"valueof" : 						{
-							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_longname" : "live.text[13]",
-							"parameter_mmax" : 1,
-							"parameter_shortname" : "live.text",
-							"parameter_type" : 2
-						}
-
-					}
-,
-					"text" : "USER8",
-					"varname" : "live.text[7]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"activebgcolor" : [ 0.486274509803922, 0.603921568627451, 0.776470588235294, 1.0 ],
-					"fontname" : "Futura Bk",
-					"fontsize" : 14.0,
-					"id" : "obj-13",
-					"maxclass" : "live.text",
-					"mode" : 0,
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 1104.63042676448822, 372.0, 149.0, 58.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 1029.48756962163111, 182.0, 149.0, 58.0 ],
-					"saved_attribute_attributes" : 					{
-						"activebgcolor" : 						{
-							"expression" : ""
-						}
-,
-						"valueof" : 						{
-							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_longname" : "live.text[12]",
-							"parameter_mmax" : 1,
-							"parameter_shortname" : "live.text",
-							"parameter_type" : 2
-						}
-
-					}
-,
-					"text" : "USER7",
-					"varname" : "live.text[6]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"activebgcolor" : [ 0.486274509803922, 0.603921568627451, 0.776470588235294, 1.0 ],
-					"fontname" : "Futura Bk",
-					"fontsize" : 14.0,
-					"id" : "obj-12",
-					"maxclass" : "live.text",
-					"mode" : 0,
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 919.63042676448822, 372.0, 149.0, 58.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 860.344712478773886, 182.0, 149.0, 58.0 ],
-					"saved_attribute_attributes" : 					{
-						"activebgcolor" : 						{
-							"expression" : ""
-						}
-,
-						"valueof" : 						{
-							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_longname" : "live.text[11]",
-							"parameter_mmax" : 1,
-							"parameter_shortname" : "live.text",
-							"parameter_type" : 2
-						}
-
-					}
-,
-					"text" : "USER6",
-					"varname" : "live.text[5]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"activebgcolor" : [ 0.486274509803922, 0.603921568627451, 0.776470588235294, 1.0 ],
-					"fontname" : "Futura Bk",
-					"fontsize" : 14.0,
-					"id" : "obj-11",
-					"maxclass" : "live.text",
-					"mode" : 0,
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 734.63042676448822, 372.0, 149.0, 58.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 691.201855335916775, 182.0, 149.0, 58.0 ],
-					"saved_attribute_attributes" : 					{
-						"activebgcolor" : 						{
-							"expression" : ""
-						}
-,
-						"valueof" : 						{
-							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_longname" : "live.text[10]",
-							"parameter_mmax" : 1,
-							"parameter_shortname" : "live.text",
-							"parameter_type" : 2
-						}
-
-					}
-,
-					"text" : "USER5",
-					"varname" : "live.text[4]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"activebgcolor" : [ 0.486274509803922, 0.603921568627451, 0.776470588235294, 1.0 ],
-					"fontname" : "Futura Bk",
-					"fontsize" : 14.0,
 					"id" : "obj-10",
 					"maxclass" : "live.text",
 					"mode" : 0,
@@ -3040,7 +3053,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 549.63042676448822, 372.0, 149.0, 58.0 ],
+					"patching_rect" : [ 665.63042676448822, 379.0, 149.0, 58.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 522.058998193059665, 182.0, 149.0, 58.0 ],
 					"saved_attribute_attributes" : 					{
@@ -3075,7 +3088,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 364.63042676448822, 372.0, 149.0, 58.0 ],
+					"patching_rect" : [ 442.63042676448822, 379.0, 149.0, 58.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 352.916141050202498, 182.0, 149.0, 58.0 ],
 					"saved_attribute_attributes" : 					{
@@ -3110,7 +3123,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 179.63042676448822, 372.0, 149.0, 58.0 ],
+					"patching_rect" : [ 219.63042676448822, 372.0, 149.0, 58.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 183.773283907345359, 182.0, 149.0, 58.0 ],
 					"saved_attribute_attributes" : 					{
@@ -3177,18 +3190,6 @@
 ,
 					"text" : "USER1",
 					"varname" : "live.text"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 331.63042676448822, 53.493746466636594, 58.0, 22.0 ],
-					"text" : "loadbang"
 				}
 
 			}
@@ -3296,7 +3297,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ -0.473686933517456, 6.721782184839185, 284.0, 70.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 436.63042676448822, 40.0, 480.0, 38.0 ],
+					"presentation_rect" : [ 141.63042676448822, 43.0, 480.0, 38.0 ],
 					"text" : "MUSIQUE À L'ÉCHELLE NANOMÉTRIQUE"
 				}
 
@@ -3315,13 +3316,55 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 93.166643261909485, 11.0, 72.0, 73.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2.166643261909485, 2.0, 1360.0, 631.0 ],
+					"presentation_rect" : [ 2.166643261909485, 2.0, 946.0, 631.0 ],
 					"proportion" : 0.39
 				}
 
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-73", 0 ],
 					"source" : [ "obj-17", 0 ]
@@ -3351,6 +3394,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 1 ],
 					"source" : [ "obj-25", 0 ]
 				}
@@ -3358,7 +3408,28 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-71", 0 ],
+					"destination" : [ "obj-3", 1 ],
+					"source" : [ "obj-25", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 1 ],
+					"source" : [ "obj-25", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 1 ],
+					"source" : [ "obj-25", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -3379,6 +3450,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-7", 0 ]
 				}
@@ -3391,191 +3476,119 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
  ],
 		"parameters" : 		{
 			"obj-10" : [ "live.text[9]", "live.text", 0 ],
-			"obj-11" : [ "live.text[10]", "live.text", 0 ],
-			"obj-12" : [ "live.text[11]", "live.text", 0 ],
-			"obj-13" : [ "live.text[12]", "live.text", 0 ],
-			"obj-14" : [ "live.text[13]", "live.text", 0 ],
+			"obj-12" : [ "mc.live.gain~[2]", "mc.live.gain~[1]", 0 ],
+			"obj-13" : [ "mc.live.gain~[3]", "mc.live.gain~[1]", 0 ],
+			"obj-16" : [ "mc.live.gain~[4]", "mc.live.gain~[1]", 0 ],
 			"obj-21" : [ "mc.live.gain~[1]", "mc.live.gain~[1]", 0 ],
 			"obj-25::obj-19" : [ "live.text", "live.text", 0 ],
 			"obj-2::obj-17::obj-61" : [ "number[2]", "number[4]", 0 ],
 			"obj-2::obj-17::obj-68" : [ "number[1]", "number[3]", 0 ],
-			"obj-2::obj-39::obj-4::obj-101::obj-114" : [ "flonum[3]", "flonum", 0 ],
-			"obj-2::obj-39::obj-4::obj-101::obj-115" : [ "number[3]", "number", 0 ],
-			"obj-2::obj-39::obj-4::obj-105" : [ "live.dial[7]", "live.dial", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-40::obj-14" : [ "lowpass", "lowpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-40::obj-16" : [ "highpass", "highpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-40::obj-17" : [ "WarbleSpeed", "speed", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-40::obj-20" : [ "WarbleAmount", "amount", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-40::obj-22" : [ "inertia", "inertia", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-40::obj-25" : [ "wet/dry", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-40::obj-27" : [ "revtime", "revtime", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-40::obj-35" : [ "reverb_wetdry", "level", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-40::obj-4" : [ "feedback", "feedback", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-40::obj-5" : [ "clipping", "clipping", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-40::obj-8" : [ "live.menu", "live.menu", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-41" : [ "wet_dry[3]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-42::obj-14" : [ "wet_dry", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-42::obj-58" : [ "left_delay[4]", "L delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-42::obj-59" : [ "left_modfreq[4]", "L freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-42::obj-60" : [ "left_moddepth[4]", "L depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-42::obj-62" : [ "left_feedback[4]", "L FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-42::obj-64" : [ "right_feedback[4]", "R FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-42::obj-65" : [ "right_moddepth[4]", "R depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-42::obj-66" : [ "right_modfreq[4]", "R freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.1::obj-42::obj-67" : [ "right_delay[4]", "R delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-14" : [ "lowpass[1]", "lowpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-16" : [ "highpass[1]", "highpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-17" : [ "WarbleSpeed[1]", "speed", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-20" : [ "WarbleAmount[1]", "amount", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-22" : [ "inertia[1]", "inertia", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-25" : [ "wet/dry[1]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-27" : [ "revtime[1]", "revtime", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-35" : [ "reverb_wetdry[1]", "level", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-4" : [ "feedback[1]", "feedback", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-5" : [ "clipping[1]", "clipping", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-8" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-41" : [ "wet_dry[5]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-14" : [ "wet_dry[4]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-58" : [ "left_delay[1]", "L delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-59" : [ "left_modfreq[1]", "L freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-60" : [ "left_moddepth[1]", "L depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-62" : [ "left_feedback[1]", "L FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-64" : [ "right_feedback[1]", "R FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-65" : [ "right_moddepth[1]", "R depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-66" : [ "right_modfreq[1]", "R freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-67" : [ "right_delay[1]", "R delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-14" : [ "lowpass[2]", "lowpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-16" : [ "highpass[2]", "highpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-17" : [ "WarbleSpeed[2]", "speed", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-20" : [ "WarbleAmount[2]", "amount", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-22" : [ "inertia[2]", "inertia", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-25" : [ "wet/dry[2]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-27" : [ "revtime[2]", "revtime", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-35" : [ "reverb_wetdry[2]", "level", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-4" : [ "feedback[2]", "feedback", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-5" : [ "clipping[2]", "clipping", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-8" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-41" : [ "wet_dry[7]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-14" : [ "wet_dry[6]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-58" : [ "left_delay[5]", "L delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-59" : [ "left_modfreq[2]", "L freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-60" : [ "left_moddepth[2]", "L depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-62" : [ "left_feedback[5]", "L FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-64" : [ "right_feedback[5]", "R FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-65" : [ "right_moddepth[5]", "R depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-66" : [ "right_modfreq[5]", "R freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-67" : [ "right_delay[5]", "R delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-14" : [ "lowpass[3]", "lowpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-16" : [ "highpass[3]", "highpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-17" : [ "WarbleSpeed[3]", "speed", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-20" : [ "WarbleAmount[3]", "amount", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-22" : [ "inertia[3]", "inertia", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-25" : [ "wet/dry[3]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-27" : [ "revtime[3]", "revtime", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-35" : [ "reverb_wetdry[3]", "level", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-4" : [ "feedback[3]", "feedback", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-5" : [ "clipping[3]", "clipping", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-8" : [ "live.menu[3]", "live.menu", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-41" : [ "wet_dry[9]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-14" : [ "wet_dry[8]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-58" : [ "left_delay[6]", "L delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-59" : [ "left_modfreq[3]", "L freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-60" : [ "left_moddepth[3]", "L depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-62" : [ "left_feedback[2]", "L FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-64" : [ "right_feedback[6]", "R FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-65" : [ "right_moddepth[2]", "R depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-66" : [ "right_modfreq[2]", "R freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-67" : [ "right_delay[2]", "R delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-14" : [ "lowpass[4]", "lowpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-16" : [ "highpass[4]", "highpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-17" : [ "WarbleSpeed[4]", "speed", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-20" : [ "WarbleAmount[4]", "amount", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-22" : [ "inertia[4]", "inertia", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-25" : [ "wet/dry[4]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-27" : [ "revtime[4]", "revtime", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-35" : [ "reverb_wetdry[4]", "level", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-4" : [ "feedback[4]", "feedback", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-5" : [ "clipping[4]", "clipping", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-8" : [ "live.menu[4]", "live.menu", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-41" : [ "wet_dry[11]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-14" : [ "wet_dry[10]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-58" : [ "left_delay[7]", "L delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-59" : [ "left_modfreq[5]", "L freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-60" : [ "left_moddepth[5]", "L depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-62" : [ "left_feedback[6]", "L FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-64" : [ "right_feedback[7]", "R FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-65" : [ "right_moddepth[6]", "R depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-66" : [ "right_modfreq[6]", "R freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-67" : [ "right_delay[6]", "R delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-14" : [ "lowpass[5]", "lowpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-16" : [ "highpass[5]", "highpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-17" : [ "WarbleSpeed[5]", "speed", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-20" : [ "WarbleAmount[5]", "amount", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-22" : [ "inertia[5]", "inertia", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-25" : [ "wet/dry[5]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-27" : [ "revtime[5]", "revtime", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-35" : [ "reverb_wetdry[5]", "level", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-4" : [ "feedback[5]", "feedback", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-5" : [ "clipping[5]", "clipping", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-8" : [ "live.menu[5]", "live.menu", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-41" : [ "wet_dry[13]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-14" : [ "wet_dry[12]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-58" : [ "left_delay[8]", "L delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-59" : [ "left_modfreq[6]", "L freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-60" : [ "left_moddepth[6]", "L depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-62" : [ "left_feedback[7]", "L FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-64" : [ "right_feedback[8]", "R FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-65" : [ "right_moddepth[7]", "R depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-66" : [ "right_modfreq[7]", "R freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-67" : [ "right_delay[7]", "R delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-14" : [ "lowpass[6]", "lowpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-16" : [ "highpass[6]", "highpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-17" : [ "WarbleSpeed[6]", "speed", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-20" : [ "WarbleAmount[6]", "amount", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-22" : [ "inertia[6]", "inertia", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-25" : [ "wet/dry[6]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-27" : [ "revtime[6]", "revtime", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-35" : [ "reverb_wetdry[6]", "level", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-4" : [ "feedback[6]", "feedback", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-5" : [ "clipping[6]", "clipping", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-8" : [ "live.menu[6]", "live.menu", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-41" : [ "wet_dry[15]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-14" : [ "wet_dry[14]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-58" : [ "left_delay[9]", "L delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-59" : [ "left_modfreq[7]", "L freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-60" : [ "left_moddepth[7]", "L depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-62" : [ "left_feedback[8]", "L FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-64" : [ "right_feedback[9]", "R FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-65" : [ "right_moddepth[8]", "R depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-66" : [ "right_modfreq[8]", "R freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-67" : [ "right_delay[8]", "R delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-14" : [ "lowpass[7]", "lowpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-16" : [ "highpass[7]", "highpass", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-17" : [ "WarbleSpeed[7]", "speed", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-20" : [ "WarbleAmount[7]", "amount", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-22" : [ "inertia[7]", "inertia", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-25" : [ "wet/dry[7]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-27" : [ "revtime[7]", "revtime", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-35" : [ "reverb_wetdry[7]", "level", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-4" : [ "feedback[7]", "feedback", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-5" : [ "clipping[7]", "clipping", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-8" : [ "live.menu[7]", "live.menu", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-41" : [ "wet_dry[17]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-14" : [ "wet_dry[16]", "dry/wet", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-58" : [ "left_delay[10]", "L delay", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-59" : [ "left_modfreq[8]", "L freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-60" : [ "left_moddepth[8]", "L depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-62" : [ "left_feedback[9]", "L FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-64" : [ "right_feedback[10]", "R FB", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-65" : [ "right_moddepth[9]", "R depth", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-66" : [ "right_modfreq[9]", "R freq", 0 ],
-			"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-67" : [ "right_delay[9]", "R delay", 0 ],
+			"obj-2::obj-39::obj-8::obj-101::obj-114" : [ "flonum[3]", "flonum", 0 ],
+			"obj-2::obj-39::obj-8::obj-101::obj-115" : [ "number[3]", "number", 0 ],
+			"obj-2::obj-39::obj-8::obj-105" : [ "live.dial[7]", "live.dial", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-2::obj-14" : [ "wet_dry", "dry/wet", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-2::obj-58" : [ "left_delay[4]", "L delay", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-2::obj-59" : [ "left_modfreq[4]", "L freq", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-2::obj-60" : [ "left_moddepth[4]", "L depth", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-2::obj-62" : [ "left_feedback[4]", "L FB", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-3::obj-14" : [ "lowpass", "lowpass", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-3::obj-16" : [ "highpass", "highpass", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-3::obj-17" : [ "WarbleSpeed", "speed", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-3::obj-20" : [ "WarbleAmount", "amount", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-3::obj-22" : [ "inertia", "inertia", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-3::obj-25" : [ "wet/dry", "dry/wet", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-3::obj-27" : [ "revtime", "revtime", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-3::obj-35" : [ "reverb_wetdry", "level", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-3::obj-4" : [ "feedback", "feedback", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-3::obj-5" : [ "clipping", "clipping", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-3::obj-8" : [ "live.menu", "live.menu", 0 ],
+			"obj-2::obj-45::obj-11::obj-11::obj-41" : [ "wet_dry[18]", "dry/wet", 0 ],
+			"obj-3::obj-17::obj-61" : [ "number[11]", "number[4]", 0 ],
+			"obj-3::obj-17::obj-68" : [ "number[10]", "number[3]", 0 ],
+			"obj-3::obj-39::obj-8::obj-101::obj-114" : [ "flonum[1]", "flonum", 0 ],
+			"obj-3::obj-39::obj-8::obj-101::obj-115" : [ "number[12]", "number", 0 ],
+			"obj-3::obj-39::obj-8::obj-105" : [ "live.dial[8]", "live.dial", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-2::obj-14" : [ "wet_dry[20]", "dry/wet", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-2::obj-58" : [ "left_delay[3]", "L delay", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-2::obj-59" : [ "left_modfreq[3]", "L freq", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-2::obj-60" : [ "left_moddepth[3]", "L depth", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-2::obj-62" : [ "left_feedback[3]", "L FB", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-3::obj-14" : [ "lowpass[3]", "lowpass", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-3::obj-16" : [ "highpass[3]", "highpass", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-3::obj-17" : [ "WarbleSpeed[3]", "speed", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-3::obj-20" : [ "WarbleAmount[3]", "amount", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-3::obj-22" : [ "inertia[3]", "inertia", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-3::obj-25" : [ "wet/dry[3]", "dry/wet", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-3::obj-27" : [ "revtime[3]", "revtime", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-3::obj-35" : [ "reverb_wetdry[3]", "level", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-3::obj-4" : [ "feedback[3]", "feedback", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-3::obj-5" : [ "clipping[3]", "clipping", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-3::obj-8" : [ "live.menu[3]", "live.menu", 0 ],
+			"obj-3::obj-45::obj-11::obj-11::obj-41" : [ "wet_dry[4]", "dry/wet", 0 ],
 			"obj-4::obj-115" : [ "live.drop[1]", "live.drop", 0 ],
 			"obj-4::obj-121" : [ "live.menu[8]", "live.menu[1]", 0 ],
 			"obj-4::obj-132" : [ "live.dial[3]", " ", 0 ],
+			"obj-5::obj-17::obj-61" : [ "number[5]", "number[4]", 0 ],
+			"obj-5::obj-17::obj-68" : [ "number[4]", "number[3]", 0 ],
+			"obj-5::obj-39::obj-8::obj-101::obj-114" : [ "flonum[2]", "flonum", 0 ],
+			"obj-5::obj-39::obj-8::obj-101::obj-115" : [ "number[6]", "number", 0 ],
+			"obj-5::obj-39::obj-8::obj-105" : [ "live.dial[4]", "live.dial", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-2::obj-14" : [ "wet_dry[1]", "dry/wet", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-2::obj-58" : [ "left_delay[5]", "L delay", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-2::obj-59" : [ "left_modfreq[5]", "L freq", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-2::obj-60" : [ "left_moddepth[5]", "L depth", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-2::obj-62" : [ "left_feedback[5]", "L FB", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-3::obj-14" : [ "lowpass[4]", "lowpass", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-3::obj-16" : [ "highpass[4]", "highpass", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-3::obj-17" : [ "WarbleSpeed[4]", "speed", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-3::obj-20" : [ "WarbleAmount[4]", "amount", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-3::obj-22" : [ "inertia[4]", "inertia", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-3::obj-25" : [ "wet/dry[4]", "dry/wet", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-3::obj-27" : [ "revtime[4]", "revtime", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-3::obj-35" : [ "reverb_wetdry[4]", "level", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-3::obj-4" : [ "feedback[4]", "feedback", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-3::obj-5" : [ "clipping[4]", "clipping", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-3::obj-8" : [ "live.menu[4]", "live.menu", 0 ],
+			"obj-5::obj-45::obj-11::obj-11::obj-41" : [ "wet_dry[2]", "dry/wet", 0 ],
+			"obj-6::obj-17::obj-61" : [ "number[14]", "number[4]", 0 ],
+			"obj-6::obj-17::obj-68" : [ "number[13]", "number[3]", 0 ],
+			"obj-6::obj-39::obj-8::obj-101::obj-114" : [ "flonum[4]", "flonum", 0 ],
+			"obj-6::obj-39::obj-8::obj-101::obj-115" : [ "number[15]", "number", 0 ],
+			"obj-6::obj-39::obj-8::obj-105" : [ "live.dial[5]", "live.dial", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-2::obj-14" : [ "wet_dry[3]", "dry/wet", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-2::obj-58" : [ "left_delay[6]", "L delay", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-2::obj-59" : [ "left_modfreq[6]", "L freq", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-2::obj-60" : [ "left_moddepth[6]", "L depth", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-2::obj-62" : [ "left_feedback[6]", "L FB", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-3::obj-14" : [ "lowpass[5]", "lowpass", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-3::obj-16" : [ "highpass[5]", "highpass", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-3::obj-17" : [ "WarbleSpeed[5]", "speed", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-3::obj-20" : [ "WarbleAmount[5]", "amount", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-3::obj-22" : [ "inertia[5]", "inertia", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-3::obj-25" : [ "wet/dry[5]", "dry/wet", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-3::obj-27" : [ "revtime[5]", "revtime", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-3::obj-35" : [ "reverb_wetdry[5]", "level", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-3::obj-4" : [ "feedback[5]", "feedback", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-3::obj-5" : [ "clipping[5]", "clipping", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-3::obj-8" : [ "live.menu[5]", "live.menu", 0 ],
+			"obj-6::obj-45::obj-11::obj-11::obj-41" : [ "wet_dry[5]", "dry/wet", 0 ],
 			"obj-7" : [ "live.text[6]", "live.text", 0 ],
 			"obj-71::obj-11" : [ "live.text[4]", "live.text", 0 ],
 			"obj-71::obj-110" : [ "live.text[5]", "live.text", 0 ],
@@ -3606,596 +3619,220 @@
 					"parameter_unitstyle" : 10
 				}
 ,
-				"obj-2::obj-39::obj-4::obj-105" : 				{
-					"parameter_longname" : "live.dial[7]"
+				"obj-3::obj-39::obj-8::obj-105" : 				{
+					"parameter_longname" : "live.dial[8]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-14" : 				{
-					"parameter_longname" : "lowpass[1]"
+				"obj-3::obj-45::obj-11::obj-11::obj-2::obj-14" : 				{
+					"parameter_longname" : "wet_dry[20]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-16" : 				{
-					"parameter_longname" : "highpass[1]"
+				"obj-3::obj-45::obj-11::obj-11::obj-2::obj-58" : 				{
+					"parameter_longname" : "left_delay[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-17" : 				{
-					"parameter_longname" : "WarbleSpeed[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-20" : 				{
-					"parameter_longname" : "WarbleAmount[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-22" : 				{
-					"parameter_longname" : "inertia[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-25" : 				{
-					"parameter_longname" : "wet/dry[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-27" : 				{
-					"parameter_longname" : "revtime[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-35" : 				{
-					"parameter_longname" : "reverb_wetdry[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-4" : 				{
-					"parameter_longname" : "feedback[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-5" : 				{
-					"parameter_longname" : "clipping[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-40::obj-8" : 				{
-					"parameter_longname" : "live.menu[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-41" : 				{
-					"parameter_longname" : "wet_dry[5]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-14" : 				{
-					"parameter_longname" : "wet_dry[4]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-58" : 				{
-					"parameter_longname" : "left_delay[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-59" : 				{
-					"parameter_longname" : "left_modfreq[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-60" : 				{
-					"parameter_longname" : "left_moddepth[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-62" : 				{
-					"parameter_longname" : "left_feedback[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-64" : 				{
-					"parameter_longname" : "right_feedback[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-65" : 				{
-					"parameter_longname" : "right_moddepth[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-66" : 				{
-					"parameter_longname" : "right_modfreq[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.2::obj-42::obj-67" : 				{
-					"parameter_longname" : "right_delay[1]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-14" : 				{
-					"parameter_longname" : "lowpass[2]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-16" : 				{
-					"parameter_longname" : "highpass[2]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-17" : 				{
-					"parameter_longname" : "WarbleSpeed[2]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-20" : 				{
-					"parameter_longname" : "WarbleAmount[2]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-22" : 				{
-					"parameter_longname" : "inertia[2]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-25" : 				{
-					"parameter_longname" : "wet/dry[2]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-27" : 				{
-					"parameter_longname" : "revtime[2]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-35" : 				{
-					"parameter_longname" : "reverb_wetdry[2]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-4" : 				{
-					"parameter_longname" : "feedback[2]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-5" : 				{
-					"parameter_longname" : "clipping[2]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-40::obj-8" : 				{
-					"parameter_longname" : "live.menu[2]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-41" : 				{
-					"parameter_longname" : "wet_dry[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-14" : 				{
-					"parameter_longname" : "wet_dry[6]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-58" : 				{
-					"parameter_longname" : "left_delay[5]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-59" : 				{
-					"parameter_longname" : "left_modfreq[2]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-60" : 				{
-					"parameter_longname" : "left_moddepth[2]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-62" : 				{
-					"parameter_longname" : "left_feedback[5]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-64" : 				{
-					"parameter_longname" : "right_feedback[5]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-65" : 				{
-					"parameter_longname" : "right_moddepth[5]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-66" : 				{
-					"parameter_longname" : "right_modfreq[5]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.3::obj-42::obj-67" : 				{
-					"parameter_longname" : "right_delay[5]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-14" : 				{
-					"parameter_longname" : "lowpass[3]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-16" : 				{
-					"parameter_longname" : "highpass[3]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-17" : 				{
-					"parameter_longname" : "WarbleSpeed[3]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-20" : 				{
-					"parameter_longname" : "WarbleAmount[3]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-22" : 				{
-					"parameter_longname" : "inertia[3]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-25" : 				{
-					"parameter_longname" : "wet/dry[3]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-27" : 				{
-					"parameter_longname" : "revtime[3]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-35" : 				{
-					"parameter_longname" : "reverb_wetdry[3]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-4" : 				{
-					"parameter_longname" : "feedback[3]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-5" : 				{
-					"parameter_longname" : "clipping[3]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-40::obj-8" : 				{
-					"parameter_longname" : "live.menu[3]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-41" : 				{
-					"parameter_longname" : "wet_dry[9]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-14" : 				{
-					"parameter_longname" : "wet_dry[8]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-58" : 				{
-					"parameter_longname" : "left_delay[6]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-59" : 				{
+				"obj-3::obj-45::obj-11::obj-11::obj-2::obj-59" : 				{
 					"parameter_longname" : "left_modfreq[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-60" : 				{
+				"obj-3::obj-45::obj-11::obj-11::obj-2::obj-60" : 				{
 					"parameter_longname" : "left_moddepth[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-62" : 				{
-					"parameter_longname" : "left_feedback[2]"
+				"obj-3::obj-45::obj-11::obj-11::obj-2::obj-62" : 				{
+					"parameter_longname" : "left_feedback[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-64" : 				{
-					"parameter_longname" : "right_feedback[6]"
+				"obj-3::obj-45::obj-11::obj-11::obj-3::obj-14" : 				{
+					"parameter_longname" : "lowpass[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-65" : 				{
-					"parameter_longname" : "right_moddepth[2]"
+				"obj-3::obj-45::obj-11::obj-11::obj-3::obj-16" : 				{
+					"parameter_longname" : "highpass[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-66" : 				{
-					"parameter_longname" : "right_modfreq[2]"
+				"obj-3::obj-45::obj-11::obj-11::obj-3::obj-17" : 				{
+					"parameter_longname" : "WarbleSpeed[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.4::obj-42::obj-67" : 				{
-					"parameter_longname" : "right_delay[2]"
+				"obj-3::obj-45::obj-11::obj-11::obj-3::obj-20" : 				{
+					"parameter_longname" : "WarbleAmount[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-14" : 				{
-					"parameter_longname" : "lowpass[4]"
+				"obj-3::obj-45::obj-11::obj-11::obj-3::obj-22" : 				{
+					"parameter_longname" : "inertia[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-16" : 				{
-					"parameter_longname" : "highpass[4]"
+				"obj-3::obj-45::obj-11::obj-11::obj-3::obj-25" : 				{
+					"parameter_longname" : "wet/dry[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-17" : 				{
-					"parameter_longname" : "WarbleSpeed[4]"
+				"obj-3::obj-45::obj-11::obj-11::obj-3::obj-27" : 				{
+					"parameter_longname" : "revtime[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-20" : 				{
-					"parameter_longname" : "WarbleAmount[4]"
+				"obj-3::obj-45::obj-11::obj-11::obj-3::obj-35" : 				{
+					"parameter_longname" : "reverb_wetdry[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-22" : 				{
-					"parameter_longname" : "inertia[4]"
+				"obj-3::obj-45::obj-11::obj-11::obj-3::obj-4" : 				{
+					"parameter_longname" : "feedback[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-25" : 				{
-					"parameter_longname" : "wet/dry[4]"
+				"obj-3::obj-45::obj-11::obj-11::obj-3::obj-5" : 				{
+					"parameter_longname" : "clipping[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-27" : 				{
-					"parameter_longname" : "revtime[4]"
+				"obj-3::obj-45::obj-11::obj-11::obj-3::obj-8" : 				{
+					"parameter_longname" : "live.menu[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-35" : 				{
-					"parameter_longname" : "reverb_wetdry[4]"
+				"obj-3::obj-45::obj-11::obj-11::obj-41" : 				{
+					"parameter_longname" : "wet_dry[4]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-4" : 				{
-					"parameter_longname" : "feedback[4]"
+				"obj-5::obj-39::obj-8::obj-105" : 				{
+					"parameter_longname" : "live.dial[4]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-5" : 				{
-					"parameter_longname" : "clipping[4]"
+				"obj-5::obj-45::obj-11::obj-11::obj-2::obj-14" : 				{
+					"parameter_longname" : "wet_dry[1]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-40::obj-8" : 				{
-					"parameter_longname" : "live.menu[4]"
+				"obj-5::obj-45::obj-11::obj-11::obj-2::obj-58" : 				{
+					"parameter_longname" : "left_delay[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-41" : 				{
-					"parameter_longname" : "wet_dry[11]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-14" : 				{
-					"parameter_longname" : "wet_dry[10]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-58" : 				{
-					"parameter_longname" : "left_delay[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-59" : 				{
+				"obj-5::obj-45::obj-11::obj-11::obj-2::obj-59" : 				{
 					"parameter_longname" : "left_modfreq[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-60" : 				{
+				"obj-5::obj-45::obj-11::obj-11::obj-2::obj-60" : 				{
 					"parameter_longname" : "left_moddepth[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-62" : 				{
-					"parameter_longname" : "left_feedback[6]"
+				"obj-5::obj-45::obj-11::obj-11::obj-2::obj-62" : 				{
+					"parameter_longname" : "left_feedback[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-64" : 				{
-					"parameter_longname" : "right_feedback[7]"
+				"obj-5::obj-45::obj-11::obj-11::obj-3::obj-14" : 				{
+					"parameter_longname" : "lowpass[4]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-65" : 				{
-					"parameter_longname" : "right_moddepth[6]"
+				"obj-5::obj-45::obj-11::obj-11::obj-3::obj-16" : 				{
+					"parameter_longname" : "highpass[4]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-66" : 				{
-					"parameter_longname" : "right_modfreq[6]"
+				"obj-5::obj-45::obj-11::obj-11::obj-3::obj-17" : 				{
+					"parameter_longname" : "WarbleSpeed[4]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.5::obj-42::obj-67" : 				{
-					"parameter_longname" : "right_delay[6]"
+				"obj-5::obj-45::obj-11::obj-11::obj-3::obj-20" : 				{
+					"parameter_longname" : "WarbleAmount[4]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-14" : 				{
-					"parameter_longname" : "lowpass[5]"
+				"obj-5::obj-45::obj-11::obj-11::obj-3::obj-22" : 				{
+					"parameter_longname" : "inertia[4]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-16" : 				{
-					"parameter_longname" : "highpass[5]"
+				"obj-5::obj-45::obj-11::obj-11::obj-3::obj-25" : 				{
+					"parameter_longname" : "wet/dry[4]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-17" : 				{
-					"parameter_longname" : "WarbleSpeed[5]"
+				"obj-5::obj-45::obj-11::obj-11::obj-3::obj-27" : 				{
+					"parameter_longname" : "revtime[4]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-20" : 				{
-					"parameter_longname" : "WarbleAmount[5]"
+				"obj-5::obj-45::obj-11::obj-11::obj-3::obj-35" : 				{
+					"parameter_longname" : "reverb_wetdry[4]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-22" : 				{
-					"parameter_longname" : "inertia[5]"
+				"obj-5::obj-45::obj-11::obj-11::obj-3::obj-4" : 				{
+					"parameter_longname" : "feedback[4]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-25" : 				{
-					"parameter_longname" : "wet/dry[5]"
+				"obj-5::obj-45::obj-11::obj-11::obj-3::obj-5" : 				{
+					"parameter_longname" : "clipping[4]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-27" : 				{
-					"parameter_longname" : "revtime[5]"
+				"obj-5::obj-45::obj-11::obj-11::obj-3::obj-8" : 				{
+					"parameter_longname" : "live.menu[4]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-35" : 				{
-					"parameter_longname" : "reverb_wetdry[5]"
+				"obj-5::obj-45::obj-11::obj-11::obj-41" : 				{
+					"parameter_longname" : "wet_dry[2]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-4" : 				{
-					"parameter_longname" : "feedback[5]"
+				"obj-6::obj-39::obj-8::obj-105" : 				{
+					"parameter_longname" : "live.dial[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-5" : 				{
-					"parameter_longname" : "clipping[5]"
+				"obj-6::obj-45::obj-11::obj-11::obj-2::obj-14" : 				{
+					"parameter_longname" : "wet_dry[3]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-40::obj-8" : 				{
-					"parameter_longname" : "live.menu[5]"
+				"obj-6::obj-45::obj-11::obj-11::obj-2::obj-58" : 				{
+					"parameter_longname" : "left_delay[6]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-41" : 				{
-					"parameter_longname" : "wet_dry[13]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-14" : 				{
-					"parameter_longname" : "wet_dry[12]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-58" : 				{
-					"parameter_longname" : "left_delay[8]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-59" : 				{
+				"obj-6::obj-45::obj-11::obj-11::obj-2::obj-59" : 				{
 					"parameter_longname" : "left_modfreq[6]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-60" : 				{
+				"obj-6::obj-45::obj-11::obj-11::obj-2::obj-60" : 				{
 					"parameter_longname" : "left_moddepth[6]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-62" : 				{
-					"parameter_longname" : "left_feedback[7]"
+				"obj-6::obj-45::obj-11::obj-11::obj-2::obj-62" : 				{
+					"parameter_longname" : "left_feedback[6]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-64" : 				{
-					"parameter_longname" : "right_feedback[8]"
+				"obj-6::obj-45::obj-11::obj-11::obj-3::obj-14" : 				{
+					"parameter_longname" : "lowpass[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-65" : 				{
-					"parameter_longname" : "right_moddepth[7]"
+				"obj-6::obj-45::obj-11::obj-11::obj-3::obj-16" : 				{
+					"parameter_longname" : "highpass[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-66" : 				{
-					"parameter_longname" : "right_modfreq[7]"
+				"obj-6::obj-45::obj-11::obj-11::obj-3::obj-17" : 				{
+					"parameter_longname" : "WarbleSpeed[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.6::obj-42::obj-67" : 				{
-					"parameter_longname" : "right_delay[7]"
+				"obj-6::obj-45::obj-11::obj-11::obj-3::obj-20" : 				{
+					"parameter_longname" : "WarbleAmount[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-14" : 				{
-					"parameter_longname" : "lowpass[6]"
+				"obj-6::obj-45::obj-11::obj-11::obj-3::obj-22" : 				{
+					"parameter_longname" : "inertia[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-16" : 				{
-					"parameter_longname" : "highpass[6]"
+				"obj-6::obj-45::obj-11::obj-11::obj-3::obj-25" : 				{
+					"parameter_longname" : "wet/dry[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-17" : 				{
-					"parameter_longname" : "WarbleSpeed[6]"
+				"obj-6::obj-45::obj-11::obj-11::obj-3::obj-27" : 				{
+					"parameter_longname" : "revtime[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-20" : 				{
-					"parameter_longname" : "WarbleAmount[6]"
+				"obj-6::obj-45::obj-11::obj-11::obj-3::obj-35" : 				{
+					"parameter_longname" : "reverb_wetdry[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-22" : 				{
-					"parameter_longname" : "inertia[6]"
+				"obj-6::obj-45::obj-11::obj-11::obj-3::obj-4" : 				{
+					"parameter_longname" : "feedback[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-25" : 				{
-					"parameter_longname" : "wet/dry[6]"
+				"obj-6::obj-45::obj-11::obj-11::obj-3::obj-5" : 				{
+					"parameter_longname" : "clipping[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-27" : 				{
-					"parameter_longname" : "revtime[6]"
+				"obj-6::obj-45::obj-11::obj-11::obj-3::obj-8" : 				{
+					"parameter_longname" : "live.menu[5]"
 				}
 ,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-35" : 				{
-					"parameter_longname" : "reverb_wetdry[6]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-4" : 				{
-					"parameter_longname" : "feedback[6]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-5" : 				{
-					"parameter_longname" : "clipping[6]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-40::obj-8" : 				{
-					"parameter_longname" : "live.menu[6]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-41" : 				{
-					"parameter_longname" : "wet_dry[15]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-14" : 				{
-					"parameter_longname" : "wet_dry[14]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-58" : 				{
-					"parameter_longname" : "left_delay[9]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-59" : 				{
-					"parameter_longname" : "left_modfreq[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-60" : 				{
-					"parameter_longname" : "left_moddepth[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-62" : 				{
-					"parameter_longname" : "left_feedback[8]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-64" : 				{
-					"parameter_longname" : "right_feedback[9]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-65" : 				{
-					"parameter_longname" : "right_moddepth[8]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-66" : 				{
-					"parameter_longname" : "right_modfreq[8]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.7::obj-42::obj-67" : 				{
-					"parameter_longname" : "right_delay[8]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-14" : 				{
-					"parameter_longname" : "lowpass[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-16" : 				{
-					"parameter_longname" : "highpass[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-17" : 				{
-					"parameter_longname" : "WarbleSpeed[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-20" : 				{
-					"parameter_longname" : "WarbleAmount[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-22" : 				{
-					"parameter_longname" : "inertia[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-25" : 				{
-					"parameter_longname" : "wet/dry[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-27" : 				{
-					"parameter_longname" : "revtime[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-35" : 				{
-					"parameter_longname" : "reverb_wetdry[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-4" : 				{
-					"parameter_longname" : "feedback[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-5" : 				{
-					"parameter_longname" : "clipping[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-40::obj-8" : 				{
-					"parameter_longname" : "live.menu[7]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-41" : 				{
-					"parameter_longname" : "wet_dry[17]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-14" : 				{
-					"parameter_longname" : "wet_dry[16]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-58" : 				{
-					"parameter_longname" : "left_delay[10]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-59" : 				{
-					"parameter_longname" : "left_modfreq[8]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-60" : 				{
-					"parameter_longname" : "left_moddepth[8]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-62" : 				{
-					"parameter_longname" : "left_feedback[9]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-64" : 				{
-					"parameter_longname" : "right_feedback[10]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-65" : 				{
-					"parameter_longname" : "right_moddepth[9]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-66" : 				{
-					"parameter_longname" : "right_modfreq[9]"
-				}
-,
-				"obj-2::obj-45::obj-8::obj-2.8::obj-42::obj-67" : 				{
-					"parameter_longname" : "right_delay[9]"
+				"obj-6::obj-45::obj-11::obj-11::obj-41" : 				{
+					"parameter_longname" : "wet_dry[5]"
 				}
 
 			}
@@ -4235,6 +3872,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "macrophage1.png",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics",
+				"patcherrelativepath" : "../media/pics",
+				"type" : "PNG",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "mc.pluggo.dryWet2~.maxpat",
 				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
 				"patcherrelativepath" : ".",
@@ -4242,10 +3886,17 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "monocyte1.png",
-				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics",
-				"patcherrelativepath" : "../media/pics",
-				"type" : "PNG",
+				"name" : "mc.spaceecho.maxpat",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mc.swirl.maxpat",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -4272,37 +3923,6 @@
 				"name" : "pathfinder.maxpat",
 				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
 				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pluggo.dryWet2~.maxpat",
-				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pluggo.dryWet3~.maxpat",
-				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pluggo.dryWet~.maxpat",
-				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pluggo.hip1~.maxpat",
-				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pluggo.lop1~.maxpat",
-				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -4348,13 +3968,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "spaceecho.maxpat",
-				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "spat5.binaural~.mxo",
 				"type" : "iLaX"
 			}
@@ -4386,13 +3999,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "stiffFX.maxpat",
-				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "stiffSpat.maxpat",
 				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
 				"patcherrelativepath" : ".",
@@ -4404,13 +4010,6 @@
 				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
 				"patcherrelativepath" : "../data",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "swirl.maxpat",
-				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
