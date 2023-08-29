@@ -114,6 +114,7 @@ io.on('connection',function(socket){
         console.log(socket.id + ' disconnected');
         let index = users_dict['ids'].indexOf(socket.id);
         users_dict['user_active'][index] = 1;
+        Max.outlet(index+1 + ' unlink');
     });
 });
 
