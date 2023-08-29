@@ -126,15 +126,31 @@ canvas {
      z-index: 2;
      margin-top: 10px;
      margin-right: 10px;
+     background-color: white;
+     border-radius: 10px;
+     padding: 4px;
 }
 
 #legendeimg {
-     display: none;
+     display: block;
      position: static;
      height: 100%;
      z-index: 3;
      transform: translateX(100%);
      opacity: 0;
+}
+
+#legendetxt {
+     display: block;
+     position: absolute;
+     opacity: 0;
+     z-index: 2;
+     bottom: 20%;
+     left: 0;
+     right: 0;
+     text-align: center;
+     background-color: white;
+     padding: 4px;
 }
 
 /*
@@ -179,12 +195,12 @@ Settings
 
 #settings {
      position: absolute;
+     display: none;
      height: auto;
      width: 100px;
      top: 0;
      right: 0;
      left: auto;
-     display: none;
      flex-direction: column;
      justify-content: start;
      background-color: transparent;
@@ -373,7 +389,7 @@ Sound Toggles
 }
 
 #elasticToggle:checked + .toggle {
-     background-color: purple;
+     background-color: blue;
 }
 
 

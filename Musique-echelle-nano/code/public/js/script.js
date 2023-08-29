@@ -17,14 +17,14 @@ const sketch = document.getElementById("sketch");
 var user_launched = false;
 let socketid;
 const cells = ['macrophage1', 'macrophage2', 'monocyte1', 'monocyte2'];
-var types = ["viscous", "stiff", "elastic", "all"];
 var touch_cell = false;
 let portrait = window.matchMedia("(orientation: portrait)");
 let orientationTel = 'portrait';
 let old_type = 'viscous';
-let type = 'stiff';
-let cell = 0;
+let type = 'all';
+let cell = 1;
 let pictureonoff = false;
+let cell_select = false;
 
 portrait.addEventListener("change", function(e){
     if(e.matches){
@@ -35,6 +35,10 @@ portrait.addEventListener("change", function(e){
     }
     changePicture(orientationTel);
 });
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 // Socket message sent from server when a client connects
 // It shows the buttons for the users that are not currently used
@@ -52,6 +56,9 @@ socket.on("users", function(users_list, id){
                 users_buttons[i].style.display = 'block';
             }
         }
+        for(let i=0; i<menu_choices.length; i++){
+            menu_choices[i].innerHTML = `<a href="#" onclick="displayMenu(${i+1})">${cells[i]}</a>`;
+        }
     }
 });
 
@@ -63,15 +70,12 @@ function choixUser(user_sel){
     user = user_sel;
     console.log('user' + user + ' choisi');
     user_launched = true;
-    
-    settings.style.display = 'flex';
     sectionbottom.style.display = 'flex';
     socket.send(`${user} link ${socketid}`);
-    for(let i=0; i<menu_choices.length; i++){
-        menu_choices[i].innerHTML = `<a href="#" onclick="displayMenu(${i+1})">${cells[i]}</a>`;
-    }
 }
 
+// Function triggered when client chooses a user
+// It translate the menu to the top left corner
 async function translateMenu(){
     const menu_debut = document.getElementById("menu_debut");
     const h = menu_debut.children[0];
@@ -79,6 +83,7 @@ async function translateMenu(){
     const logos = document.getElementById("logos");
     const menucell_div = document.getElementById("menucell_div");
     const picturebutton = document.getElementById("pictureShowHide");
+
     menucell_div.style.display = 'block'
     h.style.opacity = '0';
     p.style.opacity = '0';
@@ -86,10 +91,11 @@ async function translateMenu(){
     logos.style.opacity = '0';
     menucell_div.style.transform = 'translate(-4px, -242px)';
     menucell_div.style.transition = 'transform 0.5s';
+
     await sleep(500);
+
     menucell_div.style.transition = 'transform 0s';
     menucell_div.style.transform = 'translate(0px, 0px)';
-    picturebutton.style.opacity = '1';
     h.style.display = 'none';
     p.style.display = 'none';
     choix_user.style.display = 'none';
@@ -99,10 +105,8 @@ async function translateMenu(){
     menu_debut.style.bottom = 'auto';
     menu_debut.style.backgroundColor = 'transparent';
     menu_debut.style.padding = '0 0';
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    picturebutton.style.opacity = '1';
+    picturebutton.style.display = 'flex';
 }
 
 var on_cell = function on_cell(cellornot){
@@ -110,9 +114,11 @@ var on_cell = function on_cell(cellornot){
 };
 
 // Functions triggered when client touches the screen
-document.body.addEventListener("touchstart", function(){
+document.getElementById("sketch").addEventListener("touchstart", function(){
     showLegende(0);
-    if(user_launched && !settings_on && touch_cell){
+    console.log('mouse');
+    // touch_cell = is_on_cell();
+    if(user_launched && !settings_on){
         socket.send(`${user} touch 1`);
     }
 });
@@ -196,16 +202,19 @@ function showHideSettings(){
 // Function triggered when you select a cell
 // It changes the picture displayed on the canvas
 function displayMenu(selection){
-    let showHideImageButton = document.getElementById("pictureShowHide");
-    let check = showHideImageButton.children[0].children[0];
+    // selection = 1 (viscosity), 2 (stiffness) or 3 (elasticity)
+    let picturebutton = document.getElementById("pictureShowHide");
+    let check = picturebutton.children[0].children[0];
     cell = selection;
     if(menu.style.display == 'flex'){
+        // if the menu is already displayed, hide it
         menu.style.display = 'none';
         if(selection != 0){
+            // if a cell is selected, change the picture cell
             menu_titre.innerHTML = menu_choices[selection-1].innerText;
             socket.send(`${user} selection ${selection-1}`)
-            drawPicture(cells[selection-1], type, check.checked);
-            showHideImageButton.style.display = "flex";
+            picturebutton.style.display = "flex";
+            drawPicture(cells[cell-1], type, pictureonoff);
         }
     }
     else{
@@ -217,64 +226,89 @@ function displayMenu(selection){
 }
 // Function to show or hide the picture
 function showHidePicture(checked){
+    // checked = true or false if the checkbox is checked or not
     pictureonoff = checked;
     drawPicture(cells[cell-1], type, checked);
-    if(checked){
+    if(checked && type != 'none'){
         document.getElementById("legende").style.display = "block";
-        document.getElementById("legendeimg").style.display = "block";
     }
     else{
         document.getElementById("legende").style.display = "none";
-        document.getElementById("legendeimg").style.display = "none";
     }
 }
 
 // Function to active or disactive cell sounds (viscosity, etc.)
 // and to draw the picture linked to the data sonified (beta, etc.)
+// It also shows or hides the legend of the heatmaps
 function activeSounds(checked, sound){
+    // checked = true or false if the checkbox is checked or not
+    // sound = 0 (viscosity), 1 (stiffness) or 2 (elasticity)
     let viscousToggle = document.getElementById("viscousToggle");
     let stiffToggle = document.getElementById("stiffToggle");
     let elasticToggle = document.getElementById("elasticToggle");
+    if(pictureonoff){
+        document.getElementById("legende").style.display = "block";
+    }
     if(viscousToggle.checked && !stiffToggle.checked && !elasticToggle.checked){
+        // if viscous checkbox only is checked, adapt type and legend to viscous
         type = 'viscous';
+        document.getElementById("legendetxt").innerHTML = "beta : coefficient de viscosité";
     }
     else if(!viscousToggle.checked && stiffToggle.checked && !elasticToggle.checked){
+        // if stiff checkbox only is checked, adapt type and legend to stiff
         type = 'stiff';
+        document.getElementById("legendetxt").innerHTML = " : E : module de Young (log10(Pa))";
     }
     else if(!viscousToggle.checked && !stiffToggle.checked && elasticToggle.checked){
+        // if elastic checkbox only is checked, adapt type and legend to elastic
         type = 'elastic';
+        document.getElementById("legendetxt").innerHTML = "0.5-beta : coefficient d'élasticité";
     }
     else if(!viscousToggle.checked && !stiffToggle.checked && !elasticToggle.checked){
+        // if no checkbox is checked, adapt type and legend to none
         type = 'none';
+        document.getElementById("legende").style.display = "none";
     }
     else{
+        // if more than one checkbox is checked, adapt type and legend to all
         type = 'all';
+        document.getElementById("legendetxt").innerHTML = "Zc : point de contact en Z";
     }
     if(type != old_type){
+        // if type has changed, draw the new picture
         drawPicture(cells[cell-1], type, pictureonoff);
+        console.log(type);
         document.getElementById("legendeimg").src = `media/pics/${type}_scale.png`;
     }
     if(checked){
+        // send to Max to active the sound
         socket.send(`${user} active ${sound}`);
     }
     else{
+        // send to Max to disactive the sound
         socket.send(`${user} disactive ${sound}`);
     }
     old_type = type;
 }
 
-// Function to show or hide the legend of the heatmaps
+// Function to show or hide the legend of the heatmaps when you click on legend button
 function showLegende(onoff){
+    // onoff = 1 when you click on the button
+    // onoff = 0 when you click outside the legend
     const legendeimg = document.getElementById("legendeimg");
     if(onoff == 1){
         legendeimg.style.transform = "translateX(0)"
         legendeimg.style.opacity = "1";
         legendeimg.style.transition = "transform 0.5s, opacity 0.5s"
+        legendetxt.style.opacity = "1";
+        legendetxt.style.transition = "opacity 0.5s"
     }
     else{
         legendeimg.style.transform = "translateX(100%)"
         legendeimg.style.opacity = "0";
         legendeimg.style.transition = "transform 0.5s, opacity 0.5s"
+        legendetxt.style.opacity = "0";
+        legendetxt.style.transition = "opacity 0.5s"
     }
     
 }

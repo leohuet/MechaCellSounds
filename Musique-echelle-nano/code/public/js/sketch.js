@@ -16,7 +16,7 @@ else{
 
 var size = 15;
 var nopressuresize = 30;
-let img1, img2, img3, img4;
+let img;
 let picture = 0;
 
 function setup() {
@@ -42,14 +42,11 @@ function showHidePicture(checkBox){
 var drawPicture = function drawPicture(pic, type, onoff){
   if(onoff){
     picture = 1;
-    if(type == 'all'){
-      img = loadImage(`media/pics/all.png`);
-    }
-    else if(type == 'none'){
-      picture = 0;
+    if(type != 'none'){
+      img = loadImage(`media/pics/${pic}_${type}.png`);
     }
     else{
-      img = loadImage(`media/pics/${pic}_${type}.png`);
+      picture = 0;
     }
   }
   else{
@@ -62,10 +59,7 @@ var changePicture = function changePicture(orientation){
     picwidth = windowWidth;
     socket.send(`${picwidth} picwidth`);
     picheight = windowWidth;
-    img1.resize(picwidth, picheight);
-    img2.resize(picwidth, picheight);
-    img3.resize(picwidth, picheight);
-    img4.resize(picwidth, picheight);
+    img.resize(picwidth, picheight);
     resizeCanvas(picwidth, picheight);
   }
 }
@@ -90,6 +84,15 @@ function resetForce(){
   nopressuresize = 30;
 }
 
+var is_on_cell = function is_on_cell(){
+  if(mouseX<picwidth && mouseY<picheight){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
 function draw() {
   background(255);
   stroke(0)
@@ -98,17 +101,11 @@ function draw() {
     image(img, 0, 0, picwidth, picheight);
   }
   if(user_launched){
-    if(mouseX<picwidth && mouseY<picheight){
-      on_cell(true);
       send_xy(mouseX/picwidth, mouseY/picheight, size);
       translate(mouseX, mouseY);
       fill(200, 200, 200, 100);
       stroke(0);
       strokeWeight(1);
       circle(0, 0, size);
-    }
-    else{
-      on_cell(false);
-    }
   }
 }
