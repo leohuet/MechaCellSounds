@@ -44,6 +44,7 @@ function sleep(ms) {
 // It shows the buttons for the users that are not currently used
 socket.on("users", function(users_list, id){
     sketch.style.height = window.innerWidth;
+    legendetxt.style.top = `${window.innerWidth+30}px`;
     if(!user_launched){
         console.log('init');
         socketid = id;
@@ -105,8 +106,13 @@ async function translateMenu(){
     menu_debut.style.bottom = 'auto';
     menu_debut.style.backgroundColor = 'transparent';
     menu_debut.style.padding = '0 0';
+    menu_debut.style.display = 'flex';
+    menu_debut.style.justifyContent = 'space-between';
+    menu_debut.style.alignItems = 'center';
+    menu_debut.style.flexDirection = 'row';
     picturebutton.style.opacity = '1';
     picturebutton.style.display = 'flex';
+    titre_menu.innerHTML = 'Changez de cellule';
 }
 
 var on_cell = function on_cell(cellornot){
