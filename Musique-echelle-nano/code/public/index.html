@@ -51,6 +51,7 @@
           <input type="checkbox" oninput="showHidePicture(this.checked)">
           <span class="toggle"></span>
         </label>
+        <h6 style="margin-block-start: 0; margin-block-end: 0; font-size: 12px; width: 50px;">afficher l'image</h6>
       </div>
       <div id="logos">
         <img class="logoimg" src="media/pics/gmem.jpeg"></img>
@@ -99,6 +100,13 @@
       </div>
     </div>
 
+    <div id="sketch">
+      <script src="code/public/js/sketch.js"></script>
+      <a id="legende" onclick="showLegende(1)">Légende</a>
+      <img id="legendeimg" src="media/pics/all_scale.png"></img>
+      <a id="legendetxt">point de contact en Z</a>
+    </div>
+
     <div id="section_bottom">
       <div class="sound_toggles2">
         <label class="switch">
@@ -123,12 +131,7 @@
       </div>
     </div>
 
-    <div id="sketch">
-      <script src="code/public/js/sketch.js"></script>
-      <a id="legende" onclick="showLegende(1)">Légende</a>
-      <img id="legendeimg" src="media/pics/all_scale.png"></img>
-      <a id="legendetxt">point de contact en Z</a>
-    </div>
+
     <script type="text/javascript" src="code/public/js/script.js"></script>
 
   </body>
