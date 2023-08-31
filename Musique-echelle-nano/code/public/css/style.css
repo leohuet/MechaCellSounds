@@ -53,10 +53,6 @@ canvas {
      justify-content: space-around;
 }
 
-.logoimg {
-     width: 40px;
-     height: 40px;
-}
 #choix_user {
      position: static;
      flex-direction: row;
@@ -66,7 +62,6 @@ canvas {
      left: 0;
      bottom: 0;
      right: 0;
-     margin: 10 10;
 }
 
 #choix_user button {
@@ -82,10 +77,58 @@ canvas {
      font-size: 20px;
 }
 
+@media(max-width: 600px) {
+     #menu_debut {
+          margin: 0 0;
+     }
+
+     .logoimg {
+          width: 40px;
+          height: 40px;
+     }
+
+     #choix_user {
+          margin: 10 10;
+     }
+
+     #pictureShowHide h6 {
+          margin-block-start: 0;
+          margin-block-end: 0;
+          font-size: 16px;
+          width: 150px;
+     }
+}
+
+@media (min-width: 600px) {
+     #menu_debut {
+          margin: 100 100;
+     }
+
+     .logoimg {
+          width: 80px;
+          height: 80px;
+     }
+
+     #menucell_div {
+          margin-top: 100px
+     }
+
+     #choix_user {
+          margin-top: 50px
+     }
+
+     #pictureShowHide h6 {
+          margin-block-start: 0;
+          margin-block-end: 0;
+          font-size: 16px;
+          width: 150px;
+     }
+}
+
 #sketch {
-     display: flex;
+     display: -webkit-flex;
      align-items: start;
-     justify-content: end;
+     justify-content: flex-end;
      margin-top: 80px;
      margin-right: 0px;
      height: auto;
@@ -136,7 +179,7 @@ canvas {
      position: static;
      height: 100%;
      z-index: 3;
-     transform: translateX(100%);
+     
      opacity: 0;
 }
 
@@ -153,45 +196,10 @@ canvas {
      padding: 4px;
 }
 
-/*
-@media screen and (orientation: landscape) {
-     #choix_user {
-          position: absolute;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-around;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          margin: 0 200;
-     }
-     
-     #choix_user button {
-          display: block;
-          position: static;
-          flex-shrink: 1;
-          height: 70px;
-          width: 100px;
-          margin: 10px;
-          padding: 10px;
-          border: 2px solid black;
-          border-radius: 5px;
-          background-color: #666;
-          color: azure;
-          font-size: 20px;
-     }
-
-     #sketch {
-          margin-top: 0px;
-          margin-right: 80px;
-     }
-}
-*/
 
 /*---------------------------------------------------------------------
 Settings
----------------------------------------------------------------------*/
+---------------------------------------------------------------------
 
 #settings {
      position: absolute;
@@ -289,7 +297,7 @@ Settings
           padding-left: 20px;
      }
 }
-
+*/
 
 
 /*---------------------------------------------------------------------

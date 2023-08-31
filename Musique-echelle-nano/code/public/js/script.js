@@ -97,6 +97,7 @@ async function translateMenu(){
 
     menucell_div.style.transition = 'transform 0s';
     menucell_div.style.transform = 'translate(0px, 0px)';
+    menucell_div.style.marginTop = '0';
     h.style.display = 'none';
     p.style.display = 'none';
     choix_user.style.display = 'none';
@@ -106,6 +107,7 @@ async function translateMenu(){
     menu_debut.style.bottom = 'auto';
     menu_debut.style.backgroundColor = 'transparent';
     menu_debut.style.padding = '0 0';
+    menu_debut.style.margin = '0 0';
     menu_debut.style.display = 'flex';
     menu_debut.style.justifyContent = 'space-between';
     menu_debut.style.alignItems = 'center';
@@ -218,9 +220,9 @@ function displayMenu(selection){
         if(selection != 0){
             // if a cell is selected, change the picture cell
             menu_titre.innerHTML = menu_choices[selection-1].innerText;
-            socket.send(`${user} selection ${selection-1}`)
             picturebutton.style.display = "flex";
             drawPicture(cells[cell-1], type, pictureonoff);
+            socket.send(`${user} picture ${cell-1} ${type}`)
         }
     }
     else{
@@ -283,6 +285,7 @@ function activeSounds(checked, sound){
     if(type != old_type){
         // if type has changed, draw the new picture
         drawPicture(cells[cell-1], type, pictureonoff);
+        socket.send(`${user} picture ${cells[cell-1]} ${type}`)
         console.log(type);
         document.getElementById("legendeimg").src = `media/pics/${type}_scale.png`;
     }
