@@ -100,9 +100,6 @@ io.on('connection',function(socket){
             users_dict['ids'][event[0]-1] = event.substr(event.length-20, 20);
             Max.outlet(event[0] + ' link');
         }
-        else if(event.includes('width')){
-            console.log(event);
-        }
         else{
             // When the client sends coordinates, it is directed to Max outlet
             Max.outlet(event);
@@ -118,10 +115,12 @@ io.on('connection',function(socket){
     });
 });
 
+Max.addHandler("unlink", (user) => {
+    users_dict['user_active'][user-1] = 1;
+    Max.outlet(user + ' unlink');
+});
+
 port = 8000;
 http.listen(port,function(){
     console.log("Listening on" + port);
-    setInterval(()=>{
-    	cpuDisplay();
-    },10000);
 });
