@@ -8,7 +8,7 @@ const os      =     require('os');
 
 var users_dict = {
     'ids': [],
-    'user_active': [1, 1, 1, 1],
+    'user_active': [1, 1, 1, 1, 1],
 };
 
 var cpu_dict = {
@@ -26,6 +26,9 @@ app.use(express.static(__dirname));
 // Configures each link to a different page.
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/code/public/index.html');
+});
+app.get('/tablette', function(req, res) {
+    res.sendFile(__dirname + '/code/public/tablette.html');
 });
 
 var cpu_dict_old = [];
