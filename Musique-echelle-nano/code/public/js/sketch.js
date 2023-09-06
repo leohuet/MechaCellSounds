@@ -75,8 +75,14 @@ function sizeCercle(force, pressure){
 }
 
 function sliderSize(value){
-  size = value/3;
-  socket.send(`${user} size ${value}`);
+  if(size >= 15 && size <= 35 && value == 1){
+    size = size+value*10;
+  }
+  else if(size >= 25 && size <= 45 && value == -1){
+    size = size+value*10;
+  }
+  socket.send(`${user} size ${size}`);
+  console.log(`${user} size ${size}`);
 }
 
 function resetForce(){

@@ -81,6 +81,7 @@ async function translateMenu(){
     const menu_debut = document.getElementById("menu_debut");
     const h = menu_debut.children[0];
     const p = menu_debut.children[1];
+    const size = menu_debut.children[4];
     const logos = document.getElementById("logos");
     const menucell_div = document.getElementById("menucell_div");
     const picturebutton = document.getElementById("pictureShowHide");
@@ -102,19 +103,21 @@ async function translateMenu(){
     p.style.display = 'none';
     choix_user.style.display = 'none';
     logos.style.display = 'none';
-    menu_debut.style.right = '20px'; 
-    menu_debut.style.left = '20px'; 
+    menu_debut.style.right = '10px';
+    menu_debut.style.left = '0px';
     menu_debut.style.bottom = 'auto';
     menu_debut.style.backgroundColor = 'transparent';
     menu_debut.style.padding = '0 0';
     menu_debut.style.margin = '0 0';
     menu_debut.style.display = 'flex';
-    menu_debut.style.justifyContent = 'space-between';
+    menu_debut.style.justifyContent = 'space-around';
     menu_debut.style.alignItems = 'center';
     menu_debut.style.flexDirection = 'row';
     picturebutton.style.opacity = '1';
     picturebutton.style.display = 'flex';
     titre_menu.innerHTML = 'Changez de cellule';
+    size.style.display = 'block';
+    // size.style.flexDirection = 'column';
 }
 
 var on_cell = function on_cell(cellornot){
@@ -260,17 +263,17 @@ function activeSounds(checked, sound){
     if(viscousToggle.checked && !stiffToggle.checked && !elasticToggle.checked){
         // if viscous checkbox only is checked, adapt type and legend to viscous
         type = 'viscous';
-        document.getElementById("legendetxt").innerHTML = "beta : coefficient de viscosité";
+        document.getElementById("legendetxt").innerHTML = "Fraction de l'énergie dissipée (log10(Pa))";
     }
     else if(!viscousToggle.checked && stiffToggle.checked && !elasticToggle.checked){
         // if stiff checkbox only is checked, adapt type and legend to stiff
         type = 'stiff';
-        document.getElementById("legendetxt").innerHTML = " : E : module de Young (log10(Pa))";
+        document.getElementById("legendetxt").innerHTML = "Magnitude de non déformabilité (log10(Pa))";
     }
     else if(!viscousToggle.checked && !stiffToggle.checked && elasticToggle.checked){
         // if elastic checkbox only is checked, adapt type and legend to elastic
         type = 'elastic';
-        document.getElementById("legendetxt").innerHTML = "0.5-beta : coefficient d'élasticité";
+        document.getElementById("legendetxt").innerHTML = "Fraction de l'énergie stockée après déformation (log10(Pa))";
     }
     else if(!viscousToggle.checked && !stiffToggle.checked && !elasticToggle.checked){
         // if no checkbox is checked, adapt type and legend to none
@@ -280,7 +283,7 @@ function activeSounds(checked, sound){
     else{
         // if more than one checkbox is checked, adapt type and legend to all
         type = 'all';
-        document.getElementById("legendetxt").innerHTML = "Zc : point de contact en Z";
+        document.getElementById("legendetxt").innerHTML = "Topographie";
     }
     if(type != old_type){
         // if type has changed, draw the new picture

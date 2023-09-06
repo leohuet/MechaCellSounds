@@ -94,8 +94,8 @@ canvas {
      #pictureShowHide h6 {
           margin-block-start: 0;
           margin-block-end: 0;
-          font-size: 16px;
-          width: 150px;
+          font-size: 14px;
+          width: 40px;
      }
 }
 
@@ -193,7 +193,7 @@ canvas {
      right: 0;
      text-align: center;
      background-color: white;
-     padding: 4px;
+     padding: 0 30;
 }
 
 
@@ -304,13 +304,15 @@ Settings
 Menu déroulant 
 ---------------------------------------------------------------------*/
 
+#menu_cell {
+     font-size: 16px;
+}
 #menu_cell ul li {
      position: relative;
      float: left;
      text-align: left;
      min-width: 150px;
      max-width: 220px;
-     font-size: 18px;
 }
 
 #menu_cell ul::after {
