@@ -49,7 +49,7 @@ socket.on("users", function(users_list, id){
         console.log('init');
         socketid = id;
         choix_user.style.display = 'flex';
-        for(let i=0; i<users_list.length; i++){
+        for(let i=0; i<4; i++){
             if(users_list[i] == 0){
                 users_buttons[i].style.display = 'none';
             }
