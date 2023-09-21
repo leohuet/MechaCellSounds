@@ -1,9 +1,0 @@
-1, ColanderRubberMallet3.wav 0 1 1 -1;
-2, ColanderRubberMallet7.wav 0 1 1 -1;
-3, ColanderRubberMallet13.wav 0 1 1 -1;
-4, ColanderRubberMallet21.wav 0 1 1 -1;
-5, ColanderRubberMalletREC.wav 0 1 1 -1;
-6, MetalTin57.wav 0 1 0 1;
-7, MetalTin104.wav 0 1 0 1;
-8, MetalTin105.wav 0 1 0 1;
-9, MetalTin110-2.wav 0 1 0 1;

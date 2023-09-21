@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 1444.0, 848.0 ],
+		"rect" : [ 34.0, 100.0, 965.0, 848.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -539,7 +539,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 752.13042676448822, 1297.0, 54.0, 22.0 ],
+					"patching_rect" : [ 752.13042676448822, 1339.0, 54.0, 22.0 ],
 					"text" : "mc.dac~"
 				}
 
@@ -1314,7 +1314,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1434.031703412532806, 150.528167437315005, 150.0, 52.0 ],
-									"presentation_linecount" : 2,
 									"text" : "Elastic and viscous polybuffers"
 								}
 
@@ -1330,7 +1329,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 893.0, 199.528167437315005, 150.0, 52.0 ],
-									"presentation_linecount" : 2,
 									"text" : "soundfile polybuffer for main bufGranul"
 								}
 
@@ -4538,6 +4536,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "elastic_scale.png",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics",
+				"patcherrelativepath" : "../media/pics",
+				"type" : "PNG",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "elastic_zones.js",
 				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/code",
 				"patcherrelativepath" : "../code",
@@ -4551,7 +4556,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "macrophage1_all.png",
+				"name" : "macrophage1_elastic.png",
 				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics",
 				"patcherrelativepath" : "../media/pics",
 				"type" : "PNG",
@@ -4576,6 +4581,13 @@
 				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "monocyte1_all.png",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics",
+				"patcherrelativepath" : "../media/pics",
+				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
