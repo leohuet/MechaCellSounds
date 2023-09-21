@@ -2,8 +2,8 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3776077858,
-	"viewrect" : [ 1089.0, 153.0, 516.0, 797.0 ],
+	"modificationdate" : 3778148662,
+	"viewrect" : [ 979.0, 106.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -21,11 +21,6 @@
 				"local" : 1
 			}
 ,
-			"viscous_stiff_levels.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"mc.pluggo.dryWet2~.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -37,21 +32,6 @@
 			}
 ,
 			"mc.swirl.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"stiffSpat.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"viscousSpats.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"vocoder.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -79,6 +59,26 @@
 				"local" : 1
 			}
 ,
+			"stiffSpat.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"viscousSpats.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"viscous_stiff_levels.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"vocoder.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"pluggo.dryWet2~.maxpat" : 			{
 				"kind" : "patcher"
 			}
@@ -99,17 +99,7 @@
 				"kind" : "patcher"
 			}
 ,
-			"spaceecho.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
 			"stiffFX.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"swirl.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -118,106 +108,161 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
-,
-			"damping_fft.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"elastic_comp.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"stiff_comp.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"viscous_comp.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"230703_viscoussounds.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"fft_interpolation.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"raindrops.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
-			}
 
 		}
 ,
 		"media" : 		{
-			"macrophage1.png" : 			{
+			"elastic_scale.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"scale.png" : 			{
+			"macrophage1_elastic.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"monocyte1.png" : 			{
+			"all_scale.png" : 			{
 				"kind" : "imagefile",
 				"local" : 1
 			}
 ,
-			"amb.wav" : 			{
+			"macrophage1_all.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"macrophage1_stiff.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"macrophage1_viscous.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"macrophage2_all.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"macrophage2_elastic.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"macrophage2_stiff.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"macrophage2_viscous.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"minus.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"monocyte1_all.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"monocyte1_elastic.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"monocyte1_stiff.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"monocyte1_viscous.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"monocyte2_all.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"monocyte2_elastic.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"monocyte2_stiff.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"monocyte2_viscous.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"none_scale.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"plus.jpeg" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"stiff_scale.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"viscous_scale.png" : 			{
+				"kind" : "imagefile",
+				"local" : 1
+			}
+,
+			"bulle.aiff" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"AmbienceHunter.wav" : 			{
+			"bulle2.aiff" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"foret_percs.wav" : 			{
+			"gmu.env.trapez10.aif" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"hihat.wav" : 			{
+			"gmu.env.trapez20.aif" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"percloop.wav" : 			{
+			"gmu.env.trapez30.aif" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"piano.wav" : 			{
+			"gmu.env.tri.aif" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"saw.aiff" : 			{
+			"viscosite.aif" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"snd.aiff" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"strings.wav" : 			{
+			"viscositelong.aiff" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
@@ -267,6 +312,16 @@
 				"local" : 1
 			}
 ,
+			"amb.wav" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
+			"AmbienceHunter.wav" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
 			"BakedBeans4.wav" : 			{
 				"kind" : "audiofile",
 				"local" : 1
@@ -278,31 +333,6 @@
 			}
 ,
 			"Bubbles5.wav" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"ColanderRubberMallet3.wav" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"ColanderRubberMallet7.wav" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"ColanderRubberMallet13.wav" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"ColanderRubberMallet21.wav" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"ColanderRubberMalletREC.wav" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
@@ -322,32 +352,12 @@
 				"local" : 1
 			}
 ,
-			"granulator1_visceux.wav" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"granulator2.wav" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"granulatormix_visqueux.wav" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
 			"granulatormix_visqueux2.wav" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
 			"granulatormix_visqueux3.wav" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"MetalLunchboxVibrationSmall11.wav" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
@@ -373,6 +383,16 @@
 			}
 ,
 			"MetalTin110.wav" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
+			"percloop.wav" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
+			"piano.wav" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
@@ -407,68 +427,38 @@
 				"local" : 1
 			}
 ,
-			"visqueuxGMU.aiff" : 			{
-				"kind" : "audiofile",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
-			}
-,
-			"gmu.env.trapez10.aif" : 			{
+			"viscous_comp_1.wav" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"gmu.env.trapez20.aif" : 			{
+			"viscous_comp_2.wav" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"bulle.aiff" : 			{
+			"viscous_comp_3_1.aiff" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"bulle2.aiff" : 			{
+			"viscous_comp_3_2.aiff" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"viscosite.aif" : 			{
+			"viscous_comp_4.wav" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"viscositelong.aiff" : 			{
+			"viscous_GMU_1.aiff" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}
 ,
-			"gmu.env.trapez30.aif" : 			{
+			"viscous_GMU_2.aiff" : 			{
 				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"gmu.env.tri.aif" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"macrophage2.png" : 			{
-				"kind" : "imagefile",
-				"local" : 1
-			}
-,
-			"monocyte2.png" : 			{
-				"kind" : "imagefile",
-				"local" : 1
-			}
-,
-			"settings.png" : 			{
-				"kind" : "imagefile",
 				"local" : 1
 			}
 
@@ -476,16 +466,6 @@
 ,
 		"code" : 		{
 			"elastic_zones.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"pan_calcul.gendsp" : 			{
-				"kind" : "gendsp",
-				"local" : 1
-			}
-,
-			"sort_modulus.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
@@ -508,12 +488,17 @@
 				"local" : 1
 			}
 ,
+			"sort_modulus.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"polyBufferHandle.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
 ,
-			"damping.gendsp" : 			{
+			"pan_calcul.gendsp" : 			{
 				"kind" : "gendsp",
 				"local" : 1,
 				"singleton" : 				{
@@ -561,11 +546,6 @@
 				"local" : 1
 			}
 ,
-			"preloadn.txt" : 			{
-				"kind" : "textfile",
-				"local" : 1
-			}
-,
 			"exported.txt" : 			{
 				"kind" : "textfile",
 				"local" : 1,
@@ -593,121 +573,28 @@
 				"kind" : "object",
 				"local" : 1
 			}
-,
-			"spat5.pan~.mxo" : 			{
-				"kind" : "object"
-			}
-,
-			"spat5.binaural~.mxo" : 			{
-				"kind" : "object"
-			}
-,
-			"spat5.cpu.mxo" : 			{
-				"kind" : "object"
-			}
-,
-			"spat5.hostinfos.mxo" : 			{
-				"kind" : "object"
-			}
-,
-			"spat5.sofa.loader.mxo" : 			{
-				"kind" : "object"
-			}
-,
-			"spat5.viewer.mxo" : 			{
-				"kind" : "object",
-				"local" : 1
-			}
-,
-			"mc.bufGranul~.mxo" : 			{
-				"kind" : "object"
-			}
-,
-			"spat5.reverb~.mxo" : 			{
-				"kind" : "object",
-				"local" : 1
-			}
-,
-			"liveGranul~.mxo" : 			{
-				"kind" : "object",
-				"local" : 1
-			}
-,
-			"mubu.mxo" : 			{
-				"kind" : "object",
-				"local" : 1
-			}
-,
-			"pipo~.mxo" : 			{
-				"kind" : "object",
-				"local" : 1
-			}
-,
-			"spat5.hoa.binaural~.mxo" : 			{
-				"kind" : "object",
-				"local" : 1
-			}
-,
-			"spat5.hoa.encoder~.mxo" : 			{
-				"kind" : "object",
-				"local" : 1
-			}
-,
-			"spat5.spat~.mxo" : 			{
-				"kind" : "object"
-			}
 
 		}
 ,
 		"other" : 		{
-			"230630_exported.csv" : 			{
+			"macrophage1.csv" : 			{
 				"kind" : "file",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
-					"projectrelativepath" : "./data"
-				}
-
+				"local" : 1
 			}
 ,
-			"230630_filtered_exported.csv" : 			{
+			"macrophage2.csv" : 			{
 				"kind" : "file",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
-					"projectrelativepath" : "./data"
-				}
-
+				"local" : 1
 			}
 ,
-			"230724_cell12_filtered_exported.csv" : 			{
+			"monocyte1.csv" : 			{
 				"kind" : "file",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
-					"projectrelativepath" : "./data"
-				}
-
+				"local" : 1
 			}
 ,
-			"230727_filtered_exported.csv" : 			{
+			"monocyte2.csv" : 			{
 				"kind" : "file",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
-					"projectrelativepath" : "./data"
-				}
-
-			}
-,
-			"230804_macrophage1.csv" : 			{
-				"kind" : "file",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
-					"projectrelativepath" : "./data"
-				}
-
+				"local" : 1
 			}
 
 		}

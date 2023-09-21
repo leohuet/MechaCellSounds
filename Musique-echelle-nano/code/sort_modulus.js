@@ -14,8 +14,8 @@ var DD_dict = {
 'betaTn_2D_array': [],
 }
 
-temp_arrayf = new Array(13);
-moyenne_array = new Array(13);
+temp_arrayf = new Array(3);
+moyenne_array = new Array(3);
 
 for(var index=0; index < rows.length; index++){
 	var selected_row = rows[index];
@@ -60,20 +60,20 @@ function init(){
 		}
 		var lines = text.split('\n');
 	
-		// Split each line into 13 cells and assign them to the array
+		// Split each line into 3 cells and assing them to the array
 		for(var j=1; j < lines.length; j++){
 			var cells = lines[j].split(',');
-			D_dict['Zc_array'][j-1] = parseFloat(cells[1]);
-			if(cells[9] >= 1){
-				D_dict['E0Tn_array'][j-1] = parseFloat(Math.log(cells[9]) / Math.log(10));
+			D_dict['Zc_array'][j-1] = parseFloat(cells[0]);
+			if(cells[1] >= 1){
+				D_dict['E0Tn_array'][j-1] = parseFloat(Math.log(cells[1]) / Math.log(10));
 			}
 			else{
 				D_dict['E0Tn_array'][j-1] = 0;
 			}
-			D_dict['betaTn_array'][j-1] = parseFloat(cells[10]);
+			D_dict['betaTn_array'][j-1] = parseFloat(cells[2]);
 		}
 		
-		// Append the dictionnary to an array containing all the cells
+		// Append the dictionnary to an array containing all the cells data
 		all_data.push(D_dict);
 	}
 	
@@ -81,8 +81,7 @@ function init(){
 }
 
 function filter_data(data){
-	// post(data[0]['Zc_2D_array'][12][26]);
-	// Passe au travers de toutes les données pour récupérer les valeurs minimale maximale de chaque cellule
+	// Go through all the data to retrieve min and max values for each cell
 	var beta_maxs = [];
 	var emodulus_maxs = [];
 	var beta_mins = [];
@@ -115,7 +114,7 @@ function filter_data(data){
 		beta_mins.push(beta_min);
 	}
 	
-	// Scale les données pour que le min et le max de toutes les cellules corresponde à 0 et 1
+	// Get the min and max values from all cells and output it to the max patch
 	the_emodulus_min = Math.min.apply(null, emodulus_mins);
 	the_emodulus_max = Math.max.apply(null, emodulus_maxs);
 	the_beta_min = Math.min.apply(null, beta_mins);
@@ -142,6 +141,7 @@ function filter_data(data){
 				}
 			}
 		}
+		// Replace the array into all_data to the 2Darray
 		all_data[j] = DD_dict;
 	}
 	
@@ -152,7 +152,7 @@ function choix_cell(a){
 }
 
 function sort_values(x, y, s){
-	var addition = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	var addition = [0, 0, 0];
 	var xys = points_distance(x+32, y+32, s);
 	
 	// Retrieve the data at each point from xys array and add them in the addition array
@@ -164,7 +164,7 @@ function sort_values(x, y, s){
 		}
 	}
 	
-	// Measure each mean value for the 13 rows
+	// Measure each mean value for the 3 rows
 	for(var e=0; e<addition.length; e++){
 		moyenne = addition[e]/(xys.length/2);
 		moyenne_array[e] = moyenne;
