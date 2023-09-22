@@ -20,8 +20,8 @@ const cells = ['macrophage1', 'macrophage2', 'monocyte1', 'monocyte2'];
 var touch_cell = false;
 let portrait = window.matchMedia("(orientation: portrait)");
 let orientationTel = 'portrait';
-let old_type = 'viscous';
-let type = 'all';
+let old_type = 'betaTn';
+let type = 'Zc';
 let cell = 1;
 let pictureonoff = false;
 let cell_select = false;
@@ -262,12 +262,12 @@ function activeSounds(checked, sound){
     }
     if(viscousToggle.checked && !stiffToggle.checked && !elasticToggle.checked){
         // if viscous checkbox only is checked, adapt type and legend to viscous
-        type = 'viscous';
+        type = 'betaTn';
         document.getElementById("legendetxt").innerHTML = "Fraction de l'énergie dissipée (log10(Pa))";
     }
     else if(!viscousToggle.checked && stiffToggle.checked && !elasticToggle.checked){
         // if stiff checkbox only is checked, adapt type and legend to stiff
-        type = 'stiff';
+        type = 'E0Tn';
         document.getElementById("legendetxt").innerHTML = "Magnitude de non déformabilité (log10(Pa))";
     }
     else if(!viscousToggle.checked && !stiffToggle.checked && elasticToggle.checked){
@@ -282,15 +282,17 @@ function activeSounds(checked, sound){
     }
     else{
         // if more than one checkbox is checked, adapt type and legend to all
-        type = 'all';
+        type = 'Zc';
         document.getElementById("legendetxt").innerHTML = "Topographie";
     }
     if(type != old_type){
         // if type has changed, draw the new picture
         drawPicture(cells[cell-1], type, pictureonoff);
-        socket.send(`${user} picture ${cells[cell-1]} ${type}`)
-        console.log(type);
-        document.getElementById("legendeimg").src = `media/pics/${type}_scale.png`;
+        if(type != 'none'){
+            socket.send(`${user} picture ${cells[cell-1]} ${type}`)
+            console.log(type);
+            document.getElementById("legendeimg").src = `media/pics/${cells[cell-1]}_${type}_scale.png`;
+        }
     }
     if(checked){
         // send to Max to active the sound
