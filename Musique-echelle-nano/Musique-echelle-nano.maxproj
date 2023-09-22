@@ -2,7 +2,7 @@
 	"name" : "Musique-echelle-nano",
 	"version" : 1,
 	"creationdate" : 3769408603,
-	"modificationdate" : 3778148662,
+	"modificationdate" : 3778219789,
 	"viewrect" : [ 979.0, 106.0, 516.0, 797.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -105,6 +105,11 @@
 			}
 ,
 			"grain_message.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"shell-oper.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -483,6 +488,11 @@
 				"kind" : "javascript"
 			}
 ,
+			"pan_calcul.gendsp" : 			{
+				"kind" : "gendsp",
+				"local" : 1
+			}
+,
 			"server.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
@@ -496,16 +506,6 @@
 			"polyBufferHandle.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
-			}
-,
-			"pan_calcul.gendsp" : 			{
-				"kind" : "gendsp",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
-					"projectrelativepath" : "./patchers"
-				}
-
 			}
 ,
 			"attenuation_coef.js" : 			{
@@ -570,6 +570,11 @@
 ,
 		"externals" : 		{
 			"bufGranul~.mxo" : 			{
+				"kind" : "object",
+				"local" : 1
+			}
+,
+			"shell.mxo" : 			{
 				"kind" : "object",
 				"local" : 1
 			}
