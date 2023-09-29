@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1501.0, 1031.0 ],
+		"rect" : [ 34.0, 87.0, 1516.0, 1031.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -4106,7 +4106,7 @@
 																			"parameter_initial" : [ 100.0 ],
 																			"parameter_initial_enable" : 1,
 																			"parameter_linknames" : 1,
-																			"parameter_longname" : "wet_dry[18]",
+																			"parameter_longname" : "wet_dry[2]",
 																			"parameter_mmax" : 100.0,
 																			"parameter_modmode" : 2,
 																			"parameter_shortname" : "dry/wet",
@@ -6367,7 +6367,7 @@
 													"patching_rect" : [ 455.503333730697705, 616.999991893768311, 41.0, 48.0 ],
 													"saved_attribute_attributes" : 													{
 														"valueof" : 														{
-															"parameter_longname" : "live.dial[9]",
+															"parameter_longname" : "live.dial[4]",
 															"parameter_mmax" : 100.0,
 															"parameter_shortname" : "live.dial",
 															"parameter_type" : 0,
@@ -6534,7 +6534,7 @@
 																			"parameter_initial" : [ 1 ],
 																			"parameter_initial_enable" : 1,
 																			"parameter_invisible" : 1,
-																			"parameter_longname" : "flonum[2]",
+																			"parameter_longname" : "flonum[3]",
 																			"parameter_shortname" : "flonum",
 																			"parameter_type" : 3
 																		}
@@ -6563,7 +6563,7 @@
 																			"parameter_initial" : [ 100 ],
 																			"parameter_initial_enable" : 1,
 																			"parameter_invisible" : 1,
-																			"parameter_longname" : "number[15]",
+																			"parameter_longname" : "number[3]",
 																			"parameter_shortname" : "number",
 																			"parameter_type" : 3
 																		}
@@ -12061,7 +12061,7 @@
 											"parameter_initial" : [ 0.8 ],
 											"parameter_initial_enable" : 1,
 											"parameter_invisible" : 1,
-											"parameter_longname" : "number[14]",
+											"parameter_longname" : "number[2]",
 											"parameter_shortname" : "number[4]",
 											"parameter_type" : 3
 										}
@@ -12087,7 +12087,7 @@
 											"parameter_initial" : [ 65.0 ],
 											"parameter_initial_enable" : 1,
 											"parameter_invisible" : 1,
-											"parameter_longname" : "number[13]",
+											"parameter_longname" : "number[1]",
 											"parameter_shortname" : "number[3]",
 											"parameter_type" : 3
 										}
@@ -13659,10 +13659,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 982.914523508650063, 530.459136188030243, 29.75582990397811, 329.439545365471929 ],
-					"pic" : "elastic_scale.png",
+					"patching_rect" : [ 982.914523508650063, 530.459136188030243, 29.75582990397811, 29.75582990397811 ],
+					"pic" : "Macintosh HD:/Users/poire/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics/none.jpg",
 					"presentation" : 1,
-					"presentation_rect" : [ 491.584712999999965, 139.202759385108948, 42.75582990397811, 473.368116794043374 ]
+					"presentation_rect" : [ 491.584712999999965, 139.202759385108948, 41.75582990397811, 41.75582990397811 ]
 				}
 
 			}
@@ -13840,10 +13840,10 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 659.808820247650146, 530.459136188030243, 319.0, 317.614826500415802 ],
+					"patching_rect" : [ 661.914523508650063, 530.459136188030243, 319.0, 317.614826500415802 ],
 					"pointcolor" : [ 0.807843137254902, 0.898039215686275, 0.909803921568627, 0.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.584713459014893, 138.202759385108948, 477.0, 474.928753105637497 ],
+					"presentation_rect" : [ 13.584713000000001, 139.071246894362503, 477.0, 474.928753105637497 ],
 					"textcolor" : [ 0.129411764705882, 0.129411764705882, 0.129411764705882, 0.0 ],
 					"xplace" : [ 0.549373040752351 ],
 					"yplace" : [ 0.782522864409305 ]
@@ -13853,7 +13853,8 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
-					"bkgndpict" : "/Users/poire/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics/macrophage1_E0Tn.png",
+					"bkgndpict" : "Macintosh HD:/Users/poire/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics/none.jpg",
+					"clickedimage" : 0,
 					"color" : [ 0.807843137254902, 0.898039215686275, 0.909803921568627, 0.0 ],
 					"elementcolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
 					"id" : "obj-62",
@@ -14209,7 +14210,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
-					"midpoints" : [ 992.414523508650063, 117.0, 669.308820247650146, 117.0 ],
+					"midpoints" : [ 992.414523508650063, 117.0, 671.414523508650063, 117.0 ],
 					"order" : 1,
 					"source" : [ "obj-19", 7 ]
 				}
