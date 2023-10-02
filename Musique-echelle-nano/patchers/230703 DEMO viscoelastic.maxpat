@@ -40,6 +40,30 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 48.458709970541804, 301.0, 67.0, 22.0 ],
+					"text" : "delay 1000"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "bang" ],
+					"patching_rect" : [ 168.166643261909485, 262.0, 32.0, 22.0 ],
+					"text" : "t b b"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgcolor" : [ 0.054901960784314, 0.356862745098039, 0.647058823529412, 1.0 ],
 					"id" : "obj-69",
 					"maxclass" : "newobj",
@@ -396,7 +420,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 49.999944235511748, 40.0, 30.0, 30.0 ]
 								}
 
@@ -622,7 +646,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 181.166643261909485, 283.721782184839185, 88.0, 22.0 ],
+					"patching_rect" : [ 181.166643261909485, 297.764418936967786, 88.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -706,7 +730,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 181.166643261909485, 324.293215430974897, 67.0, 22.0 ],
+					"patching_rect" : [ 181.166643261909485, 335.293215430974897, 67.0, 22.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"text" : "thispatcher"
 				}
@@ -960,7 +984,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 181.166643261909485, 244.721782184839185, 49.0, 22.0 ],
+					"patching_rect" : [ 168.166643261909485, 233.221782184839185, 49.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -979,7 +1003,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 181.166643261909485, 203.721782184839185, 58.0, 22.0 ],
+					"patching_rect" : [ 168.166643261909485, 204.721782184839185, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -4398,7 +4422,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 25.5, 240.0, 58.0, 22.0 ],
+					"patching_rect" : [ 25.5, 188.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -4409,7 +4433,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 25.5, 274.5, 123.0, 22.0 ],
+					"patching_rect" : [ 25.5, 335.293215430974897, 123.0, 22.0 ],
 					"text" : "pathfinder @project 1"
 				}
 
@@ -4494,9 +4518,10 @@
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "adding_user.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "multichannelsignal", "" ],
 					"viewvisibility" : 1
 				}
 
@@ -4640,6 +4665,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-3", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
 					"source" : [ "obj-33", 0 ]
 				}
@@ -4705,6 +4744,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-36", 0 ],
 					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-36", 0 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
@@ -4787,7 +4833,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
+					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-75", 0 ]
 				}
 
@@ -4801,6 +4847,31 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-141::obj-21" : [ "user_volume", "level", 0 ],
+			"obj-141::obj-24" : [ "live.text[31]", "live.text[10]", 0 ],
+			"obj-141::obj-2::obj-17::obj-61" : [ "number[2]", "number[4]", 0 ],
+			"obj-141::obj-2::obj-17::obj-68" : [ "number[1]", "number[3]", 0 ],
+			"obj-141::obj-2::obj-39::obj-8::obj-101::obj-114" : [ "flonum[3]", "flonum", 0 ],
+			"obj-141::obj-2::obj-39::obj-8::obj-101::obj-115" : [ "number[3]", "number", 0 ],
+			"obj-141::obj-2::obj-39::obj-8::obj-105" : [ "live.dial[4]", "live.dial", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-13::obj-14" : [ "lowpass", "lowpass", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-13::obj-16" : [ "highpass", "highpass", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-13::obj-17" : [ "WarbleSpeed", "speed", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-13::obj-20" : [ "WarbleAmount", "amount", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-13::obj-22" : [ "inertia", "inertia", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-13::obj-25" : [ "wet/dry", "dry/wet", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-13::obj-27" : [ "revtime", "revtime", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-13::obj-35" : [ "reverb_wetdry", "level", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-13::obj-4" : [ "feedback", "feedback", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-13::obj-5" : [ "clipping", "clipping", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-13::obj-8" : [ "live.menu", "live.menu", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-2::obj-14" : [ "wet_dry", "dry/wet", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-2::obj-58" : [ "left_delay[4]", "L delay", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-2::obj-59" : [ "left_modfreq[4]", "L freq", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-2::obj-60" : [ "left_moddepth[4]", "L depth", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-2::obj-62" : [ "left_feedback[4]", "L FB", 0 ],
+			"obj-141::obj-2::obj-45::obj-11::obj-11::obj-41" : [ "wet_dry[18]", "dry/wet", 0 ],
+			"obj-141::obj-7" : [ "live.text[33]", "live.text", 0 ],
 			"obj-25::obj-19" : [ "live.text", "live.text", 0 ],
 			"obj-30::obj-1" : [ "live.text[16]", "live.text", 0 ],
 			"obj-30::obj-13" : [ "live.text[18]", "live.text", 0 ],
@@ -4843,8 +4914,68 @@
 		}
 ,
 		"dependency_cache" : [ 			{
+				"name" : "USER.maxpat",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "adding_user.maxpat",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bufGranul~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "coolelasticsf.txt",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
+				"patcherrelativepath" : "../data",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "elastic_zones.js",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "fit_jweb_to_bounds.js",
 				"bootpath" : "C74:/packages/Node for Max/patchers/debug-monitor",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mc.pluggo.dryWet2~.maxpat",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mc.spaceecho.maxpat",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mc.swirl.maxpat",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moyenne.js",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/code",
+				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -4852,6 +4983,20 @@
 				"name" : "n4m.monitor.maxpat",
 				"bootpath" : "C74:/packages/Node for Max/patchers/debug-monitor",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "none.jpg",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics",
+				"patcherrelativepath" : "../media/pics",
+				"type" : "JPEG",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "pan_calcul.gendsp",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "gDSP",
 				"implicit" : 1
 			}
 , 			{
@@ -4900,6 +5045,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "sort_modulus.js",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "spat5.binaural~.mxo",
 				"type" : "iLaX"
 			}
@@ -4919,6 +5071,10 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "spat5.pan~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "spat5.sofa.loader.mxo",
 				"type" : "iLaX"
 			}
@@ -4927,8 +5083,50 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "stiffSpat.maxpat",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "stiffspats.txt",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
+				"patcherrelativepath" : "../data",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "viscousSpats.maxpat",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "viscous_stiff_levels.maxpat",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "viscousspats.txt",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/data",
+				"patcherrelativepath" : "../data",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "vocoder.maxpat",
+				"bootpath" : "~/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
