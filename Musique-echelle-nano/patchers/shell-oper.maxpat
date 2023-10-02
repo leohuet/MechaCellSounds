@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 980.0, 848.0 ],
+		"rect" : [ 34.0, 100.0, 1444.0, 848.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 329.0, 44.0, 150.0, 64.0 ],
+					"patching_rect" : [ 955.0, 37.647761106491089, 150.0, 64.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
 					"presentation_rect" : [ 304.0, 19.333330571651459, 184.0, 51.0 ],
@@ -198,6 +198,7 @@
 						"style" : "",
 						"subpatcher_template" : "audio_template",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-50",
@@ -350,7 +351,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 466.933747708797455, 445.0, 21.0, 22.0 ],
+									"patching_rect" : [ 466.933747708797455, 437.0, 21.0, 22.0 ],
 									"text" : "t s"
 								}
 
@@ -1097,6 +1098,39 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-34", 0 ],
+									"order" : 4,
+									"source" : [ "obj-33", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-36", 0 ],
+									"order" : 3,
+									"source" : [ "obj-33", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-37", 0 ],
+									"order" : 2,
+									"source" : [ "obj-33", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-42", 0 ],
+									"order" : 1,
+									"source" : [ "obj-33", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-45", 0 ],
+									"order" : 0,
 									"source" : [ "obj-33", 0 ]
 								}
 

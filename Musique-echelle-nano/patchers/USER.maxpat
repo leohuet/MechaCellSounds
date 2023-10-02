@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1516.0, 1031.0 ],
+		"rect" : [ 34.0, 100.0, 1444.0, 848.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -1045,7 +1045,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 34.0, 87.0, 1980.0, 1031.0 ],
+						"rect" : [ 34.0, 100.0, 1444.0, 848.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1073,7 +1073,19 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-43",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 572.0, 205.259317517280579, 65.0, 22.0 ],
+									"text" : "print #1"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"bgcolor" : [ 0.741176470588235, 0.188235294117647, 0.188235294117647, 1.0 ],
 									"id" : "obj-55",
@@ -3555,7 +3567,16 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-43", 0 ],
+									"order" : 0,
+									"source" : [ "obj-64", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-88", 0 ],
+									"order" : 1,
 									"source" : [ "obj-64", 0 ]
 								}
 
@@ -6367,7 +6388,7 @@
 													"patching_rect" : [ 455.503333730697705, 616.999991893768311, 41.0, 48.0 ],
 													"saved_attribute_attributes" : 													{
 														"valueof" : 														{
-															"parameter_longname" : "live.dial[4]",
+															"parameter_longname" : "live.dial[5]",
 															"parameter_mmax" : 100.0,
 															"parameter_shortname" : "live.dial",
 															"parameter_type" : 0,
@@ -6534,7 +6555,7 @@
 																			"parameter_initial" : [ 1 ],
 																			"parameter_initial_enable" : 1,
 																			"parameter_invisible" : 1,
-																			"parameter_longname" : "flonum[3]",
+																			"parameter_longname" : "flonum[4]",
 																			"parameter_shortname" : "flonum",
 																			"parameter_type" : 3
 																		}
@@ -6563,7 +6584,7 @@
 																			"parameter_initial" : [ 100 ],
 																			"parameter_initial_enable" : 1,
 																			"parameter_invisible" : 1,
-																			"parameter_longname" : "number[3]",
+																			"parameter_longname" : "number[6]",
 																			"parameter_shortname" : "number",
 																			"parameter_type" : 3
 																		}
@@ -12061,7 +12082,7 @@
 											"parameter_initial" : [ 0.8 ],
 											"parameter_initial_enable" : 1,
 											"parameter_invisible" : 1,
-											"parameter_longname" : "number[2]",
+											"parameter_longname" : "number[4]",
 											"parameter_shortname" : "number[4]",
 											"parameter_type" : 3
 										}
@@ -12087,7 +12108,7 @@
 											"parameter_initial" : [ 65.0 ],
 											"parameter_initial_enable" : 1,
 											"parameter_invisible" : 1,
-											"parameter_longname" : "number[1]",
+											"parameter_longname" : "number[5]",
 											"parameter_shortname" : "number[3]",
 											"parameter_type" : 3
 										}
