@@ -6,7 +6,7 @@ var user = 0;
 var settings_on = false;
 const settings = document.getElementById('settings');
 const sectionbottom = document.getElementById('section_bottom');
-const choix_user = document.getElementById('choix_user');
+let choix_user = document.getElementById('choix_user');
 const users_buttons = choix_user.children;
 
 const menu_titre = document.getElementById('titre_menu');
@@ -26,23 +26,42 @@ let cell = 1;
 let pictureonoff = false;
 let cell_select = false;
 
-portrait.addEventListener("change", function(e){
-    if(e.matches){
-        orientationTel = 'portrait';
-    }
-    else{
-        orientationTel = 'paysage';
-    }
-    changePicture(orientationTel);
-});
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+
 // Socket message sent from server when a client connects
 // It shows the buttons for the users that are not currently used
 socket.on("users", function(users_list, id, cells_names){
+    if(window.innerWidth < 1000){
+        for(let i = 0; i < users_list.length; i++) {
+            console.log(i)
+            let button = document.createElement('button');
+            button.innerHTML = i+1;
+            button.setAttribute('onclick', `choixUser(${i+1})`);
+            button.id = `user${i+1}`;
+            choix_user.appendChild(button);
+            
+        }
+        for(let i=0; i<users_list.length; i++){
+            if(users_list[i] == 0 && !user_launched){
+                users_buttons[i].style.display = 'none';
+            }
+            else if(!user_launched){
+                users_buttons[i].style.display = 'block';
+            }
+        }
+    }
+    else{
+        let button = document.createElement('button');
+        button.innerHTML = 'Commencer';
+        button.id = `user5`;
+        button.setAttribute('onclick', `choixUser(5)`);
+        button.style.width = '200px';
+        choix_user.appendChild(button);
+    }
     cells = cells_names;
     sketch.style.height = window.innerWidth;
     legendetxt.style.top = `${window.innerWidth+30}px`;
@@ -50,14 +69,6 @@ socket.on("users", function(users_list, id, cells_names){
         console.log('init');
         socketid = id;
         choix_user.style.display = 'flex';
-        for(let i=0; i<4; i++){
-            if(users_list[i] == 0){
-                users_buttons[i].style.display = 'none';
-            }
-            else{
-                users_buttons[i].style.display = 'block';
-            }
-        }
         menu_titre.innerHTML = cells[0];
         for(let i=0; i<cells.length; i++){
             menu.appendChild(document.createElement('li'));

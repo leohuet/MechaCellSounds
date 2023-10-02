@@ -135,6 +135,11 @@ Max.addHandler("unlink", (user) => {
     Max.outlet(user + ' unlink');
 });
 
+Max.addHandler("users_count", (num) => {
+    users_dict['user_active'] = new Array(num).fill(1);
+    console.log(users_dict['user_active']);
+});
+
 port = 8000;
 http.listen(port,function(){
     console.log("Listening on" + port);
