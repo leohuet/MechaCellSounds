@@ -5,6 +5,7 @@ var io        =     require("socket.io")(http);
 const path    =     require('path');
 const Max     =     require('max-api');
 const os      =     require('os');
+var fs       =     require('fs');
 
 var users_dict = {
     'ids': [],
@@ -18,6 +19,17 @@ var cpu_dict = {
     'idle': 0,
     'irq': 0,
 };
+
+var cells = []
+
+var files = fs.readdirSync(__dirname + '/data');
+for(i in files) {
+    console.log(files[i]);
+    if(files[i].split('.')[1] == 'xlsx'){
+        cells.push(files[i].split('.')[0]);
+    }
+}
+
 
 // ========== Pages ========== //
 // Allows acess to all files inside 'public' folder.
@@ -93,7 +105,7 @@ io.on('connection',function(socket){
     console.log(users + " users connected" );
 
     // Send the users available to the client
-    io.to(socket.id).emit('users', users_dict['user_active'], socket.id);
+    io.to(socket.id).emit('users', users_dict['user_active'], socket.id, cells);
 
     socket.on('message',function(event){
         if(event.includes('link')){
