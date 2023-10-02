@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 1980.0, 1031.0 ],
+		"rect" : [ 34.0, 87.0, 1516.0, 1031.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -101,7 +101,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-10",
-					"items" : [ "3.10", ",", 3.8 ],
+					"items" : [ "3.10", ",", "3.8" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -173,7 +173,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 918.0, 1452.0, 816.0, 574.0 ],
+						"rect" : [ 778.0, 1307.0, 1035.0, 729.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -201,8 +201,20 @@
 						"style" : "",
 						"subpatcher_template" : "audio_template",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"linecount" : 3,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 181.281081676483154, 379.619046807289124, 220.333330750465393, 49.0 ],
+									"text" : "sprintf /Library/Frameworks/Python.framework/versions/%s/bin/python3"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"bgcolor" : [ 0.054901960784314, 0.356862745098039, 0.647058823529412, 1.0 ],
 									"id" : "obj-44",
@@ -210,7 +222,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 181.281081676483154, 253.223594784736633, 103.0, 22.0 ],
+									"patching_rect" : [ 181.281081676483154, 305.204954147338867, 103.0, 22.0 ],
 									"text" : "r python_selected"
 								}
 
@@ -281,9 +293,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "float" ],
-									"patching_rect" : [ 20.124326705932617, 150.329184830188751, 32.0, 22.0 ],
-									"text" : "t 3.7"
+									"outlettype" : [ "3.7" ],
+									"patching_rect" : [ 20.124326705932617, 150.329184830188751, 40.0, 22.0 ],
+									"text" : "t \"3.7\""
 								}
 
 							}
@@ -293,9 +305,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "float" ],
-									"patching_rect" : [ 73.843245029449463, 150.329184830188751, 32.0, 22.0 ],
-									"text" : "t 3.8"
+									"outlettype" : [ "3.8" ],
+									"patching_rect" : [ 73.843245029449463, 150.329184830188751, 40.0, 22.0 ],
+									"text" : "t \"3.8\""
 								}
 
 							}
@@ -305,9 +317,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "float" ],
-									"patching_rect" : [ 127.562163352966309, 150.329184830188751, 32.0, 22.0 ],
-									"text" : "t 3.9"
+									"outlettype" : [ "3.9" ],
+									"patching_rect" : [ 127.562163352966309, 150.329184830188751, 40.0, 22.0 ],
+									"text" : "t \"3.9\""
 								}
 
 							}
@@ -329,9 +341,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "float" ],
-									"patching_rect" : [ 235.0, 150.329184830188751, 38.0, 22.0 ],
-									"text" : "t 3.11"
+									"outlettype" : [ "3.11" ],
+									"patching_rect" : [ 235.0, 150.329184830188751, 46.0, 22.0 ],
+									"text" : "t \"3.11\""
 								}
 
 							}
@@ -357,19 +369,6 @@
 									"outlettype" : [ "", "", "", "", "", "" ],
 									"patching_rect" : [ 20.124326705932617, 115.72973108291626, 287.594591617584229, 22.0 ],
 									"text" : "route 3.7 3.8 3.9 3.1 3.11"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-8",
-									"linecount" : 3,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 181.281081676483154, 373.204954147338867, 221.166670620441437, 49.0 ],
-									"text" : "sprintf /Library/Frameworks/Python.framework/versions/%s/bin/python3"
 								}
 
 							}
@@ -612,7 +611,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-8", 0 ],
+									"destination" : [ "obj-5", 0 ],
 									"source" : [ "obj-44", 0 ]
 								}
 
@@ -620,7 +619,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-4", 0 ],
-									"source" : [ "obj-8", 0 ]
+									"source" : [ "obj-5", 0 ]
 								}
 
 							}
@@ -852,6 +851,7 @@
 						"style" : "",
 						"subpatcher_template" : "audio_template",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-4",
@@ -885,19 +885,20 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 54.0, 82.0, 30.0, 30.0 ]
+									"patching_rect" : [ 53.0, 82.0, 30.0, 30.0 ]
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"id" : "obj-16",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 53.0, 220.204954147338867, 75.0, 22.0 ],
-									"text" : "sprintf %s -d"
+									"patching_rect" : [ 53.0, 211.204954147338867, 159.0, 35.0 ],
+									"text" : "sprintf %s pythonDataProcessing.py -d"
 								}
 
 							}
@@ -945,7 +946,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 171.836667759418503, 430.000001907348633, 22.0, 22.0 ],
+					"patching_rect" : [ 153.086667759418503, 430.000001907348633, 22.0, 22.0 ],
 					"text" : "t b"
 				}
 
@@ -981,8 +982,8 @@
 					"numinlets" : 5,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 27.836667759418503, 386.333324313163757, 211.0, 22.0 ],
-					"text" : "route macOS macOSX OSX Windows"
+					"patching_rect" : [ 27.836667759418503, 386.333324313163757, 186.0, 22.0 ],
+					"text" : "route macOS Mac OSX Windows"
 				}
 
 			}

@@ -11,12 +11,12 @@ const users_buttons = choix_user.children;
 
 const menu_titre = document.getElementById('titre_menu');
 const menu = document.getElementById('sous');
-const menu_choices = menu.children;
+let menu_choices;
 const sketch = document.getElementById("sketch");
 
 var user_launched = false;
 let socketid;
-const cells = ['macrophage1', 'macrophage2', 'monocyte1', 'monocyte2'];
+let cells = [];
 var touch_cell = false;
 let portrait = window.matchMedia("(orientation: portrait)");
 let orientationTel = 'portrait';
@@ -42,7 +42,8 @@ function sleep(ms) {
 
 // Socket message sent from server when a client connects
 // It shows the buttons for the users that are not currently used
-socket.on("users", function(users_list, id){
+socket.on("users", function(users_list, id, cells_names){
+    cells = cells_names;
     sketch.style.height = window.innerWidth;
     legendetxt.style.top = `${window.innerWidth+30}px`;
     if(!user_launched){
@@ -57,9 +58,12 @@ socket.on("users", function(users_list, id){
                 users_buttons[i].style.display = 'block';
             }
         }
-        for(let i=0; i<menu_choices.length; i++){
-            menu_choices[i].innerHTML = `<a href="#" onclick="displayMenu(${i+1})">${cells[i]}</a>`;
+        menu_titre.innerHTML = cells[0];
+        for(let i=0; i<cells.length; i++){
+            menu.appendChild(document.createElement('li'));
+            menu.children[i].innerHTML = `<a href="#" onclick="displayMenu(${i+1})">${cells[i]}</a>`;
         }
+        menu_choices = menu.children;
     }
 });
 
