@@ -69,7 +69,6 @@ function init(){
 		for(var j=1; j < lines.length; j++){
 			var cells = lines[j].split(',');
 			D_dict['Zc_array'][j-1] = parseFloat(cells[0]);
-			post(D_dict['Zc_array'][j-1]);
 			if(cells[1] >= 1){
 				D_dict['E0Tn_array'][j-1] = parseFloat(Math.log(cells[1]) / Math.log(10));
 			}
@@ -165,7 +164,6 @@ function sort_values(x, y, s){
 	var addition = [0, 0, 0];
 	var new_x = Math.ceil(((x+32)/64)*map_size);
 	var new_y = Math.ceil(((y+32)/64)*map_size);
-	post(new_y);
 	var xys = points_distance(new_x, new_y, s);
 	
 	// Retrieve the data at each point from xys array and add them in the addition array
