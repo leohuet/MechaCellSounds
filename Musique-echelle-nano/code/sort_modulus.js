@@ -8,26 +8,14 @@ outlets = 5
 rows = ['Zc', 'E0Tn', 'betaTn'];
 
 var D_dict;
-var DD_dict = {
-'Zc_2D_array': [],
-'E0Tn_2D_array': [],
-'betaTn_2D_array': [],
-}
+var DD_dict;
 
 temp_arrayf = new Array(3);
 moyenne_array = new Array(3);
 
-for(var index=0; index < rows.length; index++){
-	var selected_row = rows[index];
-	for(var x=0; x<64; x++){
-		DD_dict[selected_row + '_2D_array'][x] = [];
-		for(var y=0; y<64; y++){
-			DD_dict[selected_row + '_2D_array'][x][y] = 0;
-		}
-	}
-}
 var selection = 0;
 var all_data = [];
+var map_size = 0;
 
 //============================================================================//
 //                                 FUNCTIONS                                  //
@@ -40,6 +28,12 @@ function init(){
 		'Zc_array': [],
 		'E0Tn_array': [],
 		'betaTn_array': [],
+	}
+	
+	 DD_dict = {
+		'Zc_2D_array': [],
+		'E0Tn_2D_array': [],
+		'betaTn_2D_array': [],
 	}
 	
 	for(var cell=0; cell<arguments.length; cell++){
@@ -59,11 +53,23 @@ function init(){
 			text += file.readchars(1024).join('');
 		}
 		var lines = text.split('\n');
+		map_size = Math.ceil(Math.sqrt(lines.length)) - 1;
+		
+		for(var index=0; index < rows.length; index++){
+			var selected_row = rows[index];
+			for(var x=0; x<map_size; x++){
+				DD_dict[selected_row + '_2D_array'][x] = [];	
+				for(var y=0; y<map_size; y++){
+					DD_dict[selected_row + '_2D_array'][x][y] = 0;
+				}
+			}
+		}
 	
 		// Split each line into 3 cells and assing them to the array
 		for(var j=1; j < lines.length; j++){
 			var cells = lines[j].split(',');
 			D_dict['Zc_array'][j-1] = parseFloat(cells[0]);
+			post(D_dict['Zc_array'][j-1]);
 			if(cells[1] >= 1){
 				D_dict['E0Tn_array'][j-1] = parseFloat(Math.log(cells[1]) / Math.log(10));
 			}
@@ -130,14 +136,18 @@ function filter_data(data){
 		for(var index=0; index < rows.length; index++){
 			var selected_row = rows[index];
 			i = 0;
-			for(var y=0; y<32; y++){
-				for(var x1=0; x1<64; x1++){
-					DD_dict[selected_row + '_2D_array'][x1][y*2] = all_data[j][selected_row + '_array'][i];
-					i = i + 1;
+			for(var y=0; y<map_size; y++){
+				if(y%2 == 0){
+					for(var x1=0; x1<map_size; x1++){
+						DD_dict[selected_row + '_2D_array'][x1][y] = all_data[j][selected_row + '_array'][i];
+						i = i + 1;
+					}
 				}
-				for(var x2=63; x2>=0; x2--){
-					DD_dict[selected_row + '_2D_array'][x2][y*2+1] = all_data[j][selected_row + '_array'][i];
-					i = i + 1;
+				else{
+					for(var x2=map_size-1; x2>=0; x2--){
+						DD_dict[selected_row + '_2D_array'][x2][y] = all_data[j][selected_row + '_array'][i];
+						i = i + 1;
+					}
 				}
 			}
 		}
@@ -153,7 +163,10 @@ function choix_cell(a){
 
 function sort_values(x, y, s){
 	var addition = [0, 0, 0];
-	var xys = points_distance(x+32, y+32, s);
+	var new_x = Math.ceil(((x+32)/64)*map_size);
+	var new_y = Math.ceil(((y+32)/64)*map_size);
+	post(new_y);
+	var xys = points_distance(new_x, new_y, s);
 	
 	// Retrieve the data at each point from xys array and add them in the addition array
 	for(var j=0; j<xys.length/2; j++){
@@ -181,8 +194,8 @@ function points_distance(x, y, s){
 	if(s == 1 || s == 3){
 		center = 0.5;
 	}
-	for(var x1=0; x1<64; x1++){
-		for(var y1=0; y1<64; y1++){
+	for(var x1=0; x1<map_size; x1++){
+		for(var y1=0; y1<map_size; y1++){
 			var distance = Math.sqrt(Math.pow(x+center-x1, 2)+ Math.pow(y+center-y1, 2));
 			if(distance <= distances[s]){
 				points.push(x1);

@@ -22,6 +22,7 @@ rows = ['Zc', 'E0Tn', 'betaTn']
 output_rows = ['Zc', 'E0Tn', 'betaTn', 'elastic']
 palette = ['ch:s=-.2,r=.6', 'YlOrBr', 'Blues', 'crest']
 E0_log10 = 0
+num_rows = 0
 
 onlyfiles = [f for f in listdir(args['data']) if isfile(join(args['data'], f))]
 filenames = [f[:-5] for f in onlyfiles if f.endswith('.xlsx')]
@@ -59,6 +60,7 @@ for filename in filenames:
         for selected_row in rows:
             # For each row, append the value to the corresponding array
             dict_array[f'{selected_row}'].append(row[selected_row])
+        num_rows = index + 1
 
     with open(f'{args["data"]}/{filename}.csv', 'w', newline='') as f:
         # Create a csv file and add the selected rows from the array to it
@@ -72,12 +74,15 @@ for filename in filenames:
             writer.writerow(temp_dict)
 
     print(f'{filename}.csv done')
+    print(f'{filename} rows: {num_rows}')
+    
+    size = math.ceil(math.sqrt(num_rows))
 
-
-    DD_dict['Zc_2D_array'] = initialize_2D_array(0, 64, 64)
-    DD_dict['E0Tn_2D_array'] = initialize_2D_array(0, 64, 64)
-    DD_dict['betaTn_2D_array'] = initialize_2D_array(0, 64, 64)
-    DD_dict['elastic_2D_array'] = initialize_2D_array(0, 64, 64)
+    # initialize the 2D arrays
+    DD_dict['Zc_2D_array'] = initialize_2D_array(0, size, size)
+    DD_dict['E0Tn_2D_array'] = initialize_2D_array(0, size, size)
+    DD_dict['betaTn_2D_array'] = initialize_2D_array(0, size, size)
+    DD_dict['elastic_2D_array'] = initialize_2D_array(0, size, size)
 
 
     # handle the data for the heatmaps
@@ -134,14 +139,15 @@ for filename in filenames:
     for index in range(4):
         selected_row = output_rows[index]
         i = 0
-        for y in range(32):
-            for x1 in range(64):
-                DD_dict[selected_row + '_2D_array'][y*2][x1] = dict_array[f'{selected_row}'][i]
-                i = i + 1
-
-            for x2 in range(63, -1, -1):
-                DD_dict[selected_row + '_2D_array'][y*2+1][x2] = dict_array[f'{selected_row}'][i]
-                i = i + 1
+        for y in range(size):
+            if(y % 2 == 0):
+                for x1 in range(size):
+                    DD_dict[selected_row + '_2D_array'][y][x1] = dict_array[f'{selected_row}'][i]
+                    i = i + 1
+            else:
+                for x2 in range(size-1, -1, -1):
+                    DD_dict[selected_row + '_2D_array'][y][x2] = dict_array[f'{selected_row}'][i]
+                    i = i + 1
 
     # create the heatmaps and export them as png files
     for(index, selected_row) in enumerate(output_rows):
