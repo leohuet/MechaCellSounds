@@ -40,6 +40,19 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontsize" : 14.0,
+					"id" : "obj-38",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 618.0, 41.0, 382.0, 53.0 ],
+					"text" : "This handles the link between Max and web interface and vice versa. When you launch the script for the first time, it will automatically install the needed depedencies. "
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-46",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -130,7 +143,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 344.343700426596172, 673.604791700839996, 60.0, 22.0 ],
+					"patching_rect" : [ 347.343700426596172, 673.604791700839996, 60.0, 22.0 ],
 					"text" : "zl change"
 				}
 
@@ -142,7 +155,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 312.507775319947143, 624.604791700839996, 60.0, 22.0 ],
+					"patching_rect" : [ 315.507775319947143, 624.604791700839996, 60.0, 22.0 ],
 					"text" : "zl change"
 				}
 
@@ -154,7 +167,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 279.573643995655914, 589.275450825691223, 60.0, 22.0 ],
+					"patching_rect" : [ 283.711766998463702, 589.275450825691223, 60.0, 22.0 ],
 					"text" : "zl change"
 				}
 
@@ -166,7 +179,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 249.034722222222229, 553.94610995054245, 60.0, 22.0 ],
+					"patching_rect" : [ 251.895800284397467, 553.94610995054245, 60.0, 22.0 ],
 					"text" : "zl change"
 				}
 
@@ -178,7 +191,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 218.0, 524.281440138816833, 60.0, 22.0 ],
+					"patching_rect" : [ 220.079833570331203, 524.281440138816833, 60.0, 22.0 ],
 					"text" : "zl change"
 				}
 
@@ -383,7 +396,7 @@
 					"numinlets" : 11,
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
-					"patching_rect" : [ 61.0, 423.0, 331.868219978279626, 22.0 ],
+					"patching_rect" : [ 61.0, 423.0, 337.159667140662407, 22.0 ],
 					"text" : "route 1 2 3 4 5 6 7 8 9 10"
 				}
 
@@ -448,8 +461,8 @@
 
 					}
 ,
-					"text" : "Lancer le script",
-					"texton" : "Stopper le script",
+					"text" : "Launch script",
+					"texton" : "End script",
 					"varname" : "live.text"
 				}
 
@@ -518,7 +531,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 417.0, 422.0, 400.0, 220.0 ],
+					"patching_rect" : [ 413.0, 443.0, 400.0, 220.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 8.0, 70.116522453725338, 400.0, 220.0 ],
 					"viewvisibility" : 1
@@ -560,6 +573,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -618,7 +633,7 @@
 				"patchline" : 				{
 					"color" : [ 0.815686274509804, 0.235294117647059, 0.235294117647059, 1.0 ],
 					"destination" : [ "obj-36", 1 ],
-					"midpoints" : [ 387.5, 291.0, 583.0, 291.0, 583.0, 101.000000894069672, 223.5, 101.000000894069672 ],
+					"midpoints" : [ 387.5, 394.0, 592.0, 394.0, 592.0, 101.000000894069672, 223.5, 101.000000894069672 ],
 					"source" : [ "obj-14", 1 ]
 				}
 
@@ -753,7 +768,7 @@
 				"patchline" : 				{
 					"color" : [ 0.184313725490196, 0.741176470588235, 0.090196078431373, 1.0 ],
 					"destination" : [ "obj-26", 0 ],
-					"midpoints" : [ 459.0, 291.0, 582.0, 291.0, 582.0, 5.0, 70.5, 5.0 ],
+					"midpoints" : [ 459.0, 401.0, 582.0, 401.0, 582.0, 5.0, 70.5, 5.0 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -804,7 +819,7 @@
 				"patchline" : 				{
 					"color" : [ 0.776470588235294, 0.545098039215686, 0.113725490196078, 1.0 ],
 					"destination" : [ "obj-6", 0 ],
-					"midpoints" : [ 221.5, 407.0, 426.5, 407.0 ],
+					"midpoints" : [ 221.5, 407.0, 422.5, 407.0 ],
 					"order" : 1,
 					"source" : [ "obj-3", 1 ]
 				}

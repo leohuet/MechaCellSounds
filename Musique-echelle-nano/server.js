@@ -131,8 +131,9 @@ io.on('connection',function(socket){
 });
 
 Max.addHandler("unlink", (user) => {
-    users_dict['user_active'][user-1] = 1;
-    Max.outlet(user + ' unlink');
+    let num_user = user[4];
+    users_dict['user_active'][num_user-1] = 1;
+    Max.outlet(num_user + ' unlink');
 });
 
 Max.addHandler("users_count", (num) => {

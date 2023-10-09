@@ -167,4 +167,6 @@ for filename in filenames:
 
     print(f'{filename} heatmaps done')
 
+print('All done')
+
     
