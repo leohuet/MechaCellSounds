@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 895.185137328507267, 158.607053972482618, 77.0, 22.0 ],
+					"text" : "loadmess Zc"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgcolor" : [ 0.054901960784314, 0.356862745098039, 0.647058823529412, 1.0 ],
 					"id" : "obj-32",
 					"maxclass" : "newobj",
@@ -1014,7 +1026,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-179",
-					"items" : [ "macrophage1.csv", ",", "macrophage2.csv", ",", "monocyte1.csv", ",", "monocyte2.csv" ],
+					"items" : [ "TableDataPaViscoTing_vdrag0Jbead1.csv", ",", "TableDataPaViscoTing_vdrag0Jbead2.csv", ",", "TableDataPaViscoTing_vdrag0Jbead3.csv" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1075,6 +1087,19 @@
 						"assistshowspatchername" : 0,
 						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"format" : 6,
+									"id" : "obj-48",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 506.0, 986.0, 50.0, 22.0 ]
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-43",
 									"maxclass" : "newobj",
@@ -1913,7 +1938,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 5,
 									"outlettype" : [ "", "", "", "", "" ],
-									"patching_rect" : [ 370.0, 150.981099702119764, 97.0, 35.0 ],
+									"patching_rect" : [ 370.0, 141.981099702119764, 97.0, 35.0 ],
 									"text" : "regexp .csv @substitute %0"
 								}
 
@@ -3553,7 +3578,16 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-48", 0 ],
+									"order" : 1,
+									"source" : [ "obj-60", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-98", 0 ],
+									"order" : 0,
 									"source" : [ "obj-60", 0 ]
 								}
 
@@ -4127,7 +4161,7 @@
 																			"parameter_initial" : [ 100.0 ],
 																			"parameter_initial_enable" : 1,
 																			"parameter_linknames" : 1,
-																			"parameter_longname" : "wet_dry[2]",
+																			"parameter_longname" : "wet_dry[18]",
 																			"parameter_mmax" : 100.0,
 																			"parameter_modmode" : 2,
 																			"parameter_shortname" : "dry/wet",
@@ -13680,10 +13714,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 982.914523508650063, 530.459136188030243, 29.75582990397811, 29.75582990397811 ],
-					"pic" : "Macintosh HD:/Users/poire/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics/none.jpg",
+					"patching_rect" : [ 982.914523508650063, 530.459136188030243, 29.75582990397811, 248.176283454455756 ],
+					"pic" : "TableDataPaViscoTing_vdrag0Jbead1_Zc_scale.png",
 					"presentation" : 1,
-					"presentation_rect" : [ 491.584712999999965, 139.202759385108948, 41.75582990397811, 41.75582990397811 ]
+					"presentation_rect" : [ 491.584712999999965, 139.202759385108948, 41.75582990397811, 348.261389837434479 ]
 				}
 
 			}
@@ -13874,7 +13908,7 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
-					"bkgndpict" : "Macintosh HD:/Users/poire/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics/none.jpg",
+					"bkgndpict" : "/Users/poire/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics/TableDataPaViscoTing_vdrag0Jbead1_Zc.png",
 					"clickedimage" : 0,
 					"color" : [ 0.807843137254902, 0.898039215686275, 0.909803921568627, 0.0 ],
 					"elementcolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
@@ -14312,6 +14346,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
 					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"source" : [ "obj-26", 0 ]
 				}
 
 			}
