@@ -12,14 +12,6 @@ var users_dict = {
     'user_active': [1, 1, 1, 1, 1],
 };
 
-var cpu_dict = {
-    'user': 0,
-    'nice': 0,
-    'sys': 0,
-    'idle': 0,
-    'irq': 0,
-};
-
 var cells = []
 
 var files = fs.readdirSync(__dirname + '/data');
@@ -43,58 +35,11 @@ app.get('/tablette', function(req, res) {
     res.sendFile(__dirname + '/code/public/tablette.html');
 });
 
-var cpu_dict_old = [];
-var old_cpus = os.cpus();
-for(var i = 0; i < old_cpus.length; i++) {
-    cpu_dict_old.push(cpu_dict);
-    var old_cpu = old_cpus[i];
-    cpu_dict_old[i]['user'] = old_cpu.times.user;
-    cpu_dict_old[i]['nice'] = old_cpu.times.nice;
-    cpu_dict_old[i]['sys'] = old_cpu.times.sys;
-    cpu_dict_old[i]['idle'] = old_cpu.times.idle;
-    cpu_dict_old[i]['irq'] = old_cpu.times.irq;
-}
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function cpuDisplay(){
-    var cpus = os.cpus();
-    var cpu_array_result = [];
-    var cpu_dict_current = [];
-    for(let b = 0; b < cpus.length; b++) {
-        cpu_dict = {
-            'user': 0,
-            'nice': 0,
-            'sys': 0,
-            'idle': 0,
-            'irq': 0,
-        };
-        var cpu = cpus[b];
-        cpu_dict['user'] = cpu.times.user;
-        cpu_dict['nice'] = cpu.times.nice;
-        cpu_dict['sys'] = cpu.times.sys;
-        cpu_dict['idle'] = cpu.times.idle;
-        cpu_dict['irq'] = cpu.times.irq;
-        cpu_dict_current.push(cpu_dict);
-    }
-
-    // console.log(cpu_dict_current);
-
-    for(let i = 0; i < cpu_dict_current.length; i++) {
-        var item = cpu_dict_current[i];
-        var oldVal = cpu_dict_old[i];
-        for(let timeKey in item) {
-            // console.log(item[timeKey]-oldVal[timeKey]);
-            var diff = parseFloat((item[timeKey]) - parseFloat(oldVal[timeKey])) / parseFloat(1000);
-            cpu_dict[timeKey] = diff.toFixed(2);
-        }
-        cpu_array_result.push(cpu_dict);
-    }
-    console.log(cpu_array_result);
-    cpu_dict_old = cpu_dict_current;
-}
 
 // ========== SOCKET.IO ========== //
 /*  This is auto initiated event when Client connects to the server  */
