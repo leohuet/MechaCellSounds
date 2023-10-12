@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 1241.0, 848.0 ],
+		"rect" : [ 429.0, 157.0, 1241.0, 848.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,34 @@
 		"subpatcher_template" : "audio_template",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"bubble" : 1,
+					"id" : "obj-32",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 499.0, 743.647761106491089, 136.0, 51.0 ],
+					"text" : "shell object to launch python commands"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"linecount" : 5,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 107.5, 15.833330571651459, 150.0, 74.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 103.0, 295.333330571651459, 306.0, 33.0 ],
+					"text" : "Patch handling the detection of python versions, installing dependencies, launching the python script"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"bgcolor" : [ 0.741176470588235, 0.188235294117647, 0.188235294117647, 1.0 ],
 					"id" : "obj-35",
@@ -109,7 +137,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 81.836667759418503, 323.0, 31.0, 22.0 ],
+					"patching_rect" : [ 81.836667759418503, 383.0, 31.0, 22.0 ],
 					"text" : "s os"
 				}
 
@@ -218,7 +246,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 34.0, 100.0, 1444.0, 848.0 ],
+						"rect" : [ 272.0, 160.0, 1444.0, 848.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -246,14 +274,65 @@
 						"style" : "",
 						"subpatcher_template" : "audio_template",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-25",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 177.124326705932617, 81.223594784736633, 150.0, 47.0 ],
+									"text" : "Detect all the python version on your computer (windows or mac)"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-23",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 5,
+									"outlettype" : [ "", "", "", "", "" ],
+									"patching_rect" : [ 1002.947750926017761, 485.0, 106.0, 22.0 ],
+									"text" : "regexp Python312"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-21",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "3.12" ],
+									"patching_rect" : [ 299.718918323516789, 570.329184830188751, 47.0, 22.0 ],
+									"text" : "t \"3.12\""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"bubbleside" : 3,
+									"id" : "obj-20",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 813.0, 239.5, 150.0, 64.0 ],
+									"text" : "Chose the python path linked to windows or mac user, and the version selected"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-50",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1075.281081676483154, 214.811574161052704, 73.0, 22.0 ],
+									"patching_rect" : [ 1231.281081676483154, 210.811574161052704, 73.0, 22.0 ],
 									"text" : "route /home"
 								}
 
@@ -265,7 +344,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1075.281081676483154, 186.723594784736633, 89.0, 22.0 ],
+									"patching_rect" : [ 1231.281081676483154, 182.723594784736633, 89.0, 22.0 ],
 									"text" : "spat5.hostinfos"
 								}
 
@@ -277,7 +356,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1075.281081676483154, 155.829184830188751, 42.0, 22.0 ],
+									"patching_rect" : [ 1231.281081676483154, 151.829184830188751, 42.0, 22.0 ],
 									"text" : "/home"
 								}
 
@@ -289,7 +368,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 1075.281081676483154, 110.223594784736633, 31.0, 22.0 ],
+									"patching_rect" : [ 1231.281081676483154, 106.223594784736633, 31.0, 22.0 ],
 									"text" : "t b s"
 								}
 
@@ -301,7 +380,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1052.281081676483154, 74.106620013713837, 42.0, 22.0 ],
+									"patching_rect" : [ 1208.281081676483154, 70.106620013713837, 42.0, 22.0 ],
 									"text" : "gate 2"
 								}
 
@@ -314,7 +393,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1038.281081676483154, 29.204954147338867, 29.0, 22.0 ],
+									"patching_rect" : [ 1194.281081676483154, 25.204954147338867, 29.0, 22.0 ],
 									"text" : "r os"
 								}
 
@@ -326,7 +405,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 506.933747708797455, 535.72973108291626, 96.0, 22.0 ],
+									"patching_rect" : [ 506.933747708797455, 639.311574161052704, 96.0, 22.0 ],
 									"text" : "prepend append"
 								}
 
@@ -723,7 +802,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 19.124326705932617, 212.619046807289124, 281.0, 22.0 ],
+									"patching_rect" : [ 19.124326705932617, 225.619046807289124, 281.0, 22.0 ],
 									"text" : "ls /Library/Frameworks/Python.framework/versions/"
 								}
 
@@ -736,7 +815,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 807.281081676483154, 212.619046807289124, 220.333330750465393, 49.0 ],
+									"patching_rect" : [ 1002.947750926017761, 247.0, 220.333330750465393, 49.0 ],
 									"text" : "sprintf /Library/Frameworks/Python.framework/versions/%s/bin/python3"
 								}
 
@@ -749,7 +828,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1075.281081676483154, 29.204954147338867, 103.0, 22.0 ],
+									"patching_rect" : [ 1231.281081676483154, 25.204954147338867, 103.0, 22.0 ],
 									"text" : "r python_selected"
 								}
 
@@ -761,7 +840,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 441.933747708797455, 639.311574161052704, 35.0, 22.0 ],
+									"patching_rect" : [ 441.933747708797455, 679.311574161052704, 35.0, 22.0 ],
 									"text" : "clear"
 								}
 
@@ -891,11 +970,11 @@
 								"box" : 								{
 									"id" : "obj-9",
 									"maxclass" : "newobj",
-									"numinlets" : 6,
-									"numoutlets" : 6,
-									"outlettype" : [ "", "", "", "", "", "" ],
-									"patching_rect" : [ 31.124326705932617, 535.72973108291626, 287.594591617584229, 22.0 ],
-									"text" : "route 3.7 3.8 3.9 3.1 3.11"
+									"numinlets" : 7,
+									"numoutlets" : 7,
+									"outlettype" : [ "", "", "", "", "", "", "" ],
+									"patching_rect" : [ 31.124326705932617, 535.72973108291626, 341.313509941101017, 22.0 ],
+									"text" : "route 3.7 3.8 3.9 3.1 3.11 3.12"
 								}
 
 							}
@@ -906,7 +985,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1075.281081676483154, 377.0, 81.0, 22.0 ],
+									"patching_rect" : [ 1231.281081676483154, 373.0, 81.0, 22.0 ],
 									"text" : "v python-path"
 								}
 
@@ -917,7 +996,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 1175.764004558324814, 292.295045852661133, 112.0, 20.0 ],
+									"patching_rect" : [ 1272.764004558324814, 306.295045852661133, 112.0, 20.0 ],
 									"text" : "Windows version"
 								}
 
@@ -928,7 +1007,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 909.933747708797455, 271.106620013713837, 79.0, 20.0 ],
+									"patching_rect" : [ 1110.933747708797455, 303.106620013713837, 79.0, 20.0 ],
 									"text" : "Mac version"
 								}
 
@@ -942,18 +1021,19 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 428.933747708797455, 10.0, 30.0, 30.0 ]
+									"patching_rect" : [ 428.933747708797455, 3.907801270484924, 30.0, 30.0 ]
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"id" : "obj-16",
+									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1075.281081676483154, 251.0, 321.0, 22.0 ],
+									"patching_rect" : [ 1231.281081676483154, 247.0, 170.0, 49.0 ],
 									"text" : "sprintf %s/AppData/Local/Programs/Python/%s/python.exe"
 								}
 
@@ -994,6 +1074,23 @@
 								}
 
 							}
+, 							{
+								"box" : 								{
+									"angle" : 270.0,
+									"background" : 1,
+									"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
+									"border" : 2,
+									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"id" : "obj-18",
+									"maxclass" : "panel",
+									"mode" : 0,
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 953.520399451255798, 10.0, 460.011827230453491, 397.866829476356543 ],
+									"proportion" : 0.5
+								}
+
+							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
@@ -1025,7 +1122,9 @@
 							}
 , 							{
 								"patchline" : 								{
+									"color" : [ 0.741176470588235, 0.188235294117647, 0.188235294117647, 1.0 ],
 									"destination" : [ "obj-43", 0 ],
+									"midpoints" : [ 41.624326705932617, 177.0, 398.0, 177.0, 398.0, 646.0, 451.433747708797455, 646.0 ],
 									"source" : [ "obj-12", 1 ]
 								}
 
@@ -1053,6 +1152,7 @@
 							}
 , 							{
 								"patchline" : 								{
+									"color" : [ 0.741176470588235, 0.188235294117647, 0.188235294117647, 1.0 ],
 									"destination" : [ "obj-43", 0 ],
 									"source" : [ "obj-15", 1 ]
 								}
@@ -1082,7 +1182,21 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-40", 0 ],
+									"source" : [ "obj-21", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-40", 0 ],
 									"source" : [ "obj-22", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-46", 0 ],
+									"source" : [ "obj-23", 2 ]
 								}
 
 							}
@@ -1144,8 +1258,16 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-23", 0 ],
+									"order" : 0,
+									"source" : [ "obj-33", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-34", 0 ],
-									"order" : 4,
+									"order" : 5,
 									"source" : [ "obj-33", 0 ]
 								}
 
@@ -1153,7 +1275,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-36", 0 ],
-									"order" : 3,
+									"order" : 4,
 									"source" : [ "obj-33", 0 ]
 								}
 
@@ -1161,7 +1283,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-37", 0 ],
-									"order" : 2,
+									"order" : 3,
 									"source" : [ "obj-33", 0 ]
 								}
 
@@ -1169,7 +1291,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-42", 0 ],
-									"order" : 1,
+									"order" : 2,
 									"source" : [ "obj-33", 0 ]
 								}
 
@@ -1177,7 +1299,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-45", 0 ],
-									"order" : 0,
+									"order" : 1,
 									"source" : [ "obj-33", 0 ]
 								}
 
@@ -1361,6 +1483,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-31", 0 ],
 									"source" : [ "obj-8", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-21", 0 ],
+									"source" : [ "obj-9", 5 ]
 								}
 
 							}
@@ -1801,7 +1930,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "int" ],
-					"patching_rect" : [ 153.086667759418503, 270.000001907348633, 32.0, 22.0 ],
+					"patching_rect" : [ 153.086667759418503, 330.000001907348633, 32.0, 22.0 ],
 					"text" : "t b 2"
 				}
 
@@ -1813,7 +1942,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "int" ],
-					"patching_rect" : [ 27.836667759418503, 270.000001907348633, 32.0, 22.0 ],
+					"patching_rect" : [ 27.836667759418503, 330.000001907348633, 32.0, 22.0 ],
 					"text" : "t b 1"
 				}
 
@@ -1825,7 +1954,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 27.836667759418503, 188.833333671092987, 61.0, 22.0 ],
+					"patching_rect" : [ 27.836667759418503, 248.833333671092987, 61.0, 22.0 ],
 					"text" : "sprintf %s"
 				}
 
@@ -1837,7 +1966,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 27.836667759418503, 226.333324313163757, 186.0, 22.0 ],
+					"patching_rect" : [ 27.836667759418503, 286.333324313163757, 186.0, 22.0 ],
 					"text" : "route macOS Mac OSX Windows"
 				}
 
@@ -1849,7 +1978,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 27.666667699813843, 158.833325922489166, 55.0, 22.0 ],
+					"patching_rect" : [ 27.666667699813843, 218.833325922489166, 55.0, 22.0 ],
 					"text" : "route /os"
 				}
 
@@ -1861,7 +1990,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 27.666667699813843, 125.00000536441803, 89.0, 22.0 ],
+					"patching_rect" : [ 27.666667699813843, 185.00000536441803, 89.0, 22.0 ],
 					"text" : "spat5.hostinfos"
 				}
 
@@ -1873,7 +2002,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 27.666667699813843, 91.00000536441803, 29.5, 22.0 ],
+					"patching_rect" : [ 27.666667699813843, 151.00000536441803, 29.5, 22.0 ],
 					"text" : "/os"
 				}
 
@@ -1885,7 +2014,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 27.666667699813843, 60.833330571651459, 58.0, 22.0 ],
+					"patching_rect" : [ 27.666667699813843, 120.833330571651459, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -2098,6 +2227,23 @@
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 310.0, 623.0, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"background" : 1,
+					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
+					"border" : 2,
+					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"id" : "obj-22",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 129.520399451255798, 572.829303197860781, 363.011827230453491, 253.866829476356543 ],
+					"proportion" : 0.5
 				}
 
 			}
