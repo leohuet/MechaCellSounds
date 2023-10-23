@@ -63,7 +63,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 428.554102312241412, 4.0, 154.0, 39.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1031.554102312241412, 22.0, 134.0, 39.0 ],
+					"presentation_rect" : [ 1026.554102312241412, 29.0, 134.0, 39.0 ],
 					"text" : "2 : Turn the audio on"
 				}
 
@@ -80,7 +80,7 @@
 					"patching_rect" : [ 709.380928976195264, 9.0, 152.0, 64.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 1224.166643261909485, 10.926037311553955, 182.0, 51.0 ],
+					"presentation_rect" : [ 1223.166643261909485, 9.0, 182.0, 51.0 ],
 					"text" : "Here is the audio parameters. 1 : Make sure to select the right output"
 				}
 
@@ -771,7 +771,6 @@
 						"style" : "",
 						"subpatcher_template" : "audio_template",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-10",
