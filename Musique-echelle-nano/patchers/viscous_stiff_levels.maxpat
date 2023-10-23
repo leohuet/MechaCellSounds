@@ -46,8 +46,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 597.0, 550.45957094200503, 150.0, 64.0 ],
-					"text" : "Filtre reproduisant l'effet de la viscosité sur l'attenuation sonore selon la loi de Stokes"
+					"patching_rect" : [ 597.0, 531.45957094200503, 153.0, 64.0 ],
+					"text" : "Filter reproducing sound attenuation in viscous environment, following Stokes Law."
 				}
 
 			}
@@ -355,12 +355,12 @@
 								"box" : 								{
 									"bubble" : 1,
 									"id" : "obj-33",
-									"linecount" : 4,
+									"linecount" : 3,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 262.244256227016422, 438.785894989967346, 171.0, 64.0 ],
-									"text" : "Fonctions qui régissent l'atténuation du son au cours du temps en fonction de la viscosité"
+									"patching_rect" : [ 262.244256227016422, 438.785894989967346, 173.0, 51.0 ],
+									"text" : "Functions handling sound attenuation in time according to viscosity."
 								}
 
 							}
@@ -826,16 +826,17 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"bubble" : 1,
 									"id" : "obj-11",
-									"linecount" : 3,
+									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 344.165103349685751, 234.809594511985779, 153.0, 51.0 ],
-									"text" : "Fonction qui régit la montée du son au cours du temps "
+									"patching_rect" : [ 344.165103349685751, 234.809594511985779, 153.0, 37.0 ],
+									"text" : "Function that controls sound ramping up"
 								}
 
 							}

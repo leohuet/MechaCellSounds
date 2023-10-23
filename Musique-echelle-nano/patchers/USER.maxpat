@@ -97,7 +97,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 332.0, 369.238123275041517, 132.0, 51.0 ],
-					"text" : "Activer / désactiver les différentes compositions"
+					"text" : "Activate / deactivate parameters"
 				}
 
 			}
@@ -105,12 +105,12 @@
 				"box" : 				{
 					"bubble" : 1,
 					"id" : "obj-31",
-					"linecount" : 4,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1194.0, 76.062780618667603, 150.0, 64.0 ],
-					"text" : "Différents messages envoyés par l'utilisateur sur l'interface web"
+					"patching_rect" : [ 1194.0, 76.062780618667603, 150.0, 51.0 ],
+					"text" : "Different messages send by the user from the web interface"
 				}
 
 			}
@@ -1234,12 +1234,12 @@
 								"box" : 								{
 									"bubble" : 1,
 									"id" : "obj-35",
-									"linecount" : 7,
+									"linecount" : 6,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 1134.589031860232353, 710.742976427078247, 288.0, 104.0 ],
-									"text" : "Principal javascript, qui gère l'ouverture des fichiers csv, leur ajout dans des listes, pour ensuites que les données puissent être récupérées avec une position xy en input. Les données sont ensuite rescalées en fonction des valeurs min et max globales, puis ajustées en fonction de la vitesse de l'utilisateur"
+									"patching_rect" : [ 1134.589031860232353, 710.742976427078247, 288.0, 91.0 ],
+									"text" : "Main javascript, handling opening of the csv files, the reorganisation into arrays, so that the data can be retrieved with an xy position input. The data is then rescaled according to global min and max values, then adjusted according to user speed."
 								}
 
 							}
@@ -1252,7 +1252,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1357.589031860232353, 205.259317517280579, 198.0, 51.0 ],
-									"text" : "Arrivée des données xy de l'inteface web, ainsi que le toucher sur la surface"
+									"text" : "The xy data from web interface arrive here, as well as touch of the surface."
 								}
 
 							}
@@ -1369,12 +1369,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-13",
-									"linecount" : 6,
+									"linecount" : 5,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 17.0, 17.759317517280579, 262.0, 87.0 ],
-									"text" : "Ce sous-patch permet de récupérer les données des fichiers csv contenus dans le dossier 'data'. Il vient ensuite récupérer les positions xy de l'utilisateur, sa vitesse de déplacement, pour ensuite calculer les données de rigidité et de viscosité associées. "
+									"patching_rect" : [ 17.0, 17.759317517280579, 262.0, 74.0 ],
+									"text" : "This subpatch is able to get the data from the csv files contained in the 'data' folder. Then, it will retrieve the xy positions from the user, his moving speed, to finally get the young's modulus and beta linked to the position. "
 								}
 
 							}
@@ -2986,12 +2986,12 @@
 									"background" : 1,
 									"bubble" : 1,
 									"id" : "obj-21",
-									"linecount" : 9,
+									"linecount" : 7,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 636.5, 304.104477089643524, 147.0, 131.0 ],
-									"text" : "Récupère le chemin de chaque csv et l'ajoute dans une liste, pour ensuite l'envoyer au javascript pour l'initialisation (ouverture des fichiers, calcul des max et min)."
+									"patching_rect" : [ 636.5, 304.104477089643524, 147.0, 104.0 ],
+									"text" : "Get each csv path and add it to a list, to then send it to the javascript for initalisation (opening of the files, calcul of max and min data)."
 								}
 
 							}
@@ -3005,7 +3005,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 486.070757567882538, 76.512377537488874, 150.0, 64.0 ],
-									"text" : "Remplace la background picture pour correspondre au csv sélectionné"
+									"text" : "Replace the background picture so that it is linked to the user's selection"
 								}
 
 							}
@@ -4122,7 +4122,7 @@
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 487.150679544039804, 464.662537485361099, 172.0, 20.0 ],
+																	"patching_rect" : [ 480.150679544039804, 468.662537485361099, 172.0, 20.0 ],
 																	"text" : "EQ FOR SOFTER SOUNDS",
 																	"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 																}
@@ -4136,7 +4136,7 @@
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 536.76672116603163, 65.986997336149216, 128.0, 47.0 ],
+																	"patching_rect" : [ 12.76672116603163, 100.351359186172488, 128.0, 47.0 ],
 																	"text" : "VISCOUS EFFECTS ON SOFT/STIFF ELEMENTS",
 																	"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 																}
@@ -4674,12 +4674,12 @@
 												"box" : 												{
 													"bubble" : 1,
 													"id" : "obj-18",
-													"linecount" : 3,
+													"linecount" : 2,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 867.005913615226746, 683.157903373241425, 197.0, 51.0 ],
-													"text" : "Niveau des différents éléments ajusté en fonction du module de Young"
+													"patching_rect" : [ 867.005913615226746, 683.157903373241425, 199.0, 37.0 ],
+													"text" : "Levels controled by young's modulus"
 												}
 
 											}
@@ -4687,12 +4687,12 @@
 												"box" : 												{
 													"bubble" : 1,
 													"id" : "obj-11",
-													"linecount" : 4,
+													"linecount" : 3,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 741.005913615226746, 268.0, 197.0, 64.0 ],
-													"text" : "Ajout de différents effets sur la sortie du bufGranul pour créer des éléments plutôt doux, et d'autres plus rigides"
+													"patching_rect" : [ 741.005913615226746, 268.0, 197.0, 51.0 ],
+													"text" : "Different FX added to bufGranul output to create soft elements and other stiffer."
 												}
 
 											}
@@ -7176,12 +7176,12 @@
 												"box" : 												{
 													"bubble" : 1,
 													"id" : "obj-15",
-													"linecount" : 6,
+													"linecount" : 3,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 458.085271954536438, 744.318662681579553, 150.0, 91.0 ],
-													"text" : "Gestion des niveaux des différentes sources contenues dans le signal mc. Notamment lorsqu'on écoute uniquement la viscosité"
+													"patching_rect" : [ 458.085271954536438, 744.318662681579553, 153.0, 51.0 ],
+													"text" : "Level handling of the sources contained into the mc signal. "
 												}
 
 											}
@@ -7206,7 +7206,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 286.0, 308.0, 150.0, 37.0 ],
-													"text" : "Ajout de la sortie du bufGranul"
+													"text" : "Adding output from bufGranul"
 												}
 
 											}
@@ -7219,7 +7219,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 376.0, 192.044796288013458, 150.0, 51.0 ],
-													"text" : "mc.play avec tous les samples du viscous polybuffer"
+													"text" : "mc.play with all samples from viscous polybuffer"
 												}
 
 											}
@@ -8447,12 +8447,51 @@
 										"assistshowspatchername" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
+													"bubble" : 1,
+													"id" : "obj-71",
+													"linecount" : 2,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 1809.0, 680.0, 150.0, 37.0 ],
+													"text" : "Handles the trigger of elastic samples "
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"bubble" : 1,
+													"id" : "obj-65",
+													"linecount" : 4,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 955.042418241500854, 225.0, 203.0, 64.0 ],
+													"text" : "This js script decides to open or close the trigger of a sound according to the values of viscosity and stiffness"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"bubble" : 1,
+													"id" : "obj-57",
+													"linecount" : 3,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 809.0, 1157.5, 150.0, 51.0 ],
+													"text" : "mc play with all samples contained in the elastic polybuffer"
+												}
+
+											}
+, 											{
+												"box" : 												{
 													"id" : "obj-69",
 													"maxclass" : "newobj",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "int" ],
-													"patching_rect" : [ 978.042418241500854, 80.0, 29.5, 22.0 ],
+													"patching_rect" : [ 955.042418241500854, 90.0, 29.5, 22.0 ],
 													"text" : "i"
 												}
 
@@ -8464,7 +8503,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "bang", "int" ],
-													"patching_rect" : [ 1083.042418241500854, 41.0, 29.5, 22.0 ],
+													"patching_rect" : [ 1060.042418241500854, 51.0, 29.5, 22.0 ],
 													"text" : "t b i"
 												}
 
@@ -8476,7 +8515,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "int" ],
-													"patching_rect" : [ 978.042418241500854, 147.0, 33.0, 22.0 ],
+													"patching_rect" : [ 955.042418241500854, 157.0, 33.0, 22.0 ],
 													"text" : "== 0"
 												}
 
@@ -8488,7 +8527,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "float" ],
-													"patching_rect" : [ 978.042418241500854, 111.0, 29.5, 22.0 ],
+													"patching_rect" : [ 955.042418241500854, 121.0, 29.5, 22.0 ],
 													"text" : "+ 1."
 												}
 
@@ -8501,7 +8540,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 1083.042418241500854, 11.0, 119.0, 22.0 ],
+													"patching_rect" : [ 1060.042418241500854, 21.0, 119.0, 22.0 ],
 													"text" : "r #1_viscousonoff"
 												}
 
@@ -8514,7 +8553,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 978.042418241500854, 11.0, 97.0, 22.0 ],
+													"patching_rect" : [ 955.042418241500854, 21.0, 97.0, 22.0 ],
 													"text" : "r #1_stiffonoff"
 												}
 
@@ -8720,7 +8759,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 576.0, 1814.054317593574524, 52.0, 22.0 ],
+													"patching_rect" : [ 580.691690549964051, 1674.054317593574524, 52.0, 22.0 ],
 													"text" : "$1 1000"
 												}
 
@@ -8732,7 +8771,7 @@
 													"numinlets" : 3,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "bang" ],
-													"patching_rect" : [ 576.0, 1845.600007057189941, 40.0, 22.0 ],
+													"patching_rect" : [ 580.691690549964051, 1705.600007057189941, 40.0, 22.0 ],
 													"text" : "line"
 												}
 
@@ -8745,7 +8784,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 576.0, 1785.0, 113.0, 22.0 ],
+													"patching_rect" : [ 580.691690549964051, 1645.0, 113.0, 22.0 ],
 													"text" : "r #1_elasticonoff"
 												}
 
@@ -8757,7 +8796,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "multichannelsignal" ],
-													"patching_rect" : [ 542.0, 1881.0, 53.0, 22.0 ],
+													"patching_rect" : [ 546.691690549964051, 1741.0, 53.0, 22.0 ],
 													"text" : "mc.*~ 1."
 												}
 
@@ -8842,7 +8881,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "multichannelsignal" ],
-													"patching_rect" : [ 542.0, 1640.0, 55.0, 22.0 ],
+													"patching_rect" : [ 546.691690549964051, 1575.0, 55.0, 22.0 ],
 													"text" : "mc.+~ 0."
 												}
 
@@ -9649,7 +9688,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 542.0, 2086.0, 30.0, 30.0 ]
+													"patching_rect" : [ 546.691690549964051, 1796.0, 30.0, 30.0 ]
 												}
 
 											}
@@ -9663,6 +9702,23 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "signal" ],
 													"patching_rect" : [ 240.0, 566.340318944454452, 30.0, 30.0 ]
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"angle" : 270.0,
+													"background" : 1,
+													"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
+													"border" : 2,
+													"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+													"id" : "obj-68",
+													"maxclass" : "panel",
+													"mode" : 0,
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 36.0, 406.591341691017305, 1765.011827230453491, 524.48019757747636 ],
+													"proportion" : 0.5
 												}
 
 											}
@@ -10486,7 +10542,7 @@
 												"patchline" : 												{
 													"color" : [ 0.054901960784314, 0.356862745098039, 0.647058823529412, 1.0 ],
 													"destination" : [ "obj-22", 1 ],
-													"midpoints" : [ 282.5, 334.0, 1651.180000000000291, 334.0 ],
+													"midpoints" : [ 282.5, 332.0, 1651.180000000000291, 332.0 ],
 													"order" : 0,
 													"source" : [ "obj-8", 0 ]
 												}
@@ -10675,12 +10731,12 @@
 												"box" : 												{
 													"bubble" : 1,
 													"id" : "obj-7",
-													"linecount" : 6,
+													"linecount" : 5,
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 491.563107967376709, 289.0, 225.0, 91.0 ],
-													"text" : "Le volume de l'elasticité monte lorsque l'utilisateur relâche. Le volume monte rapidement jusqu'à un certain niveau (l'inverse de la viscosité). Il redescend ensuite en une durée déterminée par la rigidité"
+													"patching_rect" : [ 491.563107967376709, 289.0, 225.0, 78.0 ],
+													"text" : "Elastic level climb when user releases. The level climb quickly until a certain level (controled by viscosity). It goes down then in a time determined by stiffness."
 												}
 
 											}
@@ -11131,7 +11187,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 412.0, 198.0, 1144.0, 848.0 ],
+						"rect" : [ 334.0, 198.0, 1144.0, 848.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -12750,8 +12806,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 1055.5, 792.0, 150.0, 20.0 ],
-									"text" : "vers durée des grains"
+									"patching_rect" : [ 1073.610237181186676, 792.0, 89.370075523853302, 20.0 ],
+									"text" : "to grain length"
 								}
 
 							}
@@ -12761,8 +12817,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 503.0, 792.0, 150.0, 20.0 ],
-									"text" : "vers transpose des grains"
+									"patching_rect" : [ 522.129194721154363, 792.0, 120.078738570213318, 20.0 ],
+									"text" : "to grain transpose"
 								}
 
 							}
@@ -12773,7 +12829,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 289.0, 792.0, 150.0, 20.0 ],
-									"text" : "vers fréquence des grains"
+									"text" : "to grain frequency"
 								}
 
 							}
@@ -12785,7 +12841,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 25.0, 19.0, 150.0, 60.0 ],
-									"text" : "Ce sous-patch récupère les deux données et les scale pour les mapper vers différents paramètres"
+									"text" : "This subpatch retrieve the data and scale them to map them to different parameters."
 								}
 
 							}
@@ -12820,12 +12876,12 @@
 									"bubblepoint" : 0.8,
 									"bubbleside" : 0,
 									"id" : "obj-24",
-									"linecount" : 6,
+									"linecount" : 5,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 10.85396664568384, 630.693400419586396, 235.0, 106.0 ],
-									"text" : "Toute cette partie gère la fréquence des grains du bufGranul. La fréquence augmente avec le niveau de rigidité, mais aussi par rapport à la vitesse. \nElle redescend à 0 quand l'utilisateur relâche."
+									"patching_rect" : [ 10.85396664568384, 630.693400419586396, 235.0, 93.0 ],
+									"text" : "All this stuff handles the bufGranul's grain frequency. Frequency increase along with the level of stiffness, but also according to speed.\nIt goes back to 0 when user releases."
 								}
 
 							}
@@ -13920,7 +13976,6 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
-					"bkgndpict" : "/Users/poire/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics/TableDataPaViscoTing_vdrag0Jbead1_Zc.png",
 					"clickedimage" : 0,
 					"color" : [ 0.807843137254902, 0.898039215686275, 0.909803921568627, 0.0 ],
 					"elementcolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],

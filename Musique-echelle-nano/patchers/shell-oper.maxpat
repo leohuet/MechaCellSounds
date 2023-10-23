@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 429.0, 157.0, 1241.0, 848.0 ],
+		"rect" : [ 237.0, 157.0, 1241.0, 848.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -61,7 +61,7 @@
 					"patching_rect" : [ 107.5, 15.833330571651459, 150.0, 74.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 103.0, 295.333330571651459, 306.0, 33.0 ],
+					"presentation_rect" : [ 105.0, 331.333330571651459, 306.0, 33.0 ],
 					"text" : "Patch handling the detection of python versions, installing dependencies, launching the python script"
 				}
 
@@ -126,7 +126,7 @@
 					"presentation" : 1,
 					"presentation_linecount" : 3,
 					"presentation_rect" : [ 304.0, 19.333330571651459, 184.0, 51.0 ],
-					"text" : "After selecting python version, press OK to install python depencies "
+					"text" : "1 : After selecting python version, press OK to install python depencies "
 				}
 
 			}
@@ -157,14 +157,15 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-26",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 757.701036155223846, 125.00000536441803, 216.835052788257599, 20.0 ],
+					"patching_rect" : [ 757.701036155223846, 125.00000536441803, 216.835052788257599, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 128.701036155223846, 73.018900036811829, 183.835052788257599, 33.0 ],
-					"text" : "Python versions found on your system"
+					"presentation_rect" : [ 6.865983366966248, 28.333330571651459, 132.835052788257599, 33.0 ],
+					"text" : "Python versions found on your computer       :"
 				}
 
 			}
@@ -246,7 +247,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 272.0, 160.0, 1444.0, 848.0 ],
+						"rect" : [ 34.0, 160.0, 1444.0, 848.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -274,7 +275,6 @@
 						"style" : "",
 						"subpatcher_template" : "audio_template",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-25",
