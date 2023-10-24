@@ -34,3 +34,45 @@ _This project is therefore the result of an unprecedented collaboration between 
 _Sonification represents the transmission of information through the sound medium, and can allow a reception by the human being that is different and complementary to vision. It can thus respond to problems of data complexity resulting from research by offering a tool that provides a simpler analysis of this data, thus guiding scientific innovation. Associated with a sensitive approach, sonification opens up new possibilities for transmission to the general public, but also for innovative assistance in specific areas such as sport, rehabilitation or therapy. When taken up by artists, sonification becomes a complex object, halfway between creation and transmission, in contexts of performances or sound installations in particular._
 
 _The project objectives is precisely to build an immersive and interactive sound installation in order to make the results and research methodologies of the LAI audible to the public, whose work makes it possible to measure certain qualities of cellular bodies at the nanoscale (rigidity, viscosity or elasticity). This sensitive approach between creation and transmission makes it possible to renew our scientific understanding, in particular with regard to the scale games at the cellular level, the latter being difficult to conceive because they are inaccessible to our human senses. Interaction with the installation also promotes engagement and appropriation of specific scientific questions by the participants._
+
+
+
+# Getting Started
+
+## Prerequirements
+
+To use the project you need to install several things :
+* Install the latest version of [Max](https://cycling74.com/downloads).
+* Install [python](https://www.python.org) 3.x (tested with python3.7, 3.8, 3.10, 3.11).
+* Install [spat5 package](https://forum.ircam.fr/projects/detail/spat/) for Max. If you do face issues when installing spat, please refer to [this guide](https://discussion.forum.ircam.fr/t/spat-5-for-max-read-this-first/21628).
+
+
+## Installation
+
+Download the latest release: [https://github.com/EnvelopSound/EnvelopForLive/releases](https://github.com/EnvelopSound/EnvelopForLive/releases)
+
+
+## Opening the project
+
+Once the project downloaded, unzip it. Then, open the Max project by double clicking on ``./Musique-echelle-nano/Musique-echelle-nano.maxproj``. Once opened, the window should look like this : 
+
+<img width="1512" alt="opening_window" src="https://github.com/leohuet/MEN_GMU-Strategy/assets/104456230/1b3ee102-c71d-48cb-a487-85eda6b5e65b">
+
+
+Here, you can select the number of users needed (you can go up to 10 but I recommend max 5 users).
+
+
+## Demo project
+
+To simply use the data provided with the project, just launch the web interface, chose your audio output device, turn audio on, and you're good to go.
+
+
+## Setting up
+
+You now have access to the main control panel. It contains several steps : 
+* The first step is to generate the data and the heat maps from your xlsx data files. To that aim, check the "Step 1 : Data processing" panel. You will have to install the python dependencies. Then, drag and drop the folder containing the data files to the required zone. Finally, click on "Process files". More details in the [[Generate new data]] page.
+* Once this done, you can launch the web interface used to interact with the system. More details in [[The web interface]] page.
+* Finally, check your audio settings in the specific panel, with care to the output device. Don't forget to start the audio. More details in the [[Audio settings]] page.
+
+
+For more informations about the project, please refer to the [Wiki](https://github.com/leohuet/MEN_GMU-Strategy/wiki).
