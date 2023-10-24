@@ -70,9 +70,11 @@ To simply use the data provided with the project, just launch the web interface,
 ## Setting up
 
 You now have access to the main control panel. It contains several steps : 
-* The first step is to generate the data and the heat maps from your xlsx data files. To that aim, check the "Step 1 : Data processing" panel. You will have to install the python dependencies. Then, drag and drop the folder containing the data files to the required zone. Finally, click on "Process files". More details in the [[Generate new data]] page.
-* Once this done, you can launch the web interface used to interact with the system. More details in [[The web interface]] page.
-* Finally, check your audio settings in the specific panel, with care to the output device. Don't forget to start the audio. More details in the [[Audio settings]] page.
+* The first step is to generate the data and the heat maps from your xlsx data files. To that aim, check the "Step 1 : Data processing" panel. You will have to install the python dependencies. Then, drag and drop the folder containing the data files to the required zone. Finally, click on "Process files". 
+* Once this done, you can launch the web interface used to interact with the system. 
+* Finally, check your audio settings in the specific panel, with care to the output device.
+
+
 
 
 For more informations about the project, please refer to the [Wiki](https://github.com/leohuet/MEN_GMU-Strategy/wiki).
