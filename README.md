@@ -49,7 +49,7 @@ To use the project you need to install several things :
 
 ## Installation
 
-Download the latest release: [https://github.com/EnvelopSound/EnvelopForLive/releases](https://github.com/EnvelopSound/EnvelopForLive/releases)
+Download the latest release: [https://github.com/leohuet/MEN_GMU-Strategy/releases](https://github.com/leohuet/MEN_GMU-Strategy/releases)
 
 
 ## Opening the project
