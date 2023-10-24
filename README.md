@@ -75,6 +75,6 @@ You now have access to the main control panel. It contains several steps :
 * Finally, check your audio settings in the specific panel, with care to the output device.
 
 
-
+# Learn more #
 
 For more informations about the project, please refer to the [Wiki](https://github.com/leohuet/MEN_GMU-Strategy/wiki).
