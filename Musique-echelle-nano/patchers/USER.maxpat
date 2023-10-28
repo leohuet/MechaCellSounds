@@ -1039,7 +1039,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-179",
-					"items" : [ "TableDataPaViscoTing_vdrag0Jbead1.csv", ",", "TableDataPaViscoTing_vdrag0Jbead2.csv", ",", "TableDataPaViscoTing_vdrag0Jbead3.csv" ],
+					"items" : [ "macrophage1.csv", ",", "macrophage2.csv", ",", "monocyte1.csv", ",", "monocyte2.csv" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1099,6 +1099,19 @@
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"format" : 6,
+									"id" : "obj-44",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 918.083333333333485, 1426.0, 50.0, 22.0 ]
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"format" : 6,
 									"id" : "obj-48",
@@ -1238,7 +1251,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 1134.589031860232353, 710.742976427078247, 288.0, 91.0 ],
+									"patching_rect" : [ 1134.589031860232353, 710.742976427078247, 290.0, 91.0 ],
 									"text" : "Main javascript, handling opening of the csv files, the reorganisation into arrays, so that the data can be retrieved with an xy position input. The data is then rescaled according to global min and max values, then adjusted according to user speed."
 								}
 
@@ -2990,7 +3003,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 636.5, 304.104477089643524, 147.0, 104.0 ],
+									"patching_rect" : [ 636.5, 304.104477089643524, 149.0, 104.0 ],
 									"text" : "Get each csv path and add it to a list, to then send it to the javascript for initalisation (opening of the files, calcul of max and min data)."
 								}
 
@@ -3570,6 +3583,15 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-175", 0 ],
+									"order" : 0,
+									"source" : [ "obj-52", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-44", 0 ],
+									"order" : 1,
 									"source" : [ "obj-52", 0 ]
 								}
 
@@ -4201,7 +4223,7 @@
 																	"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 																	"parameter_enable" : 0,
 																	"patching_rect" : [ 469.850679544039622, 343.162537485361099, 199.0, 105.657794296741486 ],
-																	"setfilter" : [ 0, 1, 1, 0, 0, 13000.0, 1.149980545043945, 1.378124952316284, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+																	"setfilter" : [ 0, 1, 1, 0, 0, 13561.7509765625, 1.149980545043945, 1.378124952316284, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 																}
 
 															}
@@ -8258,7 +8280,7 @@
 													"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 418.0, 577.0, 256.0, 128.0 ],
-													"setfilter" : [ 0, 1, 1, 0, 0, 10050.0, 0.961105227470398, 0.876276314258575, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+													"setfilter" : [ 0, 1, 1, 0, 0, 10848.4892578125, 0.961105227470398, 0.876276314258575, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 												}
 
 											}
@@ -13782,10 +13804,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 982.914523508650063, 530.459136188030243, 29.75582990397811, 248.176283454455756 ],
-					"pic" : "TableDataPaViscoTing_vdrag0Jbead1_Zc_scale.png",
+					"patching_rect" : [ 982.914523508650063, 530.459136188030243, 29.75582990397811, 333.265294924554837 ],
+					"pic" : "macrophage1_betaTn_scale.png",
 					"presentation" : 1,
-					"presentation_rect" : [ 491.584712999999965, 139.202759385108948, 41.75582990397811, 348.261389837434479 ]
+					"presentation_rect" : [ 491.584712999999965, 139.202759385108948, 41.75582990397811, 467.665294924554814 ]
 				}
 
 			}
@@ -13976,6 +13998,7 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
+					"bkgndpict" : "/Users/poire/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics/macrophage1_betaTn.png",
 					"clickedimage" : 0,
 					"color" : [ 0.807843137254902, 0.898039215686275, 0.909803921568627, 0.0 ],
 					"elementcolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],

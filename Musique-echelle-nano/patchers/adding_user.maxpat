@@ -123,9 +123,9 @@
 			}
 , 			{
 				"box" : 				{
-					"channels" : 2,
+					"channels" : 8,
 					"id" : "obj-21",
-					"lastchannelcount" : 2,
+					"lastchannelcount" : 8,
 					"maxclass" : "mc.live.gain~",
 					"numinlets" : 1,
 					"numoutlets" : 4,

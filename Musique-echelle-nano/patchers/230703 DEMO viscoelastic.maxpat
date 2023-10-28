@@ -1687,7 +1687,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 799.044869323571675, 1360.0, 54.0, 22.0 ],
+					"patching_rect" : [ 799.044869323571675, 1345.0, 54.0, 22.0 ],
 					"text" : "mc.dac~"
 				}
 
