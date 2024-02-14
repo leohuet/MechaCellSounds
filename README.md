@@ -36,12 +36,12 @@ Download the latest release: [https://github.com/leohuet/MEN_GMU-Strategy/releas
 
 ## Opening the project
 
-Once the project downloaded, unzip it. Then, open the Max project by double clicking on ``./Musique-echelle-nano/Musique-echelle-nano.maxproj``. Once opened, the window should look like this : 
+Once the project downloaded, unzip it. Then, open the Max project by double clicking on ``./Musique-echelle-nano/Musique-echelle-nano.maxproj``.
 
 <img width="1512" alt="opening_window" src="https://github.com/leohuet/MEN_GMU-Strategy/assets/104456230/1b3ee102-c71d-48cb-a487-85eda6b5e65b">
 
 
-Here, you can select the number of users needed (you can go up to 10 but I recommend max 5 users).
+Here, you can select the number of users needed (you can go up to 10 but we recommend max 5 users).
 
 
 ## Demo project
