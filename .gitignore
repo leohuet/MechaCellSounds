@@ -2,7 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,audio,images
 
 ### npm stuff ###
-code/node_modules/
+node_modules/
 
 ### Audio ###
 sounds/
