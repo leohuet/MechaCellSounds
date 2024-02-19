@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 1444.0, 848.0 ],
+		"rect" : [ 34.0, 87.0, 1852.0, 959.0 ],
 		"bglocked" : 1,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -4223,7 +4223,7 @@
 																	"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 																	"parameter_enable" : 0,
 																	"patching_rect" : [ 469.850679544039622, 343.162537485361099, 199.0, 105.657794296741486 ],
-																	"setfilter" : [ 0, 1, 1, 0, 0, 13561.7509765625, 1.149980545043945, 1.378124952316284, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+																	"setfilter" : [ 0, 1, 1, 0, 0, 11836.767578125, 1.149980545043945, 1.378124952316284, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 																}
 
 															}
@@ -8078,7 +8078,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 187.0, 268.0, 421.0, 549.0 ],
+						"rect" : [ 617.0, 1388.0, 421.0, 549.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -8280,7 +8280,7 @@
 													"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 418.0, 577.0, 256.0, 128.0 ],
-													"setfilter" : [ 0, 1, 1, 0, 0, 10848.4892578125, 0.961105227470398, 0.876276314258575, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+													"setfilter" : [ 0, 1, 1, 0, 0, 8396.5478515625, 0.961105227470398, 0.876276314258575, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 												}
 
 											}
@@ -8409,7 +8409,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 72.0, 323.0, 137.0, 22.0 ],
+									"patching_rect" : [ 72.0, 187.0, 137.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -8439,7 +8439,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ 34.0, 100.0, 1444.0, 848.0 ],
+										"rect" : [ 34.0, 87.0, 1852.0, 959.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -8467,6 +8467,7 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
+										"visible" : 1,
 										"boxes" : [ 											{
 												"box" : 												{
 													"bubble" : 1,
@@ -10757,7 +10758,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 491.563107967376709, 289.0, 225.0, 78.0 ],
+													"patching_rect" : [ 491.563107967376709, 289.0, 228.0, 78.0 ],
 													"text" : "Elastic level climb when user releases. The level climb quickly until a certain level (controled by viscosity). It goes down then in a time determined by stiffness."
 												}
 
@@ -11102,7 +11103,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 72.0, 211.0, 90.0, 22.0 ],
+									"patching_rect" : [ 72.0, 292.0, 90.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -11157,21 +11158,21 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-5", 0 ],
+									"destination" : [ "obj-4", 0 ],
 									"source" : [ "obj-3", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-4", 0 ],
+									"destination" : [ "obj-3", 0 ],
 									"source" : [ "obj-5", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-3", 0 ],
+									"destination" : [ "obj-5", 0 ],
 									"source" : [ "obj-6", 0 ]
 								}
 
@@ -13804,10 +13805,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "jit_matrix" ],
-					"patching_rect" : [ 982.914523508650063, 530.459136188030243, 29.75582990397811, 333.265294924554837 ],
-					"pic" : "macrophage1_betaTn_scale.png",
+					"patching_rect" : [ 982.914523508650063, 530.459136188030243, 29.75582990397811, 224.757627818397765 ],
+					"pic" : "macrophage1_Zc_scale.png",
 					"presentation" : 1,
-					"presentation_rect" : [ 491.584712999999965, 139.202759385108948, 41.75582990397811, 467.665294924554814 ]
+					"presentation_rect" : [ 491.584712999999965, 139.202759385108948, 41.75582990397811, 315.398404517426911 ]
 				}
 
 			}
@@ -13976,7 +13977,7 @@
 					"displayknob" : 1,
 					"id" : "obj-18",
 					"knobcolor" : [ 0.164705882352941, 0.164705882352941, 0.156862745098039, 1.0 ],
-					"knobsize" : 5.0,
+					"knobsize" : 29.0,
 					"maxclass" : "nodes",
 					"nodecolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
 					"nodesnames" : [ "1" ],
@@ -13998,7 +13999,7 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
-					"bkgndpict" : "/Users/poire/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics/macrophage1_betaTn.png",
+					"bkgndpict" : "/Users/poire/Documents/MASTER/GMEM/MEN_GMU-Strategy/Musique-echelle-nano/media/pics/macrophage1_Zc.png",
 					"clickedimage" : 0,
 					"color" : [ 0.807843137254902, 0.898039215686275, 0.909803921568627, 0.0 ],
 					"elementcolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
