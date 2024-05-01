@@ -31,8 +31,20 @@ app.use(express.static(__dirname));
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/code/public/index.html');
 });
-app.get('/tablette', function(req, res) {
-    res.sendFile(__dirname + '/code/public/tablette.html');
+app.get("/1", function(req, res) {
+    res.sendFile(__dirname + '/code/public/1.html');
+});
+app.get("/2", function(req, res) {
+    res.sendFile(__dirname + '/code/public/2.html');
+});
+app.get("/3", function(req, res) {
+    res.sendFile(__dirname + '/code/public/3.html');
+});
+app.get("/4", function(req, res) {
+    res.sendFile(__dirname + '/code/public/4.html');
+});
+app.get("/computer", function(req, res) {
+    res.sendFile(__dirname + '/code/public/computer.html');
 });
 
 
