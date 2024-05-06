@@ -36,33 +36,24 @@ function sleep(ms) {
 // It shows the buttons for the users that are not currently used
 socket.on("users", function(users_list, id, cells_names){
     choix_user.style.flexDirection = "row";
-    if(window.innerWidth < 1000){
-        for(let i = 0; i < users_list.length; i++) {
-            console.log(i)
-            let button = document.createElement('button');
-            button.innerHTML = i+1;
-            button.setAttribute('onclick', `choixUser(${i+1})`);
-            button.id = `user${i+1}`;
-            choix_user.appendChild(button);
-            
-        }
-        for(let i=0; i<users_list.length; i++){
-            if(users_list[i] == 0 && !user_launched){
-                users_buttons[i].style.display = 'none';
-            }
-            else if(!user_launched){
-                users_buttons[i].style.display = 'block';
-            }
-        }
-    }
-    else{
+    for(let i = 0; i < users_list.length; i++) {
+        console.log(i)
         let button = document.createElement('button');
-        button.innerHTML = 'Commencer';
-        button.id = `user5`;
-        button.setAttribute('onclick', `choixUser(5)`);
-        button.style.width = '200px';
+        button.innerHTML = i+1;
+        button.setAttribute('onclick', `choixUser(${i+1})`);
+        button.id = `user${i+1}`;
         choix_user.appendChild(button);
+        
     }
+    for(let i=0; i<users_list.length; i++){
+        if(users_list[i] == 0 && !user_launched){
+            users_buttons[i].style.display = 'none';
+        }
+        else if(!user_launched){
+            users_buttons[i].style.display = 'block';
+        }
+    }
+    
     cells = cells_names;
     sketch.style.height = window.innerWidth;
     legendetxt.style.top = `${window.innerWidth+30}px`;

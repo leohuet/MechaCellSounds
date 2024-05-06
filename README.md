@@ -1,5 +1,5 @@
 
-# Musique à l'échelle nanométrique
+# Mécasique : son et mécanique
 
 
 Ce repository est le suivi d'un travail de recherche en sonification de 6 mois, de mai à octobre 2023, dans le cadre d'une collaboration entre le [GMEM](https://www.gmem.org) et le [LAI](https://labadhesioninflammation.org), avec pour volonté de sonifier les données scientifiques issues des recherches du LAI. 
@@ -10,6 +10,7 @@ L’objectif du projet est justement de construire une installation sonore immer
 
 
 
+# Mechasounds : the sound of mechanics
 
 _This repository is the follow-up of a 6-month research work on sonification, from May to October 2023, as part of a collaboration between [GMEM](https://www.gmem.org) and [LAI](https://labadhesioninflammation.org), with the aim of sonifying the scientific data resulting from the LAI's research._
 

@@ -35,12 +35,25 @@ function sleep(ms) {
 // Socket message sent from server when a client connects
 // It shows the buttons for the users that are not currently used
 socket.on("users", function(users_list, id, cells_names){
-    let button = document.createElement('button');
-    button.innerHTML = 'Start';
-    button.id = `user4`;
-    button.setAttribute('onclick', `choixUser(4)`);
-    button.style.width = '200px';
-    choix_user.appendChild(button);
+    choix_user.style.flexDirection = "row";
+    for(let i = 0; i < users_list.length; i++) {
+        console.log(i)
+        let button = document.createElement('button');
+        button.innerHTML = i+1;
+        button.setAttribute('onclick', `choixUser(${i+1})`);
+        button.id = `user${i+1}`;
+        choix_user.appendChild(button);
+        
+    }
+    for(let i=0; i<users_list.length; i++){
+        if(users_list[i] == 0 && !user_launched){
+            users_buttons[i].style.display = 'none';
+        }
+        else if(!user_launched){
+            users_buttons[i].style.display = 'block';
+        }
+    }
+    
     cells = cells_names;
     sketch.style.height = window.innerWidth;
     legendetxt.style.top = `${window.innerWidth+30}px`;
