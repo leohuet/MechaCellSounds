@@ -5,12 +5,14 @@
   "main": "server.js",
   "dependencies": {
     "express": "^5.2.1",
+    "n": "^10.2.0",
     "os-utils": "^0.0.14",
     "socket.io": "^4.8.3",
     "socket.io-adapter": "^2.5.6",
     "socket.io-client": "^4.8.3",
     "socket.io-parser": "^4.2.6",
-    "socketio": "^1.0.0"
+    "socketio": "^1.0.0",
+    "stable": "^0.1.8"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
